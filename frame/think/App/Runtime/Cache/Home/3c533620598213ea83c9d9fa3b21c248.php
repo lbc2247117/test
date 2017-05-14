@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>show.html?username=123&password=456

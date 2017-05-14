@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>test upload</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form id="form" action="upload.php" method="POST" enctype="multipart/form-data">
+
+            <video id="videoView" height="300" width="530" controls preload="none"></video>
+            <input type="file" name="video" id="uploadVideo" accept=".mp4,.mkv" hidden multiple>
+            <input type="button" value="修改" id='upVideoBtn'>
+            <div>标题</div>
+            <input type="text" id="Desc" name="Desc"placeholder="标题">
+            <img id="coverView" title="视频封面" height="100" width="100" />
+            <input type="file" name="cover" id="uploadCover" accept=".png,.jepg,.jpg,.gif,.bmp" hidden multiple>
+            <input type="button" value="修改" id='upCoverBtn'>
+            <div>视频时长</div>
+            <input type="text"   name="time" placeholder="视频时长" >
+            <input type="button" value="保存" id='btnSubmit'>
+        </form>
+        <script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="../js/uploadPreview.js" type="text/javascript"></script>
+        <script src="../js/jquery.form.js" type="text/javascript"></script>
+        <script>
+            $(function () {
+                var
+                        rI = new uploadPreview({
+                            UpBtn: "uploadCover",
+                            ImgShow: "coverView",
+                            ImgType: ["gif", "jpeg", "jpg", "bmp", "png"],
+                            ErrMsg: "选择文件错误,图片类型必须是(gif,jpeg,jpg,bmp,png)中的一种",
+                            callback: function () {
+                                $("#coverView").show();
+                            }
+                        }),
+                        rII = new uploadPreview({
+                            UpBtn: "uploadVideo",
+                            ImgShow: "videoView",
+                            ImgType: ["mp4", "mkv"],
+                            ErrMsg: "选择文件错误,现仅支持MP4格式的视频",
+                            callback: function () {
+                                $("#videoView").show();
+                                $("#videoView")[0].play();
+                            }
+                        });
+                $('#upVideoBtn').on('click', function () {
+                    $('#uploadVideo').click();
+                    return false;
+                });
+                $('#upCoverBtn').on('click', function () {
+                    $('#uploadCover').click();
+                    return false;
+                });
+                $('#btnSubmit').click(function () {
+                    $('#form').ajaxSubmit({
+                        type: 'post',
+                        url: 'upload.php',
+                        success: function (result) {
+                            debugger
+                        }
+
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
+
