@@ -1,0 +1,86 @@
+<include file="Public/header" title="投票后台" css="__STATIC__/css/index.css" />
+<div id="page-wrapper">
+    <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+        <div class="close" @click="hideAlert">&times;</div>
+        <span v-html="alert.msg"></span>
+    </div>
+    <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+        <span>{{notice.msg}}</span>
+        <div class="close" @click="hideNotice">&times;</div>
+    </div>
+    <div id="searchCnr">
+
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="text" id="keyWord" v-model="searchKey" class="form-control" placeholder="请输入要查找的用户名或手机号">
+                <div class="input-group-addon bg-laia" @click="searchFn">
+                    <span class="glyphicon glyphicon-search"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            投票总数:<span style='color: red'>{{sum}}</span><br/>
+            报名总数:<span style='color: red'>{{entryCount}}</span>
+        </div>
+        <div class="col-md-2">
+            总访问量:<span style='color: red'>{{clickCount}}</span><br/>
+            总分享量:<span style='color: red'>{{shareCount}}</span>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <th>ID</th>
+                    <th>公众号ID</th>
+                    <th>用户名</th>
+                    <th @click="order('count')" style="cursor: pointer">投票数量<span :class="['glyphicon',sortType=='asc'?'glyphicon-arrow-up':'glyphicon-arrow-down']"></span></th>
+                    <th @click="order('entrytime')" style="cursor: pointer">报名时间<span :class="['glyphicon',sortType=='asc'?'glyphicon-arrow-up':'glyphicon-arrow-down']"></span></th>
+                    <th>电话</th>
+                    <th>头像</th>
+                    <th>城市</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(idx, obj) in tableData">
+
+                    <td>{{obj.id}}</td>
+                    <td>{{obj.openid}}</td>
+                    <td>{{obj.nickname}}</td>
+                    <td>{{obj.count}}</td>
+                    <td>{{obj.entrytime}}</td>
+                    <td>{{obj.mobile}}</td>
+                    <td><img src="{{obj.headimgurl}}" height="80"></td>
+                    <td>{{obj.city}}</td>
+                    <td>
+                        <div @click="showDetail(idx)" class='btn btn-link'>详情</div>
+                        <div v-if="obj.status==0"  @click="onOrOff(idx)" class='btn btn-link'>下线</div>
+                        <div v-if="obj.status==1" @click="onOrOff(idx)" class='btn btn-link'><span style="color: red">上线</span></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <ul v-show="showPageNav" class="pagination">
+            <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+                <a href="javascript:;">{{obj.num}}</a>
+            </li>
+            <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+                <a href="javascript:;">下一页</a>
+            </li>
+        </ul>
+
+        <div id="pageCount" class="btn bg-laia">
+            <span>第 {{curPage}} 页 | </span>
+            <span>共 {{pageCount}} 页</span>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/uploadPreview.js,__PUBLIC__/js/jquery.form.js,__PUBLIC__/js/vue.min.js,__STATIC__/js/index/index.js" />

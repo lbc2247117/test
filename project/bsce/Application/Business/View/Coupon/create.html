@@ -1,0 +1,56 @@
+<include file="Public/header" title="优惠券" css="__STATIC__/css/base.css,__STATIC__/css/coupon_create.css" />
+<div id="pageTitle">
+  <div class="page-title">编辑优惠券</div>
+  <div id="saveBtn" class="pull-right btn btn-laia">保存</div>
+</div>
+<div id="pageWrapper">
+  <form id="laiaForm" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <input type="hidden"  name="state" v-model="state">
+    <div class="mgn-b-30">
+      <div class="laia-ctrl-cnr col-md-6">
+        <div class="help">优惠券名称</div>
+        <input class="laia-ctrl laia-ipt" type="text"   name="voucherName" v-model="title" placeholder="优惠券名称" maxlength="20">
+        <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>20</span></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <div class="col-md-6">
+        <div class="help">优惠折扣</div>
+        <input id="perIpt" name='zk' class="form-control" type="text" v-model="per" placeholder="优惠折扣" maxlength="3" @change="checkPer()">
+        <span>折</span>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <div class="img-cnr">
+        <div class="help">优惠封面</div>
+        <div class="img-cnt" :class="!!imgCover?'filled':''" :style="!!imgCover?{backgroundImage:'url('+imgCover+')'}:''" @click="pickImg()">
+          <div class="edit"></div>
+        </div>
+        <img id="coverView" style="display:none;"/>
+        <input type="file" name="cover" id="coverIpt" accept=".png,.jpg" hidden multiple>
+      </div>
+    </div>
+    <div class="mgn-b-30">
+      <div class="col-md-6">
+        <div class="help">使用时间</div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" v-model="startTime"   placeholder="开始时间" readonly onfocus="WdatePicker({dateFmt: 'yyyy-MM-dd'})">
+        </div>
+        <div class="col-md-6"> 
+            <input type="text" class="form-control" v-model="endTime"     placeholder="结束时间" readonly onfocus="WdatePicker({dateFmt: 'yyyy-MM-dd'})">
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <div class="col-md-6">
+        <div class="help">使用说明</div>
+        <textarea  rows="100%" style="height:400px;width:100%;" id="laiaEditor" readonly="" v-model="rule" name="msg"></textarea>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </form>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/jquery.form.js,__PUBLIC__/ueditor/ueditor.config.js,__PUBLIC__/ueditor/ueditor.all.js,__PUBLIC__/js/uploadPreview.js,__PUBLIC__/ueditor/third-party/datapacker/WdatePicker.js,__STATIC__/js/coupon/create.js"/>

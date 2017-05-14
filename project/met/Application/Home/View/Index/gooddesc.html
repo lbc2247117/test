@@ -1,0 +1,38 @@
+<include file="Public/header" title="长安汽车-盐城万达东台分公司" css="__STATIC__/css/index.css" />
+<article class="sidebar-v2__article">
+    <div class="good-head">
+        <div class="col-sm-6">
+            <div class="head-good-img" :style="{backgroundImage:bgImg(goodinfo.goodPic)}"></div>
+        </div>
+        <div class="col-sm-6">
+            <div><strong>产品名称:</strong></div>
+            <div style="margin-bottom: 10px" v-html='goodinfo.name'>新逸动</div>
+            <div><strong>官方报价</strong></div>
+            <div style="margin-bottom: 10px" v-html='goodinfo.price'>4-10万</div>
+            <div><strong>产品类型:</strong></div>
+            <div style="margin-bottom: 10px" v-html='goodinfo.type'>乘用车</div>
+            <div><strong>产品描述:</strong></div>
+            <div v-html='goodinfo.remark'>至臻至美的设计，让每根线条都将时尚与动感尽情演绎。新逸动时尚动感之美，饱满而极富张力，成就精彩，引领潮流新趋势，让魅力更近一步。</div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="good-param">
+        <div>
+            <strong class="pull-left good-param-tital">产品型号:</strong>
+            <div class="col-sm-2 col-xs-6">
+                <select v-model="selSize" @change="getParam" class="form-control">
+                    <option v-for="(idx,obj) in sizeList" :value='idx' v-html='obj.name'>型号1</option>
+                </select>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="paramlist" v-for='(idx,obj) in paramList' v-if='obj.children.length>0'>
+            <div><strong>{{obj.name}}:</strong></div>
+            <div class="col-md-4 col-sm-6" v-for='(iidx,oobj) in obj.children'>
+                {{oobj.key}}：{{oobj.value}}
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</article>
+<include file="Public/footer" js="__STATIC__/js/gooddesc.js" />

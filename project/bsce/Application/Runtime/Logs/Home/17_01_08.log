@@ -1,0 +1,20 @@
+[ 2017-01-08T09:14:19+08:00 ] ::1 /bsce/Home/Index/desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::get() should be compatible with Think\Controller::get($name = '') D:\WWW\bsce\Application\Home\Controller\BaseController.class.php 第 125 行.
+NOTIC: [2] file_get_contents(http://192.168.0.201:1234/ssh2/sceman?cmd=queryScenicSpotVoByWap&amp;lon=&amp;lat=):  D:\WWW\bsce\Application\Home\Controller\BaseController.class.php 第 74 行.
+
+[ 2017-01-08T09:14:29+08:00 ] ::1 /bsce/Home/Index/dsc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::get() should be compatible with Think\Controller::get($name = '') D:\WWW\bsce\Application\Home\Controller\BaseController.class.php 第 125 行.
+NOTIC: [2] file_get_contents(http://192.168.0.201:1234/ssh2/sceman?cmd=queryScenicSpotVoByWap&amp;lon=&amp;lat=):  D:\WWW\bsce\Application\Home\Controller\BaseController.class.php 第 74 行.
+

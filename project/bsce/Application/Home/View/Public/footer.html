@@ -1,0 +1,80 @@
+</div>
+<!-- MAIN:LAIACNR END -->
+<!-- JS BEGIN -->
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/js/vue.min.js"></script>
+<script src="__STATIC__/js/base.js"></script>
+<?php $str = "[js]"; $arr = explode(",", $str); ?>
+<foreach name="arr" item="src">
+    <script src="{$src}"></script>
+</foreach>
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    console.log('获取Ticket耗时:{$time.getTicketTime}毫秒');
+    console.log('设置分享信息耗时:{$time.setShareTime}毫秒');
+    setShareInfo({
+        title: '{$share.title}',
+        summary: '{$share.desc}',
+        pic: '{$share.imgUrl}',
+        url: '{$share.link}',
+        WXconfig: {
+            swapTitleInWX: true,
+            appId: '{$sign.appId}',
+            timestamp: '{$sign.timestamp}',
+            nonceStr: '{$sign.nonceStr}',
+            signature: '{$sign.signature}'
+        }
+    });
+    wx.config({
+        debug: false,
+        appId: '{$sign.appId}',
+        timestamp: '{$sign.timestamp}',
+        nonceStr: '{$sign.nonceStr}',
+        signature: '{$sign.signature}',
+        jsApiList: [
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ'
+        ]
+    });
+    wx.ready(function () {
+        wx.onMenuShareTimeline({
+            title: '{$share.title}',
+            link: '{$share.link}',
+            imgUrl: '{$share.imgUrl}',
+            success: function () {
+
+            },
+            cancel: function () {
+            }});
+        wx.onMenuShareAppMessage({
+            title: '{$share.title}',
+            link: '{$share.link}',
+            imgUrl: '{$share.imgUrl}',
+            desc: '{$share.desc}',
+            type: '',
+            dataUrl: '',
+            success: function () {
+
+            },
+            cancel: function () {
+            }
+        });
+        wx.onMenuShareQQ({
+            title: '{$share.title}',
+            link: '{$share.link}',
+            imgUrl: '{$share.imgUrl}',
+            desc: '{$share.desc}',
+            success: function () {
+
+            },
+            cancel: function () {
+            }
+        });
+    });
+</script>
+<!-- JS END -->
+</body>
+</html>

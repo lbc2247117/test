@@ -1,0 +1,34 @@
+<include file="Public/header" title="景区视频列表" css="__PUBLIC__/css/video-js.min.css,__STATIC__/css/iscroll.css,__STATIC__/css/video_list.css"/>
+<div id="scroller">
+    <div id="pullDown">
+        <span class="pull-down-icon"></span>
+        <span class="pull-down-label">下拉刷新</span>
+    </div>
+    <div id="navCnr" v-show='videoType==11'>
+        <div v-for="(idx,obj) in wapTag" @click="toTag(obj.id)" :class="obj.id==tag?'active':''">{{obj.tagName}}</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="video-list">
+        <div class="sgl-cnr" v-for="(idx,obj) in videoList">
+            <div>
+                <video @pause='videoPause(idx)'  @play="playEvent(idx,$event.currentTarget)"  class="video-js vjs-default-skin vjs-big-play-centered" controls webkit-playsinline playsinline preload="auto" :src="obj.videoPath" :poster="obj.videoPic"></video>
+                <audio id='audio-{{obj.id}}' :src='obj.audioUrls[0]' style='display: none;'></audio>
+                <div class="clearfix"></div>
+            </div>
+            <div :class="videoType=='1'?'live-mark':''"></div>
+            <div class="dsc">
+                <div class="title" v-text="obj.videoName"></div>
+                <div class="grey">
+                    <span v-text="obj.watchNum"></span>
+                    <span>次播放</span>
+                    <span class="videotag" v-show='videoType==11'>{{obj.wapTagName}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pullUp">
+        <span class="pull-up-icon"></span>
+        <span class="pull-up-label">上拉加载更多</span>
+    </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/video.min.js,__STATIC__/js/iscroll.js,__STATIC__/js/video_list.js"/>

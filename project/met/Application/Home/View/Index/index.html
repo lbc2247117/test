@@ -1,0 +1,126 @@
+<include file="Public/header" title="长安汽车-盐城万达东台分公司" css="__STATIC__/css/index.css" />
+<div class="banner">
+    <ol id="listpoint" class="banner-point-box">
+        <li v-for="(idx,obj) in banner" @click="moveToPointer(idx)"></li>
+    </ol>
+    <div  class="banner-pic-box">
+        <div v-for="(idx,obj) in banner" class="banner-pic" @click="jumpTo(idx)">
+            <img :src="obj.path">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="content-title">
+            <h1 class="text-center"><a href="product.html" title="车辆纵览" target="_self">车辆纵览</a></h1>
+            <span>Overview of models</span>
+        </div>
+        <p class="text-center margin-small-top"></p>
+    </div>
+    <div class="content-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6" v-for="(idx,obj) in product"> 
+                    <div class="thumbnail">
+                        <div class="thumbnail-img">
+                            <a href="javascript:void(0);" title="{{obj.name}}" @click='jumpGoodDesc(obj.id)'>
+                                <img :src="obj.goodPic"  alt="{{obj.name}}" width="400" height="240" class="img-hov">
+                                <img :src="obj.goodPic"  alt="{{obj.name}}" width="400" height="240" class="img-nhov">
+                            </a> 
+                        </div>
+                        <div class="caption">
+                            <h3 class="text-large text-bold text-center padding-top padding-bottom">{{obj.name}}</h3>
+                            <h3 style="color: red" class="text-large text-center">{{obj.price}}</h3>
+                            <p>{{obj.remark}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="content-title">
+            <h1 class="text-center"><a href="factory.html" title="走进工厂" target="_self">走进工厂</a></h1>
+            <span>Into the factory</span>
+        </div>
+        <p class="text-center margin-small-top"></p>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane  active" id="excase_type_35">
+            <div class="grid gallery">
+                <figure class="effect-zoe col-sm-6 col-md-3" v-for="(idx,obj) in factory"> <a href="javascript:void(0);" title="{{obj.name}}"><img :src="obj.picPath" title="{{obj.name}}" alt="{{obj.name}}" class="img-responsive"></a>
+                    <figcaption>
+                        <h2 class="text-left"><a href="javascript:void(0);">{{obj.name}}</a></h2>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="content-title">
+            <h1 class="text-center"><a href="" title="销售服务" target="_self">销售服务</a></h1>
+            <span>SALES SERVICE</span>
+        </div>
+        <p class="text-center margin-small-top"></p>
+    </div>
+    <div class="content-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-sm-4 col">
+                    <div>
+                        <img src="__PUBLIC__/img/cir1.png" class="imgs">
+                        <font>
+                        <span>长安汽车销售</span>
+                        <p class="col-desc">长安汽车专营店，贴心服务，专业售后，品质有保障！</p>
+                        </font>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-sm-4 col">
+                    <div>
+                        <img src="__PUBLIC__/img/cir2.png" class="imgs">
+                        <font>
+                        <span>汽车配件销售</span>
+                        <p class="col-desc">全面覆盖高,中,低端市场,货真价实,物美价廉，海量选择！</p>
+                        </font>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-sm-4  col">
+                    <div>
+                        <img src="__PUBLIC__/img/cir3.png" class="imgs">
+                        <font>
+                        <span>汽车维修</span>
+                        <p class="col-desc">多位资深汽车维修师为您解决爱车的疑难杂症！</p>
+                        </font>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="content-title">
+            <h1 class="text-center"><a href="" title="关于我们" target="_self">关于我们</a></h1>
+            <span>ABOUT US</span>
+        </div>
+        <p class="text-center margin-small-top"></p>
+    </div>
+    <div class="content-body">
+        <div class="container">
+            <div class="row hidden-xs">
+                <div class="col-sm-12 text-big" v-html="dataObj.about">
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="col-sm-12 text-big" v-html="dataObj.about">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/index.js" />

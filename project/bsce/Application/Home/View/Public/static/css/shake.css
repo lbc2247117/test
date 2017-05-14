@@ -1,0 +1,241 @@
+body {
+  background-image: url(../../static/img/shakebg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#cat {
+  position: absolute;
+  left: 17%;
+  bottom: 30%;
+  width: 66%;
+  height: 0;
+  padding-bottom: 66%;
+  background-image: url(../../static/img/cat.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+#cat.shake {
+  background-image: url(../../static/img/catshake.png);
+}
+#shadow {
+  position: absolute;
+  left: 0;
+  bottom: 27%;
+  width: 100%;
+  height: 0;
+  padding-bottom: 15.2%;
+  background-image: url(../../static/img/shakeshadow.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+.shake {
+  -webkit-animation-name: shake;
+  -webkit-animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 100;
+  -webkit-transform-origin: 50% 100%;
+}
+.move {
+  -webkit-animation-name: move;
+  -webkit-animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 100;
+}
+@-webkit-keyframes shake  {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(8deg);
+  }
+  20% {
+    -webkit-transform: rotate(15deg);
+  }
+  30% {
+    -webkit-transform: rotate(12deg);
+  }
+  40% {
+    -webkit-transform: rotate(7deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  60% {
+    -webkit-transform: rotate(-8deg);
+  }
+  70% {
+    -webkit-transform: rotate(-15deg);
+  }
+  80% {
+    -webkit-transform: rotate(-12deg);
+  }
+  90% {
+    -webkit-transform: rotate(-7deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes move  {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: 3%;
+  }
+  20% {
+    left: 5%;
+  }
+  30% {
+    left: 4%;
+  }
+  40% {
+    left: 2%;
+  }
+  50% {
+    left: 0;
+  }
+  60% {
+    left: -2%;
+  }
+  70% {
+    left: -4%;
+  }
+  80% {
+    left: -5%;
+  }
+  90% {
+    left: -3%;
+  }
+  100% {
+    left: 0;
+  }
+}
+#biu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+}
+#biuCnt {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#mainTop {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 87.6%;
+  background-image: url(../../static/img/shakebiu.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#mainTopCnt { 
+  position: absolute;
+  bottom: 3%;
+  left: 12%;
+  width: 76.14%;
+  padding: 10px;
+}
+#name {
+  float: left;
+  font-size: 20px;
+  line-height: 1;
+  bottom: 8%;
+  left: calc(12% + 10px);
+  font-weight: bold;
+}
+#biz {
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 6px;
+  color: #666;
+  font-weight: normal;
+}
+#per {
+  float: right;
+  font-size: 44px;
+  line-height: 50px;
+  bottom: 6%;
+  right: calc(12% + 10px);
+  color: #ff4d48;
+}
+#cn {
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 25px;
+  margin-left: 5px;
+}
+#mainMiddle {
+  margin-left: 12%;
+  width: 76.14%;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 1px 1px #afafaf;
+}
+#img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#mainBottom {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding-bottom: 13.3333%;
+  background-image: url(../../static/img/shakeview.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#woo {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+}
+#wooCnt {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../static/img/woo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 74%;
+}
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 9%;
+  padding-bottom: 9%;
+  background-image: url(../../static/img/shakeclose.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#back {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 36px;
+  height: 36px;
+  background-size: 15px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../static/img/icon_back.png);
+  background-color: rgba(255,255,255,.6);
+  border-radius: 5px;
+}

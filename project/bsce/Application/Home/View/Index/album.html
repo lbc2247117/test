@@ -1,0 +1,34 @@
+<include file="Public/header" title="景区相册" css="__STATIC__/plugin/lightbox/css/lightbox.css,__STATIC__/css/iscroll.css,__STATIC__/css/album.css"/>
+<div id="scroller">
+  <div id="pullDown">
+    <span class="pull-down-icon"></span>
+    <span class="pull-down-label">下拉刷新</span>
+  </div>
+  <div id="bodyCnr">
+    <div class="sgl-cnr">
+      <div class="sgl" v-for="(idx,obj) in dataArr" v-show="idx%2==0">
+        <a :href="obj.picPath" data-lightbox="laia" data-title="">
+          <img class="img-cnr" :src="obj.picPath">
+        </a>
+      </div>
+    </div>
+    <div class="sgl-cnr">
+      <div class="sgl" v-for="(idx,obj) in dataArr" v-show="idx%2==1">
+        <a :href="obj.picPath" data-lightbox="laia" data-title="">
+          <img class="img-cnr" :src="obj.picPath">
+        </a>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div id="pullUp">
+    <span class="pull-up-icon"></span>
+    <span class="pull-up-label">上拉加载更多</span>
+  </div>
+</div>
+<div v-show="viewVisible" id="viewCnr">
+  <div id="viewCnt" @click="hideView()" @touchstart="touchS" @touchend="touchE" @touchmove.stop.prevent="touchM">
+    <div class="sgl-view" v-for="obj in dataArr" :style="{backgroundImage:'url('+obj.picPath+')'}"></div>
+  </div>
+</div>
+<include file="Public/footer" js="__STATIC__/plugin/lightbox/js/lightbox.min.js,__STATIC__/js/iscroll.js,__STATIC__/js/album.js"/>

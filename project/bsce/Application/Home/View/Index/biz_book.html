@@ -1,0 +1,47 @@
+<include file="Public/header" title="预订信息" navtitle="预订信息" css="__PUBLIC__/css/bootstrap-datetimepicker.min.css,__STATIC__/css/biz.css"/>
+<div id="bookCnr" v-show="!success&&!error">
+  <div class="sgl-cnr">
+    <div id="bizName" class="border-b-grey" v-text="biz"></div>
+    <div class="book-sgl">
+      <div class="book-label">预约时间</div>
+      <div class="sgl-cnr-more" @click="toggleDate()"></div>
+      <div class="pull-right input-append date" id="datetimepicker" data-date="" data-date-format="yyyy-mm-dd hh:ii">
+        <input class="span2" size="16" type="text" v-model="bookDate" readonly>
+        <span class="add-on"><i class="icon-th" style="width: 10px;height: 10px;display: inline-block;"></i></span>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="book-sgl">
+      <div class="book-label">人数</div>
+      <div id="countCnr">
+        <div class="minus" :class="parseInt(bookCount)<2?'mute':''" @click="countMinus"></div>
+        <input type="number" class="count" v-model="bookCount" @change="countChange"  readonly>
+        <div class="plus" :class="parseInt(bookCount)>98?'mute':''" @click="countPlus"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="sgl-cnr">
+    <div class="book-sgl">
+      <div class="book-label">联系人</div>
+      <input type="text" class="book-ipt" @focus='gotoCurLocation($event.currentTarget)' v-model="usr" placeholder="请填写您的姓名">
+      <div class="clearfix"></div>
+    </div>
+    <div class="book-sgl">
+      <div class="book-label">电话</div>
+      <input type="number" class="book-ipt" @focus='gotoCurLocation($event.currentTarget)' v-model="tel" placeholder="请填写您的联系电话" @change="checkCell()">
+      <div class="clearfix"></div>
+    </div>
+    <div class="book-sgl no-bottom">
+      <div class="book-label">验证</div>
+      <div class="btn-verify" v-text="verifyBtn" @click="verifyFn"></div>
+      <input type="text" class="book-ipt short" @focus='gotoCurLocation($event.currentTarget)' v-model="verify" placeholder="验证码">
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="help-danger" v-text="help"></div>
+  <div id="bookFootCnr" @click="bookConfirm"></div>
+</div>
+<div id="successCnr" v-show="success" style="display: none;" @click="toBiz"></div>
+<div id="errorCnr" v-show="error" style="display: none;" @click="toBook"></div>
+<include file="Public/footer" js="__PUBLIC__/js/bootstrap-datetimepicker.min.js,__STATIC__/js/biz_book.js"/>

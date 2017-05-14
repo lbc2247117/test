@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <title></title>
+        <link rel="icon" href="">
+        <link rel="stylesheet" href="__STATIC__/css/active/join.css">
+    </head>
+    <body>
+        <div id="cover" class="cover-cnr pos-rel"></div>
+    </div>
+    <div id="laiaCnr">
+        <div v-show="alert.show" class="alert" style="display:none;">
+            <span v-html="alert.msg"></span>
+        </div>
+        <div v-show="confirm.show" class="confirm" style="display:none;">
+            <div class="confirm-cnt">
+                <span v-html="confirm.msg"></span>
+                <div class="confirm-btn-cnr">
+                    <div class="confirm-btn" @click="confirmFn()">确定</div>
+                    <div class="confirm-btn" @click="cancelFn()">取消</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div id="join">
+            <input type="text" class="join-ipt" v-model="name" id="username" placeholder="昵称" readonly="" >
+            <input type="text" class="join-ipt" v-model="cell" id="mobile" placeholder="手机号">
+            <div id="joinBtn" @click="joinFn()"></div>
+        </div>
+    </div>
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/vue.min.js"></script>
+    <script src="__STATIC__/js/app.js"></script>
+    <script src="__STATIC__/js/active/join.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+        wx.config({
+            debug: false,
+            appId: "{$sign.appId}",
+            timestamp: {$sign.timestamp},
+            nonceStr: "{$sign.nonceStr}",
+            signature: "{$sign.signature}",
+            jsApiList: [
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ'
+            ]
+        });
+        wx.ready(function () {
+            wx.onMenuShareTimeline({
+                title: "来吖旅行|教师节活动", // 分享标题
+                link: "http://www.sda88.cn/Active/index.html", // 分享链接
+                imgUrl: "http://7xnjsm.com1.z0.glb.clouddn.com/shareImg90101.jpg", // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    $.post('shareSuccess', {type: 0}, function (rst) {
+                    });
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }});
+            wx.onMenuShareAppMessage({
+                title: "来吖旅行|教师节活动", // 分享标题
+                desc: "来吖旅行|老师很嗨，教师节活动，赢取五月天成都站演唱会门票，快来参加吧~", // 分享描述
+                link: "http://www.sda88.cn/Active/index.html", // 分享链接
+                imgUrl: "http://7xnjsm.com1.z0.glb.clouddn.com/shareImg90101.jpg", // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    $.post('shareSuccess', {type: 0}, function (rst) {
+                    });
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            wx.onMenuShareQQ({
+                title: "来吖旅行|教师节活动", // 分享标题
+                desc: "来吖旅行|老师很嗨，教师节活动，赢取五月天成都站演唱会门票，快来参加吧~", // 分享描述
+                link: "http://www.sda88.cn/Active/index.html", // 分享链接
+                imgUrl: "http://7xnjsm.com1.z0.glb.clouddn.com/shareImg90101.jpg", // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    $.post('shareSuccess', {type: 0}, function (rst) {
+                    });
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+        });
+    </script>
+</body>
+</html>  

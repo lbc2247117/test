@@ -1,0 +1,35 @@
+<include file="Public/header" title="附近" css="__STATIC__/css/iscroll.css,__STATIC__/css/nearby_place.css"/>
+<div id="scroller">
+    <div id="pullDown">
+        <span class="pull-down-icon"></span>
+        <span class="pull-down-label">下拉刷新</span>
+    </div>
+    <div id="headCnr">
+        <div id="headCnt">
+            <div id="searchCnr">
+                <input class="form-control" placeholder="搜索景区周边" v-model="searchKey" @change="search()">
+            </div>
+            <div id="navCnr">
+                <div onclick="window.location.href = 'nearby_place'" class="active">景点</div>
+                <div @click="navi('food')">美食</div>
+                <div @click="navi('hotel')">住宿</div>
+                <!-- <div @click="navi('shop')">购物</div>
+                <div @click="navi('fun')">娱乐</div> -->
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div id="bodyCnr" class="place">
+        <div v-for="(idx,obj) in dataArr" class="sgl-cnr" :style="{backgroundImage:bgImg(obj.MapMark)}" @click="jumptoplace(obj.SceLatitude,obj.SceLongitude,obj.id)">
+            <div class="dsc-cnr">
+                <div class="title text-ellipsis"><strong v-html="obj.SceName"></strong></div>
+                <div class="dsc text-ellipsis" v-html="obj.mapRemark"></div>
+            </div>
+        </div>
+    </div>
+    <div id="pullUp">
+        <span class="pull-up-icon"></span>
+        <span class="pull-up-label">上拉加载更多</span>
+    </div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/nearby_place.js"/>

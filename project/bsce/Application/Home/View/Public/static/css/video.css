@@ -1,0 +1,68 @@
+#headCnr {
+  background-color: #fff;
+}
+#headCnr .dsc {
+  font-size: 14px;
+  color: #333;
+  line-height: 20px;
+  padding: 10px;
+}
+#headCnr .count {
+  font-size: 12px;
+  color: #999;
+  padding: 0 10px 10px;
+}
+#videoCnr {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+#videoCnr > video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0;
+}
+#bodyCnr {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+}
+#bodyCnr .count {
+  font-size: 12px;
+  color: #999;
+}
+#cmtCnr {
+  padding: 10px;
+}
+.sgl {
+  position: relative;
+  margin-bottom: 10px;
+}
+.avatar {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.main {
+  float: right;
+  width: calc(100% - 50px);
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-size: 14px;
+}
+.grey {
+  font-size: 12px;
+  color: #666;
+}
+.dtl {
+  padding: 10px 0;
+}

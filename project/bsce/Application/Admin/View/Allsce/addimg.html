@@ -1,0 +1,123 @@
+<include file="Public/header" title="添加景区图片" css="__STATIC__/css/allsce.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/ueditor/third-party/webuploader/webuploader.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/ueditor/third-party/webuploader/style.css" />
+<div id="pageWrapper">
+    <div class="row">
+        <div class="col-md-6">
+            <a href="javascript:void(0);" id="showPic" class="btn btn-default">显示图片</a>
+            <div class="col-md-4">
+                <select class="form-control" id="points">
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="add_picture" class="form-group">
+        <div id="container">
+            <div id="uploader">
+                <div class="queueList">
+                    <div id="dndArea" class="placeholder">
+                        <div id="filePicker"></div>
+                    </div>
+                </div>
+                <div class="statusBar" style="display:none;">
+                    <div class="progress">
+                        <span class="text">0%</span>
+                        <span class="percentage"></span>
+                    </div>
+                    <div class="info"></div>
+                    <div class="btns">
+                        <div id="filePicker2"></div>
+                        <div class="uploadBtn">开始上传</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="__PUBLIC__/ueditor/third-party/webuploader/webuploader.js"></script>
+<script language="javascript" type="text/javascript" src="__PUBLIC__/ueditor/third-party/webuploader/upload.js"></script>
+<script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript">
+
+    var
+            uploader = false,
+            HANDLEBLOCK = false;
+    function webuploadInit() {
+        uploader = WebUploader.create({
+            pick: {
+                id: '#filePicker',
+                label: '点击选择图片'
+            },
+            formData: {
+                lonlat: -1,
+            },
+            dnd: '#dndArea',
+            paste: '#uploader',
+            swf: '__PUBLIC__/ueditor/third-party/webuploader/Uploader.swf',
+            chunked: true,
+            chunkSize: 2 * 1024 * 1024,
+            sendAsBinary: false,
+            server: 'addpicture',
+            disableGlobalDnd: true,
+            fileNumLimit: 50,
+            fileSizeLimit: 200 * 1024 * 1024, // 200 M
+            fileSingleSizeLimit: 10 * 1024 * 1024    // 50 M
+        });
+
+        uploader.addButton({
+            id: '#filePicker2',
+            label: '继续添加'
+        });
+        uploader.on('uploadBeforeSend', function (obj, data, headers) {
+            data.lonlat = $('#points').val();
+        });
+        uploader.on('uploadSuccess', function (e, obj) {
+            if (!obj.status) {
+                HANDLEBLOCK = true;
+                $('input').off('click');
+            }
+        });
+
+        if (!WebUploader.Uploader.support()) {
+            alert('Web Uploader 不支持您的浏览器！');
+            throw new Error('WebUploader does not support the browser you are using.');
+        }
+    }
+
+    function InitValue() {
+        webuploadInit();
+    }
+    window.onload = InitValue();
+
+    $(function () {
+        $('#sceimg').addClass('open');
+        $('#sceimg').parents('.dropdown').addClass('open');
+        $.post('selectScemap', {}, function (rst) {
+            rst = JSON.parse(rst);
+            if (rst.status == '1') {
+                var info = '<option value="-1">全部景点</option>';
+                rst.data.forEach(function (obj) {
+                    info += "<option value='" + obj.SceLongitude + "," + obj.SceLatitude + "'>" + obj.SceName + "</option>";
+                });
+                $('#points').html(info);
+
+            }
+            else {
+                BASE.showAlert(rst.msg, 'warning');
+            }
+        });
+        $('#showPic').click(function () {
+            window.location.href = 'image.html';
+        });
+        if (HANDLEBLOCK)
+            $('input').off('click');
+        $(document).on('click', 'input', function () {
+            if (HANDLEBLOCK) {
+                alert('抱歉，资料处于受理状态，暂时无法修改。');
+                return false;
+            }
+        });
+    });
+</script>    
+<include file="Public/footer" />

@@ -1,0 +1,81 @@
+<include file="Public/header" title="优惠券" css="__STATIC__/css/base.css,__STATIC__/css/business.css" />
+<div id="pageTitle">
+  <div class="page-title">商家管理</div>
+</div>
+<div id="pageWrapper">
+  <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+    <div class="close" @click="hideAlert">&times;</div>
+    <span v-html="alert.msg"></span>
+  </div>
+  <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+    <span>{{notice.msg}}</span>
+    <div class="close" @click="hideNotice">&times;</div>
+  </div>
+  <nav class="laia navbar navbar-default navbar-static-top pull-left" role="navigation">
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="javascript:;" @click="gotoBusiness">基本信息</a></li>
+        <li><a href="javascript:;" @click="gotoUnique">特色产品</a></li>
+        <li><a href="javascript:;" @click="gotoShortBus">其他信息</a></li>
+        <li class="active"><a href="javascript:;">优惠券管理</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="pull-right">
+    <div class="btn btn-laia" @click="add()">新增</div>
+    <div class="btn btn-danger" @click="del()">刪除</div>
+  </div>
+  <div class="clearfix"></div>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>名称</th>
+          <th>折扣</th>
+          <th>发布时间</th>
+          <th>有效期</th>
+          <th>状态</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(idx, obj) in tableData">
+          <td>
+            <div class="laia-chk">
+              <input type="checkbox" :value="obj.id" :id="obj.id" v-model="checkedArr">
+              <label :for="obj.id"></label>
+            </div>
+          </td>
+          <td v-text="obj.voucherName"></td>
+          <td v-text="obj.zk+'折'"></td>
+          <td v-text="obj.createDate"></td>
+          <td v-text="obj.useTime"></td>
+          <td v-text="obj.beyond==1?'有效期内':'已过期'"></td>
+          <td>
+            <div class="btn btn-link" @click="edit(obj.id)">编辑</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <ul v-show="showPageNav" class="pagination">
+      <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+        <a href="javascript:;">上一页</a>
+      </li>
+      <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+        <a href="javascript:;">{{obj.num}}</a>
+      </li>
+      <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+        <a href="javascript:;">下一页</a>
+      </li>
+    </ul>
+
+    <div id="pageCount" class="btn bg-laia">
+      <span>第 {{curPage}} 页 | </span>
+      <span>共 {{pageCount}} 页</span>
+    </div>
+  </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/vue.min.js,__STATIC__/js/business/bizlist.js" />

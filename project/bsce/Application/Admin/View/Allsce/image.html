@@ -1,0 +1,55 @@
+<include file="Public/header" title="景区图片" css="__STATIC__/plugin/lightbox/css/lightbox.css,__STATIC__/css/base.css,__STATIC__/css/allsce.css" />
+<div id="pageTitle">
+    <div class="page-title">景区图片</div>
+</div>
+<div id="pageWrapper">
+    <div class="col-md-6">
+        <div class="form-group ">
+            <div class="btn bg-laia" @click="addImg()">增加图片</div>
+            <div class="btn btn-danger" @click="delImg()">删除图片</div>
+            <div class="col-md-4 pull-right-nomargin">
+                <select class="form-control" v-model="selPoint" @change="getPointData()">
+                    <option v-for="(idx,obj) in points" :value="obj.SceLongitude + ','+obj.SceLatitude" v-text="obj.SceName"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="laia-row">
+        <div class="portfolio-content">
+            <ul class="cl portfolio-area">
+                <li v-for="(idx, obj) in tableImg">
+                    <div class="portfoliobox">
+                        <input class="img-chk" type="checkbox" value="{{idx}}" id="{{obj.id}}" v-model="imgCheckedArr">
+                        <label for="{{obj.id}}"></label>
+                        <div class="picbox">
+                            <a href="{{obj.picShortPath}}" data-lightbox="laia">
+                                <div style="background-image: url({{obj.picShortPath}})"></div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <ul v-show="showPageNav" class="pagination">
+            <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+                <a href="javascript:;">{{obj.num}}</a>
+            </li>
+            <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+                <a href="javascript:;">下一页</a>
+            </li>
+        </ul>
+        <div id="pageCount" class="btn bg-laia">
+            <span>第 {{curPage}} 页 | </span>
+            <span>共 {{pageCount}} 页</span>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<include file="Public/footer" js="__STATIC__/plugin/lightbox/js/lightbox.min.js,__PUBLIC__/js/vue.min.js,__STATIC__/js/allsce/image.js" />

@@ -1,0 +1,54 @@
+<include file="Public/header" title="首页设置" css="__STATIC__/plugin/lightbox/css/lightbox.css,__STATIC__/css/base.css,__STATIC__/css/allsce.css" />
+<div id="pageTitle">
+    <div class="page-title">首页设置</div>
+    <div class="pull-right btn btn-laia">保存</div>
+</div>
+<div id="pageWrapper">
+    <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+        <div class="close" @click="hideAlert">&times;</div>
+        <span v-html="alert.msg"></span>
+    </div>
+    <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+        <span>{{notice.msg}}</span>
+        <div class="close" @click="hideNotice">&times;</div>
+    </div>
+    <div class="col-md-6">
+      <div  v-for="(idx, obj) in tableData">
+        <div v-if="(obj.ishow=='true')">
+        <div class="form-group">
+            <div class="col-md-12"><strong>{{obj.TName}}</strong></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">首页显示个数</div>
+            <div class="col-md-10">
+                <select class="form-control" v-model="selPointVideo" @change="setPointVideo()">
+                    <option v-for="(idx,obj) in points" :value="obj.index" v-text="obj.val"></option>
+                </select>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">设置显示内容</div>
+            <div   v-for="(idx2, obj2) in tableInfo">
+                <div   class="col-md-3"   v-if="obj.tclass == obj2.tClass " style="text-align:center">
+                    <a    class="laia-img-link" :src="obj2.url" onerror="this.src='__PUBLIC__/img/error_5_4.png'" data-lightbox="laia-set" data-title="图片标题">
+                        <img class="laia-img" height="100" :src="obj2.url" onerror="this.src='__PUBLIC__/img/error_5_4.png'" alt=""/>
+                    </a>
+                    <div >  {{obj2.title}}</div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        </div>
+      </div>
+
+
+        <div class="form-group col-md-12">
+            <div id="btnSubmit" class="btn btn-laia pull-right">保存</div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/allsce/homepage.js" />

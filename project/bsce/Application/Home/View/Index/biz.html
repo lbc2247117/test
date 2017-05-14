@@ -1,0 +1,171 @@
+<include file="Public/header" title="商家详情" css="__PUBLIC__/css/bootstrap-datetimepicker.min.css,__PUBLIC__/css/video-js.min.css,__STATIC__/css/biz.css"/>
+<div>
+    <div id="headCnr">
+        <div id="laiaCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li v-for="(idx,obj) in banners" data-target="#laiaCarousel" data-slide-to="{{idx}}" :class="idx==0?'active':''"></li>
+            </ol>
+            <!-- <div class="carousel-caption" v-text="title"></div> -->
+            <div class="carousel-inner">
+                <div v-for="(idx,obj) in banners" class="item" :class="idx==0?'active':''" :style="{backgroundImage:bgImg(obj)}"></div>
+            </div>
+        </div>
+        <!-- <div class="input-append date" id="datetimepicker" data-date="" data-date-format="yyyy-mm-dd hh:ii">
+          <input type="text" value="" readonly>
+          <span class="add-on"><i class="icon-th"></i></span>
+        </div> -->
+        <div class="pad-0-10">
+            <div class="pad-10-0 border-b-grey">
+                <div id="bizNameCnr">
+                    <div class="title" v-text="title"></div>
+                    <div class="tag-cnr">
+                        <div v-for="obj in tagArr" class="tag-sgl">
+                            <div class="tag-text" v-text="obj"></div>
+                            <div class="tag-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="logoCnr" :style="{backgroundImage:bgImg(logo)}"></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="pad-10-0 border-b-grey to-cmt" @click="toCmt()">
+                <div class="level pull-left">
+                    <!-- <div class="stars">
+                      <div class="stars per per-70"></div>
+                    </div> -->
+                    <div class="stars" :class="parseInt(cmt.aveScore)>0?'active':''"></div>
+                    <div class="stars" :class="parseInt(cmt.aveScore)>1?'active':''"></div>
+                    <div class="stars" :class="parseInt(cmt.aveScore)>2?'active':''"></div>
+                    <div class="stars" :class="parseInt(cmt.aveScore)>3?'active':''"></div>
+                    <div class="stars" :class="parseInt(cmt.aveScore)>4?'active':''"></div>
+                </div>
+                <div class="price pull-left" v-text="'￥'+price+'/人'"></div>
+                <div class="sgl-cnr-more"></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="border-b-grey contact-icon adr" @click="toMap()">
+                <span v-text="address"></span>
+            </div>
+            <div class="contact-icon tel">
+                <div><a :href="'tel:'+cell" v-text="cell"></a></div>
+                <div><a :href="'tel:'+tel" v-text="tel"></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="sgl-cnr" v-show="tickets.length>0">
+        <div class="cnr-title border-b-grey">优惠</div>
+        <div v-for="obj in tickets" class="sgl-ticket" @click="jumptoticket(obj.id)">
+            <div class="per">
+                {{obj.zk}}<span class="cn">折</span>
+            </div>
+            <div class="name" v-text="obj.voucherName"></div>
+            <div class="date" v-text="obj.useTime"></div>
+        </div>
+    </div>
+    <div class="sgl-cnr">
+        <div class="cnr-title border-b-grey">店铺介绍</div>
+        <div class="biz-dsc">
+            <div class="color-999" v-html="regEnter(dsc)"></div>
+            <div :class="banners[0]?'biz-cover':''" :style="{backgroundImage:'url('+banners[0]+')'}"></div>
+        </div>
+    </div>
+    <div class="sgl-cnr" v-show="unique.length>0">
+        <div class="cnr-title border-b-grey">特色产品</div>
+        <div class="sgl-unique" v-for="obj in unique">
+            <div class="unique-title" v-text="'· '+obj.proName+' ·'"></div>
+            <div class="unique-dsc color-999" v-text="regEnter(obj.proRemark)"></div>
+            <img class="unique-img" v-for="src in obj.pic" :src="src">
+        </div>
+    </div>
+    <div class="sgl-cnr">
+        <div class="cnr-title border-b-grey to-cmt" @click="toCmt()">商家评价
+            <div class="sgl-cnr-more"></div>
+        </div>
+        <div class="cmt-level-cnr">
+            <div class="level-cnr">
+                <div class="level">
+                    <div class="stars" :class="parseInt(cmt.aveScore)>0?'active':''"></div>
+                    <div class="stars" :class="parseInt(cmt.aveScore)>1?'active':''"></div>
+                    <div class="stars" :class="parseInt(cmt.aveScore)>2?'active':''"></div>
+                    <div class="stars" :class="parseInt(cmt.aveScore)>3?'active':''"></div>
+                    <div class="stars" :class="parseInt(cmt.aveScore)>4?'active':''"></div>
+                </div>
+                <div class="count" v-text="cmt.allPerson+'人参与评论'"></div>
+            </div>
+            <div class="pull-right">
+                <span class="count-large" v-text="parseInt(cmt.aveScore)*2"></span>/10
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="cmt-tag-cnr">
+            <div class="sgl-cmt-tag" v-for="obj in cmt.ScoreInfor" v-text="obj.k+'('+obj.v+')'"></div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sgl-cnr">
+        <div class="cnr-title border-b-grey">周边好店</div>
+        <div class="sgl-rcmd" v-for="obj in rcmd" @click="toRcmd(obj.id)">
+            <div class="rcmd-cover" :style="{backgroundImage: bgImg(obj.backPic)}"></div>
+            <div class="rcmd-dsc">
+                <div class="rcmd-dsc-top">
+                    <div class="pull-left text-ellipsis" v-text="obj.name"></div>
+                    <div class="clearfix"></div>
+                    <div class="pull-left">
+                        <div class="stars" :class="parseInt(obj.starLev)>0?'active':''"></div>
+                        <div class="stars" :class="parseInt(obj.starLev)>1?'active':''"></div>
+                        <div class="stars" :class="parseInt(obj.starLev)>2?'active':''"></div>
+                        <div class="stars" :class="parseInt(obj.starLev)>3?'active':''"></div>
+                        <div class="stars" :class="parseInt(obj.starLev)>4?'active':''"></div>
+                    </div>
+                    <div class="score">
+                        <span v-text="parseInt(obj.starLev)*2"></span>/10
+                    </div>
+                </div>
+                <div class="rcmd-dsc-bottom text-ellipsis" v-text="'地址：'+obj.adress"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="bodyCnr">
+      <div v-for="(idx,obj) in showArr" class="sgl-show">
+        <div v-if="obj.attrType==2" v-html="obj.remark"></div>
+        <div v-if="obj.attrType==0">
+          <img :src="obj.url" width="100%">
+        </div>
+        <div v-if="obj.attrType==1">
+          <video class="video-js vjs-default-skin vjs-big-play-centered" controls webkit-playsinline playsinline preload="auto" :poster="obj.picUrl">
+            <source :src="obj.url" type="">
+          </video>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div id="atc">
+      <div v-html="colHtml"></div>
+    </div> -->
+    <div id="footCnr" @click="toBook()">
+        <div class="call" @click.stop="showCallCnr()"></div>
+        <!-- <a :href="'tel:'+tel+'#mp.weixin.qq.com'" @click.stop v-if='browser.weChat'>
+            <div class="call"></div>
+        </a>
+        <a :href="'tel:'+tel" @click.stop v-if='!browser.weChat'>
+            <div class="call"></div>
+        </a> -->
+    </div>
+    <div id="callCnr" v-show="callCnrVisible" style="display: none;">
+        <div id="callCnt">
+            <div class="main-cnt">
+                <div class="sgl-call border-b-grey">拨打电话</div>
+                <div class="sgl-call border-b-grey">
+                    <a :href="'tel:'+cell+'#mp.weixin.qq.com'" v-text="cell" v-if="browser.weChat"></a>
+                    <a :href="'tel:'+cell" v-text="cell" v-if="!browser.weChat"></a>
+                </div>
+                <div class="sgl-call">
+                    <a :href="'tel:'+tel+'#mp.weixin.qq.com'" v-text="tel" v-if="browser.weChat"></a>
+                    <a :href="'tel:'+tel" v-text="tel" v-if="!browser.weChat"></a>
+                </div>
+            </div>
+            <div id="cancelCall" @click="hideCallCnr()">取消</div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/bootstrap-datetimepicker.min.js,__PUBLIC__/js/video.min.js,__STATIC__/js/biz.js"/>

@@ -1,0 +1,83 @@
+input[placeholder],
+[placeholder],
+*[placeholder] {
+    color: #c1c1c1;
+}
+
+#headCnr {
+    background-color: #eee;
+}
+
+#searchCnr {
+    padding: 10px;
+}
+
+#searchCnr .form-control {
+    text-align: center;
+    height: 34px;
+    line-height: 24px;
+    padding: 5px 10px;
+    color: #333;
+    background-color: #fff;
+    border: none;
+}
+
+#navCnr {
+    background-color: #fff;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+#navCnr > div {
+    float: left;
+    width: 33.3333%;
+    line-height: 40px;
+    text-align: center;
+}
+
+#navCnr > div.clearfix {
+    float: none;
+    width: 100%;
+}
+
+#navCnr > div.active {
+    color: #3bc2b5;
+    border-bottom: 2px solid #3bc2b5;
+}
+
+#bodyCnr {
+    padding: 10px;
+}
+
+.sgl-cnr {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding-bottom: 50%;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dsc-cnr {
+    position: absolute;
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.title {
+    color: #fff;
+    font-size: 18px;
+    text-shadow:1px 2px rgba(0,0,0,0.5);
+}
+
+.dsc {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1;
+    color: #eee;
+    text-shadow: 1px 1px rgba(0,0,0,0.5);
+}

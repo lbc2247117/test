@@ -1,0 +1,16 @@
+<ul class="nav navbar-nav side-nav">
+    <volist name="auth.menus" id="item">
+        <li class="dropdown">
+            <a href="{$item.href}"><i class="{$item.icon}"></i> {$item.text}</a>
+        <volist name="item.childs" id="child">
+
+            <ul class="dropdown-menu">
+                <li class="nav-lvl-3" id="{$child.pageid}">
+                    <a href="{$child.href}"> <i class="{$child.icon}"></i>{$child.text}</a>
+                </li>
+            </ul>
+
+        </volist>
+        </li>
+    </volist>
+</ul>

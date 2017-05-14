@@ -1,0 +1,52 @@
+<include file="Public/header" title="移动高清直播" css="__STATIC__/css/iscroll.css,__STATIC__/css/act.css"/>
+<div id="scroller">
+    <div id="pullDown">
+        <span class="pull-down-icon"></span>
+        <span class="pull-down-label">下拉刷新</span>
+    </div>
+    <div id="headCnr">
+        <div class="head-live" :style="{backgroundImage: bgImg(dataObj.cover)};" v-show="trailerVisible">
+             <div class="head-bg">
+                <div class="content">
+                    <div class="content-text">开播倒计时:</div>
+                    <div class="Countdown">
+                        <div class="numBg" v-text='day'></div>天
+                        <div class="numBg" v-text='hour'></div>时
+                        <div class="numBg" v-text='minute'></div>分
+                        <div class="numBg" v-text='second'></div>秒
+                    </div>
+                    <div class="content-remind" @click="showSendMsg"></div>
+                    <div class='content-person'><div class='personImg'></div><div class="personCount">{{dataObj.onlineNum}}人</div></div>
+                </div>
+            </div>   
+        </div>
+        <div class="live-content" style="display: none;" v-show="liveTimeVisible">
+            <SCRIPT LANGUAGE=JavaScript>
+                var vID = "";
+                var vWidth = '100%'; //播放器宽度设置
+                var vHeight = '100%'; //播放器宽度设置
+                var vPlayer = "__PUBLIC__/ueditor/third-party/video-js/HLSPlayer.swf?v=1.5"; //播放器文件
+                var vHLSset = "__PUBLIC__/ueditor/third-party/video-js/HLS.swf";             //HLS配置
+                var vPic = '{$data.cover}';    //视频缩略图
+                var vCssurl = "__PUBLIC__/ueditor/third-party/video-js/mini.css";     //移动端CSS应用文件
+                var vHLSurl = '{$data.liveUrl}';//'http://pullhls5885cbcf.live.126.net/live/0ed68bc07f434342822e08964072361b/playlist.m3u8'
+            </SCRIPT> 
+            <script type ="text/javascript" src="__PUBLIC__/ueditor/third-party/video-js/hls.min.js?rand=3396fsa778"></script>
+        </div>
+    </div>
+    <div id="bodyCnr">
+        <div v-html="dataObj.desc"></div>
+        <div class="clearfix"></div>
+    </div>
+    <div id="mobileCnr" v-show="msgVisible" style="display: none;">
+        <div class="content">
+            <div class="text-center text-lg" id="mobiletext"><strong>手机号</strong></div>
+            <input v-model="mobile" id="mobile" type ="text" class="form-control" placeholder="请填写您的手机号" @keyup.enter='sendMsg'/>
+            <div class="btn btn-default pull-left" @click="hideSendMsg">取消</div>
+            <div class="btn btn-default pull-right" @click="sendMsg">提交</div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div id="footLiveCnr" @click="jumptoApp()"></div>
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/liveplay.js"/>

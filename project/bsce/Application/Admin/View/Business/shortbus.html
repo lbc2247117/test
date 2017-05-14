@@ -1,0 +1,30 @@
+<include file="Public/header" title="商家介绍" css="__STATIC__/css/business.css" />
+<div id="pageTitle">
+    <div class="page-title">商家管理</div>
+</div>
+<div id="pageWrapper">
+    <nav class="laia navbar navbar-default navbar-static-top pull-left" role="navigation">
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="javascript:;" @click="gotoBusiness">基本信息</a></li>
+                <li><a href="javascript:;" @click="gotoUnique">特色产品</a></li>
+                <li class="active"><a href="javascript:;">其他信息</a></li>
+                <li><a href="javascript:;" @click="gotoBiz">优惠券管理</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <div class="btn btn-laia pull-right" @click="save()">保存</div> -->
+    <div class="clearfix"></div>
+    <div  class="col-md-12">
+        <div class="form-group">
+            <div class="col-md-12">
+                <textarea name="desc" rows="100%" style="height:400px;width:100%;" id="myEditor"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row mgn-10-0"></div>
+    <div class="col-md-2 col-md-offset-5 btn btn-laia" @click="save()">保存</div>
+    <div class="clearfix"></div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/ueditor/ueditor.config.js,__PUBLIC__/ueditor/ueditor.all.js,__PUBLIC__/js/vue.min.js,__STATIC__/js/business/shortbus.js" />

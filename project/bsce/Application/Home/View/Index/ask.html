@@ -1,0 +1,7 @@
+<include file="Public/header" title="" css="__STATIC__/css/ask.css"/>
+<div id="bodyCnr">
+  <div id="help">如果您没有找到您需要的答案，可以在这里向景区提问，景区会尽快回复您。</div>
+  <textarea class="form-control" rows="8" placeholder="请在此输入您的问题" v-model="question"></textarea>
+</div>
+<div id="footCnr" @click="postData()">提交问题</div>
+<include file="Public/footer" js="__STATIC__/js/ask.js"/>

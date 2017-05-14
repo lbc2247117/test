@@ -1,0 +1,239 @@
+<include file="Public/header" title="{$share.title}" css="__PUBLIC__/css/video-js.min.css,__STATIC__/css/iscroll.css,__STATIC__/css/sce.css"/>
+<div id="scroller">
+    <div id="pullDown">
+        <span class="pull-down-icon"></span>
+        <span class="pull-down-label">下拉刷新</span>
+    </div>
+    <div id="headPic" :style="{backgroundImage:bgImg(headObj.cover)}">
+        <div class="headCover-grey"></div>
+        <div class="head-name">{{dscObj.name}}<img @click="showQR()" class="head-Qr" src="__STATIC__/css/img/icon_comiiserweima.png"></div>
+        <div class="Official"><img class="Official-img" src="__STATIC__/css/img/icon_guanfangrenzheng.png"></div>
+        <div class="sceTag"><span v-for="obj in dscObj.tags">{{obj}}</span></div>
+        <div class="entry-icon ei-weather" :style="{backgroundImage:bgImg(headObj.weathericon)}" @click="jumptoweather">
+            <div v-text="headObj.temp+'℃'"></div>
+            <div v-text="headObj.weather"></div>
+        </div>
+        <div class="entry-icon ei-video" @click="jumptovideo"></div>
+        <div class="entry-icon ei-album" @click="jumptoalbum"></div>
+        <div class="entry-icon ei-shake" @click="jumptoshake"></div>
+        <div class="entry-icon ei-live" v-show="liveVisible" @click="jumptovod"></div>
+    </div>
+    <div id="bodyCnr">
+        <div class="bodyScore">
+            <div class="bodyScore-line"  @click="jumptoscore">
+                <div class="userstar-text">游客点评</div>
+                <div class="score-left">
+                    <div class="stars active"  ></div>
+                    <div class="stars" :class="headObj.star>=1.5?(headObj.star>1.5?'active':'per'):''" ></div>
+                    <div class="stars" :class="headObj.star>=2.5?(headObj.star>2.5?'active':'per'):''" ></div>
+                    <div class="stars" :class="headObj.star>=3.5?(headObj.star>3.5?'active':'per'):''" ></div>
+                    <div class="stars" :class="headObj.star>=4.5?(headObj.star>4.5?'active':'per'):''" ></div>
+                </div>
+                <div class="score-right">
+                    <div class="score-more"  ></div>
+                    <div class="score-text">分</div>
+                    <div class="score-total">/10</div>
+                    <div class="cur-score"><strong>{{headObj.score}}</strong></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="bodydes" @click="jumptodsc">
+            <div class="dsc-dtl" v-text="dscObj.sceSynopsis"></div>
+            <div class="dsc-more"></div>
+            <div class="dsc-desc">详情介绍</div>
+        </div>
+        <div id="dscAct">
+            <div class="dsc-act-cnr"  @click="jumptorcmd">
+                <div class="icon" style="background-image: url(__STATIC__/img/rcmd.png)"></div>
+                <div class="text-center">行程推荐</div>
+            </div>
+            <div class="dsc-act-cnr"  @click="jumptonear">
+                <div class="icon" style="background-image: url(__STATIC__/img/near.png)"></div>
+                <div class="text-center">附近服务</div>
+            </div>
+            <div class="dsc-act-cnr"  @click="jumptofaq">
+                <div class="icon" style="background-image: url(__STATIC__/img/faq.png)"></div>
+                <div class="text-center">官方解答</div>
+            </div>
+            <div class="dsc-act-cnr"  @click="jumptoactlist">
+                <div class="icon" style="background-image: url(__STATIC__/img/act.png)"></div>
+                <div class="text-center">景区活动</div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div id="bodyList">
+        <div id="rcmdCnr" v-show="rcmdVisible" style="display: none;">
+            <div class="cnr-title">
+                行程推荐
+                <div class="more"  @click="jumptorcmd">更多</div>
+            </div>
+            <div v-for="(idx,obj) in rcmdArr" class="rcmd" @click="toRcmd(obj.id)">
+                <div class="mgn-b-10-title">
+                    <!--<div class="rcmd-no" v-text="rcmdNo(idx)"></div>-->
+                    <div class="pull-left">
+                        <div class="rcmd-title" v-text="obj.name"></div>
+                        <div class="rcmd-per">{{obj.percentNum}}%</div>
+                        <div class="rcmd-grey">游客会选择该路线</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="mgn-b-10">
+                    <span class="rcmd-place" v-text="obj.remark"></span>
+                </div>
+                <div class="rcmd-cover" :style="{backgroundImage:bgImg(obj.url)}"></div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div id="actCnr" v-show="actVisible" style="display: none;">
+            <div class="cnr-title">
+                景区活动
+                <div class="more" @click="jumptoactlist">更多</div>
+            </div>
+            <div v-for="(idx,objLive) in actLiveArr">
+                <div class="cover-2-1 mgn-b-10" :style="{backgroundImage:bgImg(objLive.cover)}" @click="jumptoActLive(idx)"></div>
+            </div>
+            <div v-for="obj in actArr">
+                <div class="cover-2-1 mgn-b-10" :style="{backgroundImage:bgImg(obj.url)}" @click="toAct(obj.id)"></div>
+            </div>
+        </div>
+        <div id="ticketCnr" v-show='ticketVisible' style="display: none;">
+            <div class="cnr-title">
+                票务
+                <div class="more" @click="jumptoticketlist">更多</div>
+            </div>
+            <div class="ticket-box" v-for='(idx,obj) in ticketArr'>
+                <div class="rcmd-cover" :style="{backgroundImage:bgImg(obj.pic)}" @click="toinfo(obj.id)">
+                    <div class="ticket-grey">
+                    </div>
+                    <div class="serverdesc">{{obj.remark}}</div>
+                </div>
+                <div class="round-fa">
+                    <div class="round">
+                        <div class="round-left"></div>
+                        <div class="round-right"></div>
+                        <hr style="border:1px dashed #eee;margin-top: 7px;" />
+                    </div>
+                </div>
+                <div class="rcmd-price">
+                    <div class="rcmd-name" @click="toinfo(obj.id)">{{obj.name}}</div>
+                    <div>
+                        <div style="color: #ff4d48;float: left;margin-top: 20px;">￥</div>
+                        <div style="color: #ff4d48;float: left;font-size: 20px;margin-top: 13px;"><strong>{{obj.price}}</strong></div>
+                        <div style="color: #666666;float: left;margin-top: 18px;">/份</div>
+                        <div class="buytag"></div>
+                        <div class="btn-watch pull-right" @click="toinfo(obj.id)">立即查看</div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div id="headCnr">
+
+        <div class="entry-icon ei-video" @click="jumptovideo"></div>
+        <div class="entry-icon ei-album" @click="jumptoalbum"></div>
+        <div class="entry-icon ei-shake" @click="jumptoshake"></div>
+        <div class="entry-icon ei-weather" :style="{backgroundImage:bgImg(headObj.weathericon)}" @click="jumptoweather">
+            <div v-text="headObj.temp+'℃'"></div>
+            <div v-text="headObj.weather"></div>
+        </div>
+        <div class="entry-icon ei-r"></div>
+    </div>
+    <div id="bodyCnr">
+        <div id="dscCnr">
+            <div class="pad-10">
+                <div>
+                    <div class="sce-name" v-text="dscObj.name"></div>
+                    <div class="qr-icon" @click="showQR()"></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="pad-10-0">
+                    <div class="dsc-tag" v-for="obj in dscObj.tags" v-text="obj"></div>
+                </div>
+                <div>
+                    <div class="dsc-dtl" v-text="dscObj.dsc" @click="jumptodsc"></div>
+                    <div class="dsc-more"></div>
+                </div>
+            </div>
+            <div id="dscAct">
+                <div class="dsc-act-cnr"  @click="jumptonear">
+                    <div class="icon" style="background-image: url(__STATIC__/img/near.png)"></div>
+                    <div class="text-center">附近服务</div>
+                </div>
+                <div class="dsc-act-cnr"  @click="jumptovod">
+                    <div class="icon" style="background-image: url(__STATIC__/img/live.png)"></div>
+                    <div class="text-center">美景直播</div>
+                </div>
+                <div class="dsc-act-cnr"  @click="jumptorcmd">
+                    <div class="icon" style="background-image: url(__STATIC__/img/rcmd.png)"></div>
+                    <div class="text-center">行程推荐</div>
+                </div>
+                <div class="dsc-act-cnr"  @click="jumptofaq">
+                    <div class="icon" style="background-image: url(__STATIC__/img/faq.png)"></div>
+                    <div class="text-center">官方问题</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div id="actCnr" v-show="actVisible" style="display: none;">
+            <div class="cnr-title">
+                景区活动
+                <div class="more" @click="jumptoactlist">更多</div>
+            </div>
+            <div v-for="(idx,objLive) in actLiveArr">
+                <div class="cover-2-1 mgn-b-10" :style="{backgroundImage:bgImg(objLive.cover)}" @click="jumptoActLive(idx)"></div>
+            </div>
+            <div v-for="obj in actArr">
+                <div class="cover-2-1 mgn-b-10" :style="{backgroundImage:bgImg(obj.url)}" @click="toAct(obj.id)"></div>
+            </div>
+        </div>
+        <div id="rcmdCnr" v-show="rcmdVisible" style="display: none;">
+            <div class="cnr-title">
+                行程推荐
+                <div class="more"  @click="jumptorcmd">更多</div>
+            </div>
+            <div v-for="(idx,obj) in rcmdArr" class="rcmd" @click="toRcmd(obj.id)">
+                <div class="mgn-b-10">
+                    <div class="rcmd-no" v-text="rcmdNo(idx)"></div>
+                    <div class="pull-left">
+                        <div class="rcmd-title" v-text="obj.name"></div>
+                        <div class="rcmd-per">{{obj.percentNum}}%</div>
+                        <div class="rcmd-grey">游客会选择该路线</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="mgn-b-10">
+                    <span class="rcmd-place" v-text="obj.routeWay"></span>
+                </div>
+                <div class="rcmd-cover" :style="{backgroundImage:bgImg(obj.url)}"></div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div id="liveCnr" v-show='liveVisible' style="display: none;">
+            <div class="cnr-title">
+                美景直播
+                <div class="more" @click="jumptovod">更多</div>
+            </div>
+            <div class="mgn-b-10" v-for="obj in liveArr">
+    <!-- <div class="cover-2-1 mgn-b-10" :style="{backgroundImage:bgImg(obj.videoPic)}" @click="toLive(obj.videoPath)"></div> -->
+    <!-- <video class="video-js vjs-default-skin vjs-big-play-centered" controls webkit-playsinline playsinline preload="auto" :poster="obj.videoPic">
+         <source :src="obj.videoPath" type="">
+     </video>
+     <div class="clearfix"></div>
+     <div class="live-mark"></div>
+ </div>
+</div>
+</div>-->
+</div>
+<!--<div id="maskCnr" :style="{backgroundImage:bgImg(headObj.cover)}"></div>
+<div id="headCover" :style="{backgroundImage:bgImg(headObj.cover)}"></div>-->
+
+<div v-show="qrVisible" class="qr-cnr" style="display: none;">
+    <div class="qr-cnt">
+        <div class="qr-close" @click="hideQR()">&times;</div>
+        <img :src="headObj.qr">
+    </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/video.min.js,__STATIC__/js/iscroll.js,__STATIC__/js/sce.js"/>

@@ -1,0 +1,39 @@
+.step-guide {
+  height: 50px;
+  margin: 20px 15px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(img/editstepi.png);
+}
+
+.stepi-cnr,
+.stepii-cnr {
+  width: 300px;
+}
+
+.stepi-cnr > div,
+.stepii-cnr > div {
+  margin-bottom: 10px;
+}
+
+.stepi-cnr input.form-control,
+.stepii-cnr input.form-control {
+  background-color: #eee;
+  border-radius: 0;
+  border-color: #eee;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+.stepi-cnr input.form-control:hover,
+.stepi-cnr input.form-control:focus,
+.stepii-cnr input.form-control:hover,
+.stepii-cnr input.form-control:focus {
+  border-color: #1fbba6;
+}
+
+.stepi-cnr input.form-control:focus,
+.stepii-cnr input.form-control:focus {
+  box-shadow: inset 0 0 0 #1fbba6, 0 0 2px #1fbba6;
+}

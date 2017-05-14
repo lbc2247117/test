@@ -1,0 +1,40 @@
+<meta name="format-detection" content="telephone=yes">
+
+<include file="Public/header" title="游客评分" css="__STATIC__/css/ticketinfo.css"/>
+<div id="scroller">
+    <div id="headCnr">
+        <div class="rcmd-cover" :style="{backgroundImage:bgImg(pic)}"></div>
+        <div class="ticketname">
+            {{name}}
+        </div>
+        <div class="ticketprice">
+            <div style="color: #ff4d48;float: left;margin-top: 10px;">￥</div>
+            <div style="color: #ff4d48;float: left;font-size: 20px;margin-top: 2px;"><strong>{{price}}</strong></div>
+            <div style="color: #666666;float: left;margin-top: 8px;">/份</div>
+            <div style="color: #666666;float: right;margin-top: 8px;">儿童：<span style="color: #3bc2b5">{{person2}}</span>人</div>
+            <div style="color: #666666;float: right;margin-top: 8px;margin-right: 10px;">成人：<span style="color: #3bc2b5">{{person1}}</span>人</div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div id ="bodyCnr">
+        <div class="sgl">
+            <div class ="titledsc">使用范围</div>
+            <div v-html="rangeRemark"></div>
+        </div>
+        <div class="sgl">
+            <div class="titledsc">使用规则</div>
+            <div v-html="ruleRemark"></div>
+        </div>
+        <div class="sgl">
+            <div class ="titledsc">包含项目</div>
+            <div v-html="includeRemark"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div id="footCnr">
+        <a :href="'tel:'+tel+'#mp.weixin.qq.com'" v-if='browser' @click="seekBuy"><img src="__STATIC__/css/img/telphone.png" >咨询购买</a>
+        <a :href="'tel:'+tel" v-if='!browser'  @click="seekBuy"><img src="__STATIC__/css/img/telphone.png">咨询购买</a>
+    </div>
+</div>
+
+<include file="Public/footer" js="__STATIC__/js/ticketinfo.js"/>

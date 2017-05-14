@@ -1,0 +1,168 @@
+#pageCount {
+    vertical-align: top;
+    margin: 20px 10px;
+}
+#editCnr {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+}
+#editCnt {
+    position: absolute;
+    width: 600px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -300px;
+    background-color: #fff;
+}
+#editCnt *{
+    box-sizing: border-box;
+}
+#editCnt #header {
+    width: 100%;
+    height: 30px;
+    background-color: #3bc2b5;
+    color: #fff;
+}
+#editCnt #editClose {
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0 5px;
+    cursor: pointer;
+}
+#editCnt #avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+}
+#editCnt table {
+    width: 100%;
+    padding: 5px;
+}
+#editCnt td {
+    padding: 3px 10px;
+    text-align: center;
+}
+#editCnt input.form-control {
+}
+#editCnt #coverCnr {
+    background-color: #eee;
+    padding: 5px;
+    margin: 5px 0;
+}
+#editCnt #coverCnr .help {
+    font-size: 12px;
+    color: #ccc;
+}
+#editCnt #actionCnr {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+}
+
+#msgCnr {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+}
+#msgCnt {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -300px;
+    background-color: #fff;
+}
+#msgCnt *{
+    box-sizing: border-box;
+}
+#msgCnt #msgHeader {
+    width: 100%;
+    height: 30px;
+    background-color: #3bc2b5;
+    color: #fff;
+}
+#msgCnt #msgClose {
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0 5px;
+    cursor: pointer;
+}
+#msgCnt #msgActionCnr {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+}
+
+#pwdCnr {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+}
+#pwdCnt {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -200px;
+    background-color: #fff;
+}
+#pwdCnt *{
+    box-sizing: border-box;
+}
+#pwdCnt #pwdHeader {
+    width: 100%;
+    height: 30px;
+    background-color: #3bc2b5;
+    color: #fff;
+}
+#pwdCnt #pwdClose {
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0 5px;
+    cursor: pointer;
+}
+#pwdCnt #pwdActionCnr {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+}
+.must{
+    color: red;
+    margin-left: 5px
+}
+.pull-right{
+    margin-left: 5px; 
+    margin-right: 5px;
+}

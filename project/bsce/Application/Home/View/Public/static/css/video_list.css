@@ -1,0 +1,68 @@
+.video-list {
+    padding: 10px;
+}
+.sgl-cnr {
+    position: relative;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    width:100%;
+}
+.dsc {
+    padding: 10px;
+}
+.title {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 2px;
+}
+.grey {
+    color: #999;
+    font-size: 12px;
+    line-height: 20px;
+}
+.sgl-cnr video {
+    float: right;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0;
+}
+.live-mark {
+    background-image: url(../../static/img/livemark.png);
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 15%;
+    max-width: 50px;
+    height: 0;
+    padding-bottom: 6%;
+    z-index: 9;
+}
+.videotag{
+    border-radius: 4px;
+    background: #3bc2b5;
+    color: #fff;
+    padding: 3px;
+}
+#navCnr {
+    background-color: #fff;
+    border-bottom: 1px solid #d7d7d7; 
+}
+#navCnr > div {
+    float: left;
+    width: 25%;
+    line-height: 40px;
+    text-align: center;
+}
+#navCnr > div.clearfix {
+    float: none;
+    width: 100%;
+}
+#navCnr > div.active {
+    color: #3bc2b5;
+    border-bottom: 3px solid #3bc2b5;
+}

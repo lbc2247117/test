@@ -1,0 +1,81 @@
+<footer class="main-footer sticky footer-type-1">
+    <div class="foot-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-9">
+                    <div class="foot-nav text-left">
+                        <a href="/Home/Index/index.html" >网站首页</a>|<a href="/Home/Index/product.html" >产品展示</a>|<a href="/Home/Index/factory.html">走进工厂</a>|<a href="/Home/Index/tell.html" >联系我们</a>|<a href="/Home/Index/about.html">关于我们</a>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-3 hidden-xs">
+                    <div class="go-up"> <a href="#" rel="go-top"> <i class="fa-angle-up"></i> <span class="title text-big">返回顶部</span> </a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-inner">
+        <div class="container">
+            <div class="row hidden-xs">
+                <div class="col-xs-12 col-sm-9 col-md-10">
+                    <div class="row padding-large-top">
+                        <div class="col-xs-5 col-sm-7">
+                            <div class="footer-text ">
+                                <p>{$setting.company} 版权所有 2016-2017</p>
+                                <p>{$setting.address}</p>
+                                <p>电话：{$setting.mobile}  QQ:{$setting.QQ}  </p><div id="metinfo_91mb_Powered"></div><p></p>
+
+                                <div class="powered_by_metinfo">Powered&nbsp;by&nbsp;<a href="javascript:void(0);">QiMeng&nbsp;</a> ©2010-2016&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-5 borderL padding-large-left">
+                            <p class="title text-bold text-large ">{$setting.tell}</p>
+                            <p class="title margin-little-top ">周一至周日（9:00 - 22:00）</p>
+                            <a href="http://wpa.qq.com/msgrd?v=3&uin={$setting.QQ}&site=qq&menu=yes" class="btn btn-warning btn-lg margin-top " role="button"> <i class="fa-qq"></i> QQ在线服务 </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-2">
+                    <div class="wxcon pull-right">
+                        <p class=""><img src="{$setting.qr}" width="125" height="125">
+                        </p></div>
+                </div>
+            </div>
+            <div class="row padding-big-top padding-big-bottom visible-xs padding-left">
+                <div class="col-xs-12">
+                    <p class="title text-bold text-large  hidden-xs">{$setting.tell}</p>
+                    <p class="title margin-little-top  hidden-xs">周一至周日（9:00 - 22:00）</p>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin={$setting.QQ}&site=qq&menu=yes" class="btn btn-warning btn-lg margin-top  hidden-xs" role="button"> <i class="fa-qq"></i> QQ在线服务</a>
+                    <p class="margin-little-top "> </p> 
+                    <p>{$setting.company} 版权所有 2016-2017</p>
+                    <p>{$setting.address} </p>
+                    <p>电话：{$setting.mobile}  QQ:{$setting.QQ}  </p><div id="metinfo_91mb_Powered"></div><p></p>
+                    <p></p>
+                    <div class="powered_by_metinfo">Powered&nbsp;by&nbsp;<a href="javascript:void(0);">QiMeng&nbsp;</a> ©20010-2017&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+</div>
+<!-- JavaScript -->
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/js/vue.min.js"></script>
+<script src="__STATIC__/js/base.js"></script>
+<?php $str = "[js]"; $arr = explode(",", $str); ?>
+<foreach name="arr" item="src">
+    <script src="{$src}"></script>
+</foreach>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e2be48a47ce95bd707fb6b163e090a68";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>

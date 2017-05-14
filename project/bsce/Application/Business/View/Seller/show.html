@@ -1,0 +1,27 @@
+<include file="Public/header" title="商家秀" css="__STATIC__/css/base.css,__STATIC__/css/seller.css" />
+<div id="pageTitle">
+  <div class="page-title">商家秀</div>
+  <div class="pull-right">
+    <div id="previewBtn" class="btn btn-default" onclick="CNT.showView()">预览</div>
+    <div id="saveBtn" class="btn btn-laia">保存</div>
+  </div>
+</div>
+<div id="pageWrapper">
+  <form id="laiaForm" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <textarea style="height:600px;width:100%;" id="laiaEditor" v-model="rule" name="msg"></textarea>
+  </form>
+
+  <div id="previewMask" v-show="previewMaskVisible" style="display: none;">
+    <div class="pull-right btn-close" @click="hideView">&times;</div>
+    <div id="previewCnr">
+      <div id="previewCnt">
+        <div id="slideCnr">
+          <div id="slideCnt" @mouseenter="mouseenter" @mouseleave="mouseleave">
+            <div v-html="mobileView"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/jquery.form.js,__PUBLIC__/ueditor/ueditor.config.js,__PUBLIC__/ueditor/ueditor.all.js,__PUBLIC__/js/uploadPreview.js,__PUBLIC__/ueditor/third-party/datapacker/WdatePicker.js,__STATIC__/js/seller/show.js"/>

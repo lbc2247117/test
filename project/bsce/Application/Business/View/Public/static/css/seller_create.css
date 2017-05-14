@@ -1,0 +1,155 @@
+.route-cnr {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.route-cnt {
+  position: absolute;
+  width: 40%;
+  height: 90%;
+  left: 30%;
+  bottom: 10%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(img/guide.png);
+}
+
+.route-btn {
+  position: absolute;
+  width: 20%;
+  height: 0;
+  padding-bottom: 8%;
+  bottom: 10%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.route-btn.jump {
+  background-image: url(img/stay.png);
+  left: 20%;
+}
+
+.route-btn.stay {
+  background-image: url(img/create.png);
+  right: 20%;
+}
+
+.step-guide {
+  height: 50px;
+  margin: 20px 15px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(img/createstepi.png);
+}
+
+.stepi-cnr .title {
+  background-color: #eee;
+  padding: 10px 15px;
+  color: #333;
+}
+
+.stepi-cnr .help {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.stepi-cnr .img-cnr {
+  padding: 15px;
+}
+
+.stepi-cnr .img-cnt {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(img/uimg.png);
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.stepi-cnr .img-cnt .edit {
+  display: none;
+  cursor: pointer;
+  background-image: url(img/edit.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.stepi-cnr .img-cnt.filled:hover .edit {
+  display: block;
+}
+
+.stepi-cnr .id-help {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: bottom;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(img/help.png);
+  cursor: pointer;
+}
+
+.stepi-cnr .id-help .id-ex {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 861.6px;
+  height: 314.4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(img/idcard.jpg);
+}
+
+.stepi-cnr .id-help:hover .id-ex {
+  display: block;
+}
+
+.stepii-cnr {
+  width: 300px;
+}
+
+.stepii-cnr > div {
+  margin-bottom: 10px;
+}
+
+.stepii-cnr input.form-control {
+  background-color: #eee;
+  border-radius: 0;
+  border-color: #eee;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+.stepii-cnr input.form-control:hover,
+.stepii-cnr input.form-control:focus {
+  border-color: #1fbba6;
+}
+
+.stepii-cnr input.form-control:focus {
+  box-shadow: inset 0 0 0 #1fbba6, 0 0 2px #1fbba6;
+}

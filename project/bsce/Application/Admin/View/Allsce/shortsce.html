@@ -1,0 +1,200 @@
+<include file="Public/header" title="景区简介" css="__STATIC__/css/base.css,__STATIC__/css/allsce.css" />
+<div id="pageTitle">
+    <div class="page-title">景区简介</div>
+    <div class="pull-right btn btn-laia" @click="saveSceRemark()">保存</div>
+</div>
+<div id="pageWrapper">
+
+    <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+        <div class="close" @click="hideAlert">&times;</div>
+        <span v-html="alert.msg"></span>
+    </div>
+    <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+        <span>{{notice.msg}}</span>
+        <div class="close" @click="hideNotice">&times;</div>
+    </div>
+    <div class="clearfix"></div>
+    <form id="editform"  method="post" enctype="multipart/form-data">
+        <input type="hidden" name="Longitude" id="Longitude" v-model="Longitude">
+        <input type="hidden" name="Latitude" id="Latitude" v-model="Latitude">
+        <div class="col-md-7">
+            <div class="form-group"  >
+                <strong>景区导览图：</strong>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6">
+                    <img @click="uploadGuidePicBth" id ="sceGuidePicView"  class="upload-review album-cover"  title="请上传视频简介封面，格式为jpg、png、gif，大小不超过1M。" src="{{dataObj.guidePic}}"  style="cursor: pointer;" width="100%" onerror="this.src='/bsce/Public/img/error_scepic.png'"/>
+                    请上传景区导览图，格式为JPG/PNG/GIF，大小不超过1M
+                    <input type="file" name="guidePic" id="uploadGuidePic" accept=".png,.jepg,.jpg,.gif,.bmp" hidden multiple>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group"  >
+                <strong>景区简介：</strong>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group"  >
+                <div class="col-md-6">
+                    <video id="sceRemarkVideoView" src="{{dataObj.sceRemarkVideoUrl}}" title="请上传视频简介，格式为MP4，大小不超过200MB" poster="{{dataObj.sceRemarkVideoPic}}" controls preload="none" width="100%" onerror="this.poster='/bsce/Public/img/error_scepic.png'"></video>
+                    <input type ="file" name="sceRemarkVideo" id="uploadSceRemarkVideo" accept=".mp4" hidden multiple>
+                    请上传视频简介，大小不超过200M
+                    <div class="clearfix"></div>
+                    <div @click="uploadSceRemarkVideoBtn" class="btn btn-default">修改</div>
+                </div>
+                <div class="col-md-6">
+                    <img @click="uploadSceRemarkCoverBtn" id ="sceRemarkCoverView"  class="upload-review album-cover"  title="请上传视频简介封面，格式为jpg、png、gif，大小不超过1M。" src="{{dataObj.sceRemarkVideoPic}}"  style="cursor: pointer;" width="100%" onerror="this.src='/bsce/Public/img/error_scepic.png'"/>
+                    请上传视频封面，格式为JPG/PNG/GIF，大小不超过1M
+
+                    <input type="file" name="sceRemarkCover" id="uploadSceRemarkCover" accept=".png,.jepg,.jpg,.gif,.bmp" hidden multiple>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 laia-ctrl-cnr">
+                    <textarea name='sceRemark' type="text" class="form-control laia-ctrl laia-area" placeholder="景区简介" style="height: 150px;" maxlength="200" v-model="dataObj.sceRemark"></textarea>
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>200</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group" >
+                <strong>景区交通：</strong>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 laia-ctrl-cnr">
+                    <textarea name='otherremark' type="text" class="form-control laia-ctrl laia-area" maxlength="500" placeholder="景区交通"  style="height: 150px" v-model="dataObj.otherremark"></textarea>
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>500</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group" >
+                <strong>特色介绍：</strong>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group"  >
+                <div class="col-md-6">
+                    <video  id="specRemarkVideoView" src="{{dataObj.specVideoUrl}}" title="请上传特色介绍视频，格式为MP4，大小不超过200MB" poster="{{dataObj.specVideoPic}}" controls preload="none" width="100%"  onerror="this.poster='/bsce/Public/img/error_scepic.png'"></video>
+                    <input type ="file" name="specRemarkVideo" id="uploadSpecRemarkVideo" accept=".mp4" hidden multiple>
+                    请上传特色介绍视频，大小不超过200M
+                    <div class="clearfix"></div>
+                    <div @click="uploadSpecRemarkVideoBtn" class="btn btn-default">修改</div>
+                </div>
+                <div class="col-md-6">
+                    <img @click="uploadSpecRemarkCoverBtn" id ="specRemarkCoverView"  class="upload-review album-cover"  title="请上传特色介绍视频封面，格式为jpg、png、gif，大小不超过1M。" src="{{dataObj.specVideoPic}}"  style="cursor: pointer;" width="100%" onerror="this.src='/bsce/Public/img/error_scepic.png'"/>
+                    <input type="file" name="specRemarkCover" id="uploadSpecRemarkCover" accept=".png,.jepg,.jpg,.gif,.bmp" hidden multiple>
+                    请上传特色介绍封面，格式为JPG/PNG/GIF，大小不超过1M
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 laia-ctrl-cnr">
+                    <textarea type="text" name='specRemark' class="form-control laia-ctrl laia-area" placeholder="景区特色" style="height: 150px;" maxlength="500" v-model="dataObj.specRemark"></textarea>
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>500</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <strong>节日庆典：</strong>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="btn btn-default pull-right" @click="addFestival">添加节目</div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>节目名称</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for ="(idx,obj) in tableData">
+                            <td>{{obj.name}}</td>
+                            <td>
+                                <div class="btn btn-link" @click='showEdit(idx)'>编辑</div>
+                                <div class="btn btn-link" @click="delFestival(idx)">删除</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <strong>注意事项：</strong>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 laia-ctrl-cnr">
+                    <textarea type="text" name='carefulContent' class="form-control laia-area laia-ctrl"  maxlength="500" v-model="dataObj.carefulContent" placeholder="注意事项" style="height: 150px"></textarea>
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>500</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group col-md-12">
+                <div id="btnSubmit" class="btn btn-laia pull-right" @click="saveSceRemark()">保存</div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </form>
+    <div class="laia-mask" v-show="editCnrVisible" style="display: none;">
+        <div class="laia-edit-cnr">
+            <div class="edit-icon"></div>
+            <div class="edit-cnt">
+                <div class="cnt-body">
+                    <form id="festivalEditForm"  method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="id" id="id" v-model="editVideoObj.id">
+                        <div id="videoCnr" class="pull-left">
+                            <video id="festivalVideoView" v-show='videoVisible' :src="editVideoObj.videoUrl" :poster="editVideoObj.videoPic" controls preload="none" width="390" height="390" onerror="this.poster='/operate/Public/img/error.png'"></video>
+                            <img width='390' src='/operate/Public/img/error.png' v-show='imgVisible'>
+                            <input type="file" name="festivalVideo" id="festivalVideoFile" accept=".mp4" hidden multiple>
+                            <div class="btn btn-default pull-left btn-sm" id="upFestivalVideoBtn">修改</div><span><strong class="star">●</strong>视频小于200MB</span>
+                        </div>
+                        <div id="ContentCnr" class="pull-left">
+                            <div class="form-group">
+                                <div class="col-md-2">名称</div>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" placeholder="节目名称"  name="name" v-model="editVideoObj.name">
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-2">描述</div>
+                                <div class="col-md-10 laia-ctrl-cnr">
+                                    <textarea style="height: 150px;" maxlength="500" placeholder="节目描述" class="form-control laia-ctrl laia-area" name="remark" v-model="editVideoObj.remark"></textarea>
+                                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>500</span></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-2">封面</div>
+                                <div class="col-md-10">
+                                    <img id="festivalCover" @click="festivalCoverBtn" class="upload-review album-cover" style="cursor: pointer;" title="视频封面" :src="editVideoObj.videoPic"  width="295" onerror="this.src='/bsce/Public/img/error_scepic.png'"/>
+                                    <input type="file" name="festivalCover" id="festivalCoverFile" accept=".png,.jepg,.jpg,.gif,.bmp" hidden multiple>
+                                    <!-- <div id='upCoverBtn' class="btn btn-default btn-sm pull-right">修改</div>
+                                     <div  class="btn btn-laia btn-sm  pull-right" @click="cutImg">截图</div>-->
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-1"><strong class="star">●</strong></div>
+                                <div class="col-md-11">请选择图片大小为1280px*720px，小于1MB，格式为jpg/png/gif</div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="cnt-foot">
+                    <div id="btnSubmit" @click="saveFestival" class="pull-right btn btn-laia">保存</div>
+                    <div class="pull-right btn btn-default" @click="hideEdit()">取消</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/uploadPreview.js,__PUBLIC__/js/jquery.form.js,__STATIC__/js/allsce/shortsce.js" />

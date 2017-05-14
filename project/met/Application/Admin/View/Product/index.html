@@ -1,0 +1,153 @@
+<include file="Public/header" title="产品款式管理" css="__STATIC__/css/base.css" />
+<div id="pageTitle">
+    <div class="page-title">产品款式管理</div>
+</div>
+<div id="pageWrapper">
+    <div id="searchCnr">
+        <div class="col-md-2">
+            <div class="input-group">
+                <input id='keyWord' type="text" class="form-control" placeholder="请输入款式名称" v-model="keyWord" @change="searchFn">
+                <div class="input-group-addon bg-laia" @click="searchFn">
+                    <span class="glyphicon glyphicon-search" ></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <select class="form-control" v-model="type" @change="searchFn">
+                <option v-for="(idx,obj) in types" :value="obj.key" v-text="obj.val"></option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <select class="form-control" v-model="status" @change="searchFn">
+                <option v-for="(idx,obj) in statuses" :value="obj.key" v-text="obj.val"></option>
+            </select>
+        </div>
+        <div class="pull-right">
+            <div class="btn btn-laia" @click="showEdit(-1)"  >添加</div>
+            <div class="btn btn-default" @click="delBanner()">删除</div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>产品ID</th>
+                    <th>名称</th>
+                    <th>车型</th>
+                    <th>图片</th>
+                    <th>价格</th>
+                    <th>排序</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(idx, obj) in tableData">
+                    <td>
+                        <div class="laia-chk">
+                            <input type="checkbox" :value="obj.id" :id="obj.id" v-model="checkedArr">
+                            <label :for="obj.id"></label>
+                        </div>
+                    </td>
+                    <td>{{obj.id}}</td>
+                    <td>{{obj.name}}</td>
+                    <td>{{obj.type}}</td>
+                    <td>
+                        <img height="100" :src="obj.goodPic">
+                    </td>
+                    <td>{{obj.price}}</td>
+                    <td>
+                        {{obj.sort}}
+                    </td>
+                    <td v-if="obj.status==0">下线</td>
+                    <td v-if="obj.status==1">上线</td>
+                    <td>
+                        <div class="btn btn-link" @click="showSize(obj.id)">查看型号</div>
+                        <div class="btn btn-link" @click="showEdit(idx)">编辑</div>
+                        <div v-if="obj.status==0" class="btn btn-link" @click="upProduct(obj.id)">上架</div>
+                        <div v-if="obj.status==1" class="btn btn-link" @click="downProduct(obj.id)">下架</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <ul v-show="showPageNav" class="pagination">
+            <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+                <a href="javascript:;">{{obj.num}}</a>
+            </li>
+            <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+                <a href="javascript:;">下一页</a>
+            </li>
+        </ul>
+
+        <div id="pageCount" class="btn bg-laia">
+            <span>第 {{curPage}} 页 | </span>
+            <span>共 {{pageCount}} 页</span>
+        </div>
+    </div>
+    <div class="laia-mask" style='display: none' v-show='editVisible'>
+        <div class="laia-edit-cnr">
+            <div class="edit-icon"></div>
+            <div class="edit-cnt">
+                <div class="cnt-body">
+                    <form id="editform" method="post" enctype="multipart/form-data" class="form-horizontal">
+                        <input type="hidden" name="id" v-model="editobj.id">
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">类型</label>
+                            <div class="col-sm-10">
+                                <select  name="type" class="form-control" v-model="editobj.type">
+                                    <option v-for="obj in editTypes" :value="obj.name" v-html="obj.name"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="name" class="form-control" v-model="editobj.name" placeholder="名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">图片</label>
+                            <div class="col-sm-10">
+                                <img  id="goodPicView" :src="editobj.goodPic" width="300" onerror="this.src='__PUBLIC__/img/error_scepic.png'" style="cursor: pointer;">
+                                <label class="lable-aaa"><span class="red">●</span> 请上传1000px*600px比例的图片</label>
+                                <input type="file" hidden="hidden" name="goodPic" id="goodPic">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">价格</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="price" class="form-control" v-model="editobj.price" placeholder="价格区间">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">序号</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="sort" class="form-control" v-model="editobj.sort" placeholder="只能是整数，数字越小越靠前">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">描述</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" name="remark" class="form-control" v-model="editobj.remark" placeholder="描述"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="clearfix"></div>
+                    <div class="pull-right">
+                        <div class="btn btn-laia btn-sm" @click="saveData">保存</div>
+                        <div class="btn btn-default  btn-sm" @click="hideEdit">关闭</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/uploadPreview.js,__PUBLIC__/js/vue.min.js,__PUBLIC__/js/jquery.form.js,__STATIC__/js/product/index.js" />

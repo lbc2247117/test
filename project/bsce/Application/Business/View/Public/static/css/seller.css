@@ -1,0 +1,149 @@
+.title {
+  background-color: #eee;
+  padding: 10px 15px;
+  color: #333;
+}
+
+.dsc-cnr,
+.cover-cnr {
+  padding: 15px;
+}
+
+.mgn-b-30 {
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 40px;
+  color: #999;
+}
+
+.portfolio-area {
+  margin: 0;
+}
+
+.portfolio-area li {
+  position: relative;
+  width: calc(20% - 20px);
+  height: 0;
+  padding-bottom: calc(10% - 10px);
+  margin: 10px;
+}
+
+.portfolio-area li .add-cnr {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30% auto;
+  background-image: url(img/add.png);
+  border-radius: 5px;
+  border: 2px dashed #ccc;
+  cursor: pointer;
+}
+
+.portfolio-area li .picbox > a > div {
+  background-size: cover;
+}
+
+.portfolio-area li .portfoliobox .picbox {
+  border-color: #fff;
+}
+
+.portfoliobox .picbox .edit {
+  display: none;
+  cursor: pointer;
+  background-image: url(img/remove.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.portfoliobox:hover .picbox .edit {
+  display: block;
+}
+
+#previewMask {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#previewMask .btn-close {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 40px;
+  text-align: center;
+  color: #eee;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+#previewMask .btn-close:hover {
+  color: #fff;
+}
+
+#previewCnr {
+  width: 400px;
+  height: 640px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -320px;
+  margin-left: -200px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#previewCnt {
+  width: 280px;
+  height: 581px;
+  margin: 30px auto 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(img/mobile.png);
+  padding: 71px 22px 84px 20px;
+}
+
+#slideCnr {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+#slideCnt {
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+}
+
+#slideCnt * {
+  max-width: 100%;
+}
+
+#slideCnt img {
+  border-radius: 6px;
+}
+
+#slideCnt video {
+  width: 100%;
+  height: auto;
+  background-color: #000;
+}

@@ -1,0 +1,112 @@
+<div id="editPassDiv" class="laia-mask" style='display: none'>
+    <div class="laia-edit-cnr">
+        <div class="edit-icon"></div>
+        <div class="edit-cnt">
+            <div class="cnt-body">
+                <form id="passform" method="post" enctype="multipart/form-data" class="form-horizontal">
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">旧密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" id="oldPass" class="form-control"  placeholder="旧密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">新密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" id="newPass" class="form-control"  placeholder="新密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">重复密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" id="rePass"  class="form-control"  placeholder="重复密码">
+                        </div>
+                    </div>
+                </form>
+                <div class="clearfix"></div>
+                <div class="pull-right">
+                    <div class="btn btn-laia btn-sm" id="saveBtn">保存</div>
+                    <div class="btn btn-default  btn-sm" id="hideBtn">关闭</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id='loading' style='display: none'>
+    <div>
+        <img src="__PUBLIC__/img/loading.gif" align=""><span>&nbsp;&nbsp;loading...</span>
+    </div>
+</div>
+<div id="footer">© 2016 版权归启梦网络所有</div>
+</div>
+<!-- JavaScript -->
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/js/vue.min.js"></script>
+<script src="__PUBLIC__/js/md5.js"></script>
+<script src="__STATIC__/js/base.js"></script>
+<?php $str = "[js]"; $arr = explode(",", $str); ?>
+<foreach name="arr" item="src">
+    <script src="{$src}"></script>
+</foreach>
+<script>
+    $(function () {
+        $('#editPass').click(function () {
+            $('#editPassDiv').show();
+        });
+        $('#hideBtn').click(function () {
+            $('#editPassDiv').hide();
+        });
+        $('#saveBtn').click(function () {
+            var _oldPass = $('#oldPass').val();
+            _oldPass = _oldPass.trim();
+            var _newPass = $('#newPass').val();
+            _newPass = _newPass.trim();
+            var _rePass = $('#rePass').val();
+            _rePass = _rePass.trim();
+            if (_oldPass == '') {
+                BASE.showAlert('请输入旧密码');
+                return false;
+            }
+            if (_newPass == '') {
+                BASE.showAlert('请输入新密码');
+                return false;
+            }
+            if (_rePass == '') {
+                BASE.showAlert('请输入确认密码');
+                return false;
+            }
+            if (_newPass !== _rePass) {
+                BASE.showAlert('两次密码输入不一致');
+                return false;
+            }
+            if (_oldPass == _newPass) {
+                BASE.showAlert('新密码不能和旧密码一致');
+                return false;
+            }
+            $('#passform').ajaxSubmit({
+                url: '/Admin/Index/editPass',
+                data: {
+                    oldPass: hex_md5(_oldPass),
+                    newPass: hex_md5(_newPass),
+                },
+                beforeSubmit: function () {
+                    $('#loading').show();
+                },
+                success: function (rst) {
+                    $('#loading').hide();
+                    rst = JSON.parse(rst);
+                    if (rst.status != 1) {
+                        BASE.showAlert(rst.msg);
+                        return false;
+                    }
+                    BASE.showAlert(rst.msg);
+                    $('#editPassDiv').hide();
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

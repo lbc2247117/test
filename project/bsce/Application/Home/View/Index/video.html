@@ -1,0 +1,38 @@
+<include file="Public/header" title="景点详情" css="__PUBLIC__/css/video-js.min.css,__STATIC__/css/video.css"/>
+<div id="headCnr">
+  <div id="videoCnr">
+    <video class="video-js vjs-default-skin vjs-big-play-centered" controls webkit-playsinline playsinline preload="auto" :poster="headObj.cover">
+      <source :src="headObj.src" type="">
+    </video>
+  </div>
+  <div class="dsc" v-text="headObj.title"></div>
+  <div class="count">
+    <div class="pull-right">
+      <span v-text="headObj.count"></span>
+      <span>次播放</span>
+    </div>
+    <div class="pull-left" v-text="headObj.time"></div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<div id="bodyCnr">
+  <div class="count">
+    <span>评论</span>
+    <span>256</span>
+  </div>
+  <div id="cmtCnr">
+    <div class="sgl" v-for="obj in cmtArr">
+      <div class="avatar" :style="{backgroundImage:bgImg(obj.avatar)}"></div>
+      <div class="main">
+        <div class="grey">
+          <div class="pull-left" v-text="obj.name"></div>
+          <div class="pull-right" v-text="obj.time"></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="dtl" v-text="obj.dtl"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/video.min.js,__STATIC__/js/video.js"/>

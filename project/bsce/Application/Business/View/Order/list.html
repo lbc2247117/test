@@ -1,0 +1,71 @@
+<include file="Public/header" title="订单管理" css="__STATIC__/css/base.css,__STATIC__/css/order.css" />
+<div id="pageTitle">
+  <div class="page-title">订单列表</div>
+</div>
+<div id="pageWrapper">
+  <div id="searchCnr">
+    <div class="col-md-2">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="联系人" v-model="searchKey" @keyup.enter="getData()">
+        <div class="input-group-addon bg-laia" @click="getData()">
+          <span class="glyphicon glyphicon-search" ></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <select v-model="searchType" class="form-control" @change="getData()">
+        <option v-for="obj in searchTypeArr" :value="obj.id" v-text="obj.name"></option>
+      </select>
+    </div>
+    <div class="pull-right">
+      <div class="btn btn-danger" @click="del()">删除</div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>预订时间</th>
+        <th>人数</th>
+        <th>联系人</th>
+        <th>电话</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="(idx, obj) in tableData">
+        <td>
+          <div class="laia-chk">
+            <input type="checkbox" :value="obj.id" :id="obj.id" v-model="checkedArr">
+            <label :for="obj.id"></label>
+          </div>
+        </td>
+
+        <td v-text="obj.createDate"></td>
+        <td v-text="obj.personNum"></td>
+        <td v-text="obj.name"></td>
+        <td v-text="obj.tel"></td>
+        <td>
+          <span v-if="obj.orderState=='1'">待处理</span>
+          <span v-if="obj.orderState=='2'">已接单</span>
+          <span v-if="obj.orderState=='3'">已拒绝</span>
+        </td>
+        <td v-if="obj.orderState=='1'">
+          <div class="btn btn-link" @click="accept(idx)">接单</div>
+          <div class="btn btn-link" @click="refuse(idx)">拒绝</div>
+        </td>
+        <td v-if="obj.orderState=='2'">已接单</td>
+        <td v-if="obj.orderState=='3'">已拒绝</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <div v-show="showPageNav" id="pageCount" class="btn bg-laia">
+      <span>第 {{curPage}} 页 | </span>
+      <span>共 {{pageCount}} 页</span>
+    </div>
+  </div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/order/list.js" />

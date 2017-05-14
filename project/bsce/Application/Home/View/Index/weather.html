@@ -1,0 +1,44 @@
+<include file="Public/header" title="天气详情" css="__STATIC__/css/weather.css"/>
+<div id="maskCnr" :style="{backgroundImage:bgImg(dataObj.cover)}"></div>
+<div id="mainCnr">
+  <div id="mainCnt">
+    <div id="middleCnr">
+      <div>
+        <div id="middleNum" v-text="dataObj.curtemp">24</div>
+        <div class="pull-left">
+          <div id="middleOc">&#8451;</div>
+          <div id="middleZhcn" v-html="getZhcn(dataObj.weather)">{{dataObj.type}}</div>
+        </div>
+        <div id="middleIcon" :style="{backgroundImage:'url('+dataObj.weather+')'}"></div>
+        <div class="clearfix"></div>
+      </div>
+      <div id="middleDtl">
+        <div v-html="dataObj.temp">24&#8451;-30&#8451;</div>
+        <div>
+          <span>风向 &nbsp;</span>
+          <span v-text="dataObj.wind"></span>
+        </div>
+        <div>
+          <span>风力 &nbsp;</span>
+          <span v-text="dataObj.windlevel"></span>
+        </div>
+        <div>
+          <span>穿衣指数 &nbsp;</span>
+          <span class="cloth-dsc" v-text="dataObj.cloth"></span>
+        </div>
+      </div>
+    </div>
+    <div id="bottomCnr">
+      <div id="bottom-title">未来4日</div>
+      <div id="bottom-cnt">
+        <div class="bottom-sgl" v-for="obj in dataObj.futurearr">
+          <div class="sgl-date" v-text="obj.date"></div>
+          <div class="sgl-icon" :style="{backgroundImage:'url('+obj.weatherPic+')'}"></div>
+          <div class="sgl-temp" v-html="obj.lowtemp+'/'+obj.hightemp" ></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/weather.js"/>

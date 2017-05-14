@@ -1,0 +1,115 @@
+<include file="Public/header" title="移动高清直播" css="__STATIC__/css/base.css,__STATIC__/css/allsce.css,__STATIC__/css/activity.css" />
+<div id="pageTitle">
+    <div class="page-title">移动高清直播</div>
+</div>
+<div id="pageWrapper">
+    <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+        <div class="close" @click="hideAlert">&times;</div>
+        <span v-html="alert.msg"></span>
+    </div>
+    <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+        <span>{{notice.msg}}</span>
+        <div class="close" @click="hideNotice">&times;</div>
+    </div>
+    <div id="searchCnr">
+        <div class="col-md-2">
+            <div class="input-group">
+                <input id='keyWord' type="text" class="form-control" placeholder="直播名称" v-model="searchKey" @keyup.enter="searchFn">
+                <div class="input-group-addon bg-laia" @click="searchFn">
+                    <span class="glyphicon glyphicon-search" ></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 pull-left">
+            <select class="form-control" v-model="selStatus" @change="getData">
+                <option v-for="(idx,obj) in status" :value="obj.id" v-text="obj.val"></option>
+            </select>
+        </div>
+        <div class="clearfix"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>直播ID</th>
+                    <th>直播名称</th>
+                    <th>创建时间</th>
+                    <th>直播开始时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(idx, obj) in tableData">
+
+                    <td>{{obj.id}}</td>
+                    <td>
+                        <img src="{{obj.cover}}" height="100" onerror="this.src='__PUBLIC__/img/error.png'">
+                        <div>{{obj.name}}</div>
+                    </td>
+
+                    <td>{{obj.createTime}}</td>
+                    <td>{{obj.startTime}}</td>
+                    <td> <div v-if="obj.vstate=='-1'">预告</div>
+                        <div v-if="obj.vstate=='1'">正在直播</div>
+                        <div v-if="obj.vstate=='2'">回放</div></td>
+                    <td>
+                        <div v-if="obj.vstate!='2'" class="btn btn-link" @click="showLive(idx,'first')">查看直播</div>
+                        <div v-if="obj.vstate=='2'" class="btn btn-link" @click="showLive(idx,'back')">查看回放</div>
+                        <div class="btn btn-link"  @click="showQr(idx)">查看二维码</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <ul v-show="showPageNav" class="pagination">
+            <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+                <a href="javascript:;">{{obj.num}}</a>
+            </li>
+            <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+                <a href="javascript:;">下一页</a>
+            </li>
+        </ul>
+        <div id="pageCount" class="btn bg-laia">
+            <span>第 {{curPage}} 页 | </span>
+            <span>共 {{pageCount}} 页</span>
+        </div>
+    </div>
+    <div class="laia-mask" style='display: none' v-show='qrCodeVisable'>
+        <div class="laia-edit-cnr">
+            <div class="edit-icon"></div>
+            <div class="edit-cnt">
+                <div class="cnt-body">
+                    <div id='fixQrCode'>
+                        <div class="form-group">{{titleName}}二维码</div>
+                        <div class='form-group'><img src="{{QRCodeUrl}}"></div>
+                        <div class="form-group">
+                            <input type="text" placeholder="二维码信息" v-model="jumpurl" class="form-control" readonly="">
+                        </div>
+                    </div>
+                    <div id="downCnr">
+                        <div class="col-md-6" style="border-right: 1px solid #ccc;">
+                            <div class="btn btn-default" @click="upQr">上传logo</div>
+                            <form id="uploadQr" method="post" enctype="multipart/form-data">
+                                <input name="logo" id="logo" type="file" style="display: none;">
+                                <img id="logoView" style="display: none;">
+                            </form>
+                            <p></p>
+                            <div style="color: #999"><strong style="color: red">●</strong>请选择图片大小为1024px*1024px，小于1MB，格式为JPG/PNG</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn btn-link" @click="downQr(1)">普通质量（网页）下载</div>
+                            <div class="btn btn-link"@click="downQr(2)">高质量（印刷）下载</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="btn btn-default pull-right" @click="cancle">关闭</div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/uploadPreview.js,__PUBLIC__/js/jquery.form.js,__STATIC__/js/activity/live.js" />

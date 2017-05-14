@@ -1,0 +1,60 @@
+<include file="Public/header" title="评论管理" css="__STATIC__/css/base.css,__STATIC__/css/cmt.css" />
+<div id="pageTitle">
+  <div class="page-title">评论列表</div>
+</div>
+<div id="pageWrapper">
+  <div id="searchCnr">
+    <div class="col-md-2">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="" v-model="searchKey" @keyup.enter="getData()">
+        <div class="input-group-addon bg-laia" @click="getData()">
+          <span class="glyphicon glyphicon-search"></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <select v-model="searchType" class="form-control" @change="getData()">
+        <option v-for="obj in searchTypeArr" :value="obj.id" v-text="obj.name"></option>
+      </select>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>商店名称</th>
+        <th>类别</th>
+        <th>平均分</th>
+        <th>点击量</th>
+        <th>订单量</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="(idx, obj) in tableData">
+        <td>
+          <div class="laia-chk">
+            <input type="checkbox" :value="obj.id" :id="obj.id" v-model="checkedArr">
+            <label :for="obj.id"></label>
+          </div>
+        </td>
+        <td v-text="obj.name"></td>
+        <td v-text="obj.commercialTenantType=='0'?'美食':'住宿'"></td>
+        <td v-text="obj.aveScore"></td>
+        <td v-text="obj.clickNum"></td>
+        <td v-text="obj.orderNum"></td>
+        <td>
+          <div class="btn btn-link" @click="edit(obj.id)">编辑</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <div v-show="showPageNav" id="pageCount" class="btn bg-laia">
+      <span>第 {{curPage}} 页 | </span>
+      <span>共 {{pageCount}} 页</span>
+    </div>
+  </div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/business/cmtlist.js" />

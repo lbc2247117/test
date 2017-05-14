@@ -1,0 +1,85 @@
+<include file="Public/header" title="商家账号" css="__STATIC__/css/business.css" />
+<div id="pageTitle">
+    <div class="page-title">商家账号</div>
+</div>
+<div id="pageWrapper">
+    <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+        <div class="close" @click="hideAlert">&times;</div>
+        <span v-html="alert.msg"></span>
+    </div>
+    <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+        <span>{{notice.msg}}</span>
+        <div class="close" @click="hideNotice">&times;</div>
+    </div>
+    <div id="searchCnr">
+        <div class="col-md-2">
+            <select class="form-control" v-model="selStatus" @change="getData">
+                <option v-for="(idx,obj) in status" :value="obj.id" v-text="obj.val"></option>
+            </select>
+        </div>
+
+        <div class="pull-right">
+            <div class="btn btn-default">下载列表</div>
+        </div>
+        <div class="clearfix"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>商家ID</th>
+                    <th>商家名称</th>
+                    <th>商家状态</th>
+                    <th>联系方式</th>
+                    <th>激活时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(idx, obj) in tableData">
+                    <td>
+                        <img height="36" :src="obj.MapMark"  onerror="this.src='__PUBLIC__/img/error.png'">
+                        <div>{{obj.SceName}}</div>
+                    </td>
+                    <td>
+                        {{obj.SceLongitude}}
+                    </td>
+                    <td>
+                        {{obj.SceLatitude}}
+                    </td>
+                    <td>
+                        {{obj.AllSceName}}
+                    </td>
+                    <td>
+                        {{obj.count_img}}张图
+                    </td>
+                    <td>
+                        {{obj.count_video}}个视频
+                    </td>
+                    <td>
+                        <div class="btn btn-link">回答</div>
+                        <div class="btn btn-link">删除</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <ul v-show="showPageNav" class="pagination">
+            <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+                <a href="javascript:;">{{obj.num}}</a>
+            </li>
+            <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+                <a href="javascript:;">下一页</a>
+            </li>
+        </ul>
+
+        <div id="pageCount" class="btn bg-laia">
+            <span>第 {{curPage}} 页 | </span>
+            <span>共 {{pageCount}} 页</span>
+        </div>
+    </div>
+
+</div>
+<include file="Public/footer" js="__STATIC__/js/business/account.js" />

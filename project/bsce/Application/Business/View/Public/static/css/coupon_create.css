@@ -1,0 +1,60 @@
+.help {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.img-cnr {
+  padding: 15px;
+}
+
+.img-cnt {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(img/uimg.png);
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.img-cnt .edit {
+  display: none;
+  cursor: pointer;
+  background-image: url(img/edit.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.img-cnt.filled:hover .edit {
+  display: block;
+}
+
+.mgn-b-30 {
+  margin-bottom: 30px;
+}
+
+.form-control {
+  padding: 0 auto;
+  height: 40px;
+  line-height: 40px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+#perIpt {
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+}

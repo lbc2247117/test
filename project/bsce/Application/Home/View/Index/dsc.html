@@ -1,0 +1,79 @@
+<include file="Public/header" title="" css="__PUBLIC__/css/video-js.min.css,__STATIC__/css/dsc.css,__STATIC__/css/video_list.css"/>
+
+<div id="headerCnr">
+    <img :src="dataObj.guidePic" width="100%" v-show="dataObj.guidePic.length>0">
+</div>
+<div id ="bodyCnr">
+
+    <div id ="sceRemark" class="sgl">
+        <div class ="titledsc">简介</div>
+        <div class ="sgl-cnr">
+            <div>
+                <video class ="video-js vjs-default-skin vjs-big-play-centered" controls webkit-playsinline playsinline preload="auto" :src="dataObj.sceRemarkVideoUrl" :poster="dataObj.sceRemarkVideoPic"></video>
+                <div class ="clearfix"></div>
+            </div>
+        </div>
+        <div v-html="dataObj.sceRemark"></div>
+    </div>
+    <div id="otherremark" class="sgl">
+        <div class="titledsc">交通</div>
+        <div v-html="dataObj.otherremark"></div>
+    </div>
+    <div id ="specRemark" class="sgl">
+        <div class ="titledsc">特色介绍</div>
+        <div class ="sgl-cnr">
+            <div>
+                <video class ="video-js vjs-default-skin vjs-big-play-centered" controls webkit-playsinline playsinline preload="auto" :src="dataObj.specVideoUrl" :poster="dataObj.specVideoPic"></video>
+                <div class ="clearfix"></div>
+            </div>
+        </div>
+        <div v-html="dataObj.specRemark"></div>
+    </div>
+    <div id="festival" class="sgl">
+        <div class ="titledsc">节日庆典</div>
+        <div v-for="(idx,obj) in dataObj.ScenicSpotProgramVo">
+            <div class ="sgl-cnr">
+                <div class="place-title-cnt" id="{{obj.id}}"><strong>{{obj.name}}</strong></div>
+                <div>
+                    <video class ="video-js vjs-default-skin vjs-big-play-centered" controls webkit-playsinline playsinline preload="auto" :src="obj.videoUrl" :poster="obj.videoPic"></video>
+                    <div class ="clearfix"></div>
+                </div>
+            </div>
+            <div v-html="obj.remark"></div>
+            <div class ="clearfix"></div>
+        </div>
+    </div>
+    <div id="carefulContent" class="sgl">
+        <div class="titledsc">注意事项</div>
+        <div v-html="dataObj.carefulContent"></div>
+    </div>
+</div>
+<div id="listCnr" @click="hideList()">
+    <div id="list">
+        <div class="list-title">
+            <div class="name">目录</div>
+        </div>
+        <ul class="list-unstyled">
+            <li>
+                <div @click="gotoLocation('sceRemark',$event.currentTarget)" id='menu-sceRemark'>简介</div>
+            </li>
+            <li>
+                <div @click="gotoLocation('otherremark',$event.currentTarget)" id='menu-otherremark'>交通</div>
+            </li>
+            <li>
+                <div @click="gotoLocation('specRemark',$event.currentTarget)" id='menu-specRemark'>特色介绍</div>
+            </li>
+            <li>
+                <div class="title" @click="gotoLocation('festival',$event.currentTarget)" id='menu-festival'>节日庆典</div>
+            </li>
+            <li v-for="(idx,obj) in dataObj.ScenicSpotProgramVo" style="margin-left: 15px;font-weight: normal;font-size: 12px;background: url(__STATIC__/css/img/jingqu_icon_dian2.png);background-repeat: no-repeat;background-size: 10px;background-position: left;">
+                <div href="javascript:;" @click='gotoLocation(obj.id,$event.currentTarget)' v-text="obj.name" id='menu-{{obj.id}}'></div>
+            </li>
+            <li>
+                <div @click="gotoLocation('carefulContent',$event.currentTarget)" id='menu-carefulContent'>注意事项</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="listBtn" @click="showList()"></div>
+<include file="Public/footer" js="__PUBLIC__/js/pinchzoom.js,__STATIC__/js/dsc.js"/>

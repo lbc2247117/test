@@ -1,0 +1,41 @@
+<include file="Public/header" title="推荐行程" css="__STATIC__/css/iscroll.css,__STATIC__/css/rcmd_list.css"/>
+<div id="scroller">
+    <div id="pullDown">
+        <span class="pull-down-icon"></span>
+        <span class="pull-down-label">下拉刷新</span>
+    </div>
+    <div id="bodyCnr">
+        <div v-for="(idx,obj) in dataArr" class="rcmd">
+            <div class="mgn-b-10-title">
+                <div class="pull-left">
+                    <div class="rcmd-title" v-text="obj.name"  @click="jumptorcmd(idx)"></div>
+                    <div class="rcmd-per">
+                        <span v-text="obj.percentNum"></span><span>%</span>
+                    </div>
+                    <div class="rcmd-grey">游客会选择该路线</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="mgn-b-10">
+                <span class="rcmd-place" ><span v-text="obj.remark"></span>  </span>
+            </div>
+            <div class="rcmd-cover" :style="{backgroundImage:bgImg(obj.url)}"  @click="jumptorcmd(idx)">
+                <!-- <div class="rcmd-cnr">
+                  <div class="rcmd-cnt">
+                    <div class="rcmd-place-on rcmd-place-a" v-text="obj.placearr[0]"></div>
+                    <div class="rcmd-place-on rcmd-place-b" v-text="obj.placearr[1]"></div>
+                    <div class="rcmd-place-on rcmd-place-c" v-text="obj.placearr[2]"></div>
+                    <div class="rcmd-place-on rcmd-place-d" v-text="obj.placearr[3]"></div>
+                  </div>
+                </div> -->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div id="pullUp">
+        <span class="pull-up-icon"></span>
+        <span class="pull-up-label">上拉加载更多</span>
+    </div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/rcmd_list.js"/>

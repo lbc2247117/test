@@ -1,0 +1,122 @@
+<include file="Public/header" title="景区基本资料" css="__STATIC__/css/base.css,__STATIC__/css/allsce.css,__PUBLIC__/css/bootstrap-select.min.css" />
+<div id="pageTitle">
+    <div class="page-title">景区基本资料</div>
+    <div class="pull-right btn btn-laia" @click="saveEdit">保存</div>
+</div>
+
+<div id="pageWrapper">
+    <!--<div id="contentheader">
+        <div class="contenttitle pull-left"><strong>景区基本资料</strong></div>
+        <div class="btn btn-save pull-right" @click="save">保存</div>
+        <div class="clearfix"></div>
+    </div>-->
+
+    <div id="sceName" name="sceName">{{sceName}}<a class="qrCode" @click="showQrCode"><img src="__PUBLIC__/img/qrCode.png"></a></div>
+
+    <form id="editform"  method="post" enctype="multipart/form-data">
+        <div class="col-md-7">
+            <div class="form-group">
+                <div class="col-md-2">
+                    景区标签：
+                </div>
+                <div class="col-md-10">
+                    <div class="tag-area">
+                        <div class="tag-cnr" v-for="(idx,obj) in sysTagObjArr">
+                            <div v-text="obj.name"></div>
+                            <div class="tag-close" @click="removeTag('sys',idx)">&times;</div>
+                        </div>
+                        <!--<div class="tag-cnr" v-for="(idx,obj) in usrTagArr">
+                            <div v-text="obj"></div>
+                            <div class="tag-close" @click="removeTag('usr',idx)">&times;</div>
+                        </div>-->
+                    </div>
+                    <!--<select id="tagPcr"  class="selectpicker form-control" multiple data-live-search="false" @change="selectTag"></select>-->
+                    <div class="tag-cnr-nocheck"  v-for="(idx,obj) in allSysTagArr">
+                        <div id="{{obj.id}}" @click='selectTag(obj.id)'>{{obj.typeName}}</div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">
+                    关键词:
+                </div>
+                <div class="laia-ctrl-cnr col-md-10">
+                    <input class="form-control laia-ctrl laia-ipt" type="text" maxlength="30"  name="audefinedType" v-model="audefinedType" placeholder="关键词方便搜索景区，关键词间用英文逗号分隔。">
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>30</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">
+                    景区等级：
+                </div>
+                <div  class="col-md-10">
+                    <input type="text" v-model="star" readonly="景区等级" class="form-control">
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">景区描述：</div>
+                <div class="col-md-10 laia-ctrl-cnr">
+                    <input type="text"  id="sceSynopsis" class="form-control laia-ctrl laia-ipt" maxlength="30" placeholder="请输入30字以内的景区概述" v-model='sceSynopsis'>
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>30</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">景区图片：</div>
+                <div class="col-md-10">
+                    <div class="help">请上传尺寸为1125x570px 比例为16:9，格式为jpg/png，大小不要超过1M。</div>
+                    <div>
+                        <img  id="picView" style="cursor: pointer" class="upload-review album-cover" title="景区封面" width="319" height="176" onerror="this.src='__PUBLIC__/img/error_scepic.png'" :src="PicUrl" onclick="pic.click();
+                                return false;">
+                        <input type="file" hidden="" class="upload-button" id="pic" name="cover">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group col-md-12">
+                <div @click="saveEdit" class="btn btn-laia pull-right">保存</div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </form>
+    <div class="laia-mask" style='display: none' v-show='qrCodeVisable'>
+        <div class="laia-edit-cnr">
+            <div class="edit-icon"></div>
+            <div class="edit-cnt">
+                <div class="cnt-body">
+                    <div id='fixQrCode'>
+                        <div class="form-group">{{sceName}}二维码</div>
+                        <div class='form-group'><img src="{{qrCode}}"></div>
+                        <div class="form-group">
+                            <input type="text" placeholder="二维码信息" v-model="jumpurl" class="form-control" readonly="">
+                        </div>
+                    </div>
+                    <div id="downCnr">
+                        <div class="col-md-6" style="border-right: 1px solid #ccc;">
+                            <div class="btn btn-default" @click="upQr">上传logo</div>
+                            <form id="uploadQr" method="post" enctype="multipart/form-data">
+                                <input name="logo" id="logo" type="file" style="display: none;">
+                                <img id="logoView" style="display: none;">
+                            </form>
+                            <p></p>
+                            <div style="color: #999"><strong style="color: red">●</strong>请选择图片大小为1024px*1024px，小于1MB，格式为JPG/PNG</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn btn-link" @click="downQr(1)">普通质量（网页）下载</div>
+                            <div class="btn btn-link"@click="downQr(2)">高质量（印刷）下载</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="btn btn-default pull-right" @click="cancle">关闭</div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/uploadPreview.js,__PUBLIC__/js/vue.min.js,__PUBLIC__/js/jquery.form.js,__PUBLIC__/js/bootstrap-select.js,__STATIC__/js/allsce/base.js" />

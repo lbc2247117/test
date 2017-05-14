@@ -1,0 +1,444 @@
+<include file="Public/header" title="主页" css="__STATIC__/plugin/lightbox/css/lightbox.css,__PUBLIC__/css/bootstrap-select.min.css,__PUBLIC__/css/video-js.min.css,__STATIC__/css/base.css" />
+<div id="pageTitle">
+  <div class="page-title">控件库</div>
+  <div class="pull-right btn btn-laia">返回</div>
+</div>
+<div id="pageWrapper">
+
+  <div class="laia-row">
+    <!-- 带输入字数提示的输入框 placeholder可选 maxlength必填 会在app.js里面rewrite -->
+    <input class="laia-ipt" type="text" placeholder="输入XXX" maxlength="10">
+  </div>
+  <div class="divider"></div>
+
+  <div class="laia-row">
+    <!-- 同上 -->
+    <textarea class="laia-area" type="text" placeholder="输入XXX" maxlength="60"></textarea>
+  </div>
+  <div class="divider"></div>
+
+  <div class="laia-row">
+    <select v-model="selectDemo" class="form-control" @change="selectFn()">
+      <option v-for="obj in selectArr" :value="obj.val" v-text="obj.dsc"></option>
+    </select>
+    <div>Select值：<span v-text="selectDemo"></span></div><!-- 这个用的时候不用加哈 对应值是VUE实例的selectDemo、selectArr、selectFn-->
+  </div>
+  <div class="divider"></div>
+
+  <div class="laia-row">
+    <div class="h5 text-center">搜索</div>
+    <div class="input-group">
+      <input type="text" v-model="searchKey" class="form-control" placeholder="搜点儿啥？">
+      <div class="input-group-addon btn-laia" @click="searchFn()">
+        <span class="glyphicon glyphicon-search"></span>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="laia-row">
+    <div class="h5 text-center">CHECKBOX</div>
+    <div>
+      <div class="laia-chk">
+        <input type="checkbox" value="valueI" id="laiaChkIptI" v-model="laiaChkArr">
+        <label for="laiaChkIptI"></label>
+      </div>
+      <div class="laia-chk">
+        <input type="checkbox" value="valueII" id="laiaChkIptII" v-model="laiaChkArr">
+        <label for="laiaChkIptII"></label>
+      </div>
+    </div>
+    <div>已选：<span v-text="laiaChkArr | json"></span></div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="laia-row">
+    <div class="h5 text-center">BUTTON</div>
+    <div>
+      <div class="btn btn-danger">Danger</div>
+      <div class="btn btn-default">Default</div>
+      <div class="btn btn-laia">Color-laia</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="laia-row">
+    <!-- 图集 可点击预览 -->
+    <!-- 来自三方：引用JS‘__STATIC__/plugin/lightbox/js/lightbox.min.js’及CSS‘__STATIC__/plugin/lightbox/css/lightbox.css’ -->
+    <!-- 单个图片的‘data-lightbox’属性需设置不同值 -->
+    <div class="h5 text-center">单个图片（预览不可切换）</div>
+    <div> 
+      <a href="http://192.168.0.90/qb.jpg" data-lightbox="laia-i" data-title="乔巴">
+        <img height="100" src="http://192.168.0.90/qb.jpg" alt="" />
+      </a>  
+      <a href="http://192.168.0.90/qb.jpg" data-lightbox="laia-ii" data-title="乔巴">
+        <img class="laia-img" height="100" src="http://192.168.0.90/qb.jpg" alt="" />
+      </a> 
+    </div>
+    <div class="h5 text-center">图集（预览可切换）</div>
+    <div> 
+      <a href="http://192.168.0.90/momo.jpg" data-lightbox="laia-set" data-title="图片标题">
+        <img height="100" src="http://192.168.0.90/momo.jpg" alt=""/>
+      </a> 
+      <a href="http://192.168.0.90/qb.jpg" data-lightbox="laia-set" data-title="图片标题">
+        <img height="100" src="http://192.168.0.90/qb.jpg" alt="" />
+      </a> 
+      <a href="http://192.168.0.90/bg.jpg" data-lightbox="laia-set" data-title="图片标题">
+        <img height="100" src="http://192.168.0.90/bg.jpg" alt="" />
+      </a>
+    </div>
+    <div class="h5 text-center">带checkbox的 HOVER试试 CLICK试试</div>
+    <!-- CSS样式的宽高根据所需图片尺寸 写在对应的独立CSS文件里例如 login.css中 添加'portfolio-area>li{width:200px;height:150px;}' -->
+    <div class="portfolio-content">
+      <ul class="cl portfolio-area">
+        <li style="width: 200px;height: 150px;">
+          <div class="portfoliobox">
+            <input class="img-chk" type="checkbox" value="乔巴" id="demoQb" v-model="imgCheckedArr">
+            <label for="demoQb"></label>
+            <div class="picbox">
+              <a href="http://192.168.0.90/qb.jpg" data-lightbox="laia" data-title="乔巴">
+                <div style="background-image: url(http://192.168.0.90/qb.jpg)"></div>
+                <!-- <div :style="{'backgroundImage': 'url('+var+')'}"></div> --><!-- 用VUE.JS变量注入 -->
+              </a>
+            </div>
+            <!-- <div class="textbox">XXXXXX</div> --><!-- 要是需要在图片下面显示内容加上这个 -->
+          </div>
+        </li>
+        <li style="width: 200px;height: 150px;">
+          <div class="portfoliobox">
+            <input class="img-chk" type="checkbox" value="墨墨" id="demoMomo" v-model="imgCheckedArr">
+            <label for="demoMomo"></label>
+            <div class="picbox">
+              <a href="http://192.168.0.90/momo.jpg" data-lightbox="laia" data-title="墨墨">
+                <div style="background-image: url(http://192.168.0.90/momo.jpg)"></div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li style="width: 200px;height: 150px;">
+          <div class="portfoliobox">
+            <input class="img-chk" type="checkbox" value="Canyon" id="demoCanyon" v-model="imgCheckedArr">
+            <label for="demoCanyon"></label>
+            <div class="picbox">
+              <a href="http://192.168.0.90/bg.jpg" data-lightbox="laia" data-title="墨墨">
+                <div style="background-image: url(http://192.168.0.90/bg.jpg)"></div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <div class="clearfix"></div>
+      </ul>
+      <div>想看看选哪个了？已选：<span v-text="imgCheckedArr | json"></span></div><!-- 这个用的时候不用加哈 对应值是VUE实例的imgCheckedArr -->
+    </div>
+  </div>
+  <div class="divider"></div>
+
+
+  <div class="laia-row">
+    <!-- 视频集 可点击预览 -->
+    <!-- 来自三方：引用JS‘__STATIC__/plugin/lightbox/js/lightbox.min.js’及CSS‘__STATIC__/plugin/lightbox/css/lightbox.css’ -->
+    <div class="h5 text-center">带checkbox的 HOVER试试 CLICK试试</div>
+    <!-- CSS样式的宽高根据所需图片尺寸 写在对应的独立CSS文件里例如 login.css中 添加'portfolio-area>li{width:200px;height:150px;}' -->
+    <div class="portfolio-content">
+      <ul class="cl portfolio-area">
+        <li class="video-thumbnail" style="width: 250px;height: 200px;">
+          <div class="portfoliobox">
+            <input class="img-chk" type="checkbox" value="乔巴" id="videoQb" v-model="videoCheckedArr">
+            <label for="videoQb"></label>
+            <div class="picbox">
+              <div class="video-cover" style="background-image: url(http://192.168.0.90/qb.jpg)" @click="previewVideo('http://192.168.0.90/qb.jpg','http://192.168.0.90/mp4.mp4')"></div>
+              <!-- <div class="video-cover" :style="{'backgroundImage': 'url('+poster+')'}" @click="previewVideo(poster,src)"></div> --><!-- 用VUE.JS变量注入 -->
+              <div class="video-date">
+                <div class="pull-left">2011-11-11</div>
+                <div class="pull-right">222</div>
+              </div>
+              <div class="video-dsc">
+                <div>树欲静，而风不止，风不止树还是一样得静。你欲罢，我不能，你对我说，你能不能不走了。</div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="video-thumbnail" style="width: 250px;height: 200px;">
+          <div class="portfoliobox">
+            <input class="img-chk" type="checkbox" value="墨墨" id="videoMomo" v-model="videoCheckedArr">
+            <label for="videoMomo"></label>
+            <div class="picbox">
+              <div class="video-cover" style="background-image: url(http://192.168.0.90/momo.jpg)" @click="previewVideo('http://192.168.0.90/momo.jpg','http://192.168.0.90/mp4.mp4')"></div>
+              <!-- <div class="video-cover" :style="{'backgroundImage': 'url('+poster+')'}" @click="previewVideo(poster,src)"></div> --><!-- 用VUE.JS变量注入 -->
+              <div class="video-date">
+                <div class="pull-left">2022-11-11</div>
+                <div class="pull-right">999</div>
+              </div>
+              <div class="video-dsc">
+                <div>树欲静，而风不止，风不止树还是一样得静。你欲罢，我不能，你对我说，你能不能不走了。</div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <div class="clearfix"></div>
+      </ul>
+      <div class="video-preview-cnr" v-show="videoVisible" style="display:none;">
+        <div class="video-preview-cnt">
+          <video id="laiaPlayer" class="video-js vjs-default-skin vjs-big-play-centered" controls webkit-playsinline preload="auto" data-setup="{}"></video>
+        </div>
+        <div class="video-close" @click="hideVideo()"></div>
+      </div>
+      <div>想看看选哪个了？已选：<span v-text="videoCheckedArr | json"></span></div><!-- 这个用的时候不用加哈 对应值是VUE实例的videoCheckedArr -->
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="laia-row">
+    <!-- 需要引用JS:__PUBLIC__/js/uploadPreview.js -->
+    <div class="h5 text-center">单个图片上传</div>
+    <div id="laiaUploader" class="imgUper" onclick="document.getElementById('uploadIpt').click()">
+      <img id="laiaPreview" class="upload-review album-cover" width="100" height="100" :src="uploaderImg">
+      <input type="file" id="uploadIpt" accept=".png,.jpg" v-show="!1" multiple>
+      <!-- <div onclick="document.getElementById('uploadIpt').click()">上传图片</div> --><!-- 上传按钮独立出来的时候用这个，外层的那个onclick事件删掉 -->
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="laia-row">
+    <!-- 需要设置宽度 左外边距设置为负的宽度的一半 高度会根据内容的增加而增加 -->
+    <div class="h5 text-center">编辑窗</div>
+    <div class="btn btn-laia" v-text="!editCnrVisible?'显示编辑窗':'关闭编辑窗'" @click="toggleEditCnr()"></div>
+    <div class="laia-mask" v-show="editCnrVisible" style="display: none;">
+      <div class="laia-edit-cnr" style="width: 800px;margin-left: -400px;">
+        <div class="edit-icon"></div>
+        <div class="edit-cnt">
+          <div class="cnt-body">
+            <div>XXXXXXXXXXX</div>
+            <div>XXXXXXXXXXX</div>
+            <div>XXXXXXXXXXX</div>
+            <div>XXXXXXXXXXX</div>
+            <div>XXXXXXXXXXX</div>
+          </div>
+          <div class="cnt-foot">
+            <div class="pull-right">
+              <div class="btn btn-default" @click="toggleEditCnr()">取消</div>
+              <div class="btn btn-laia">保存</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="laia-row">
+    <div class="h5 text-center">标签选择</div>
+    <div class="tag-area">
+      <div class="tag-cnr" v-for="(idx,obj) in sysTagObjArr">
+        <div v-text="obj.name"></div>
+        <div class="tag-close" @click="removeTag('sys',idx)">&times;</div>
+      </div>
+      <div class="tag-cnr" v-for="(idx,obj) in usrTagArr">
+        <div v-text="obj"></div>
+        <div class="tag-close" @click="removeTag('usr',idx)">&times;</div>
+      </div>
+    </div>
+    <select id="tagPcr" class="selectpicker form-control" multiple data-live-search="false" @change="selectTag"></select>
+    <div class="tag-help">没找到合适的？添加一个吧！</div>
+    <input type="text" v-model="usrTag" @keyup.enter="addUsrTag" @change="addUsrTag" class="form-control" placeholder="自定义标签">
+    <div class="clearfix"></div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="laia-row">
+    <div class="h5 text-center">音频上传</div>
+    <div class="audio-radio-cnr">
+      <div class="title">请选择背景音乐</div>
+      <div class="sgl-radio-cnr">
+        <input type="radio" id="uploadRadio" value="upload" v-model="audioType">
+        <label for="uploadRadio">自己上传音频</label>
+      </div>
+      <div class="sgl-radio-cnr">
+        <input type="radio" id="libRadio" value="lib" v-model="audioType">
+        <label for="libRadio">使用来吖音频库</label>
+      </div>
+      <div class="sgl-radio-cnr">
+        <input type="radio" id="defaultRadio" value="default" v-model="audioType">
+        <label for="defaultRadio">景区直播自带音频</label>
+      </div>
+    </div>
+    <div v-show="audioType=='upload'" class="audio-upload-cnr">
+      <div v-show="audioUpStatus=='before'">
+        <div class="pull-right btn btn-default">浏览</div>
+        <div class="help">背景音乐请选择文件后缀为.mp3的音频文件</div>
+      </div>
+      <div v-show="audioUpStatus=='on'">
+        <div class="pull-right btn btn-laia">
+          <span class="dot dot-first"></span>
+          <span class="dot dot-second"></span>
+          <span class="dot dot-third"></span>
+        </div>
+        <div>正在上传，请稍安勿躁...</div>
+      </div>
+      <div v-show="audioUpStatus=='after'">
+        <div class="pull-right btn btn-default">更换</div>
+        <div>上传成功了.mp3</div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+</div>
+<script type="text/javascript">
+$(function() {
+  var 
+  /*上传图片预览*/
+  laiaUploader = new uploadPreview({
+      UpBtn: 'uploadIpt',
+      ImgShow: 'laiaPreview',
+      ImgType: ['jpg', 'png'],
+      ErrMsg: '选择文件错误,图片类型必须是(png,jpg)中的一种'
+  }),
+  /*视频预览实例*/
+  player = window.PLAYER = videojs('laiaPlayer');
+  /*VUE.JS实例*/
+  window.DEMO = new Vue({
+    el: '#wrapper',
+    data: {
+      imgCheckedArr: ['乔巴'],
+      videoCheckedArr: ['乔巴'],
+      selectDemo: '',
+      selectArr: [
+        {
+          val: '值I',
+          dsc: '选项I'
+        },
+        {
+          val: '值II',
+          dsc: '选项II'
+        },
+        {
+          val: '值III',
+          dsc: '选项III'
+        }
+      ],
+      uploaderImg: '',
+      searchKey: '',
+      editCnrVisible: !1,
+      laiaChkArr: ['valueI'],
+      /* 标签相关变量 开始 */
+      allSysTagArr: [], //数组。从接口获取的系统标签列表。（从接口获取数据填充）。
+      sysTags: '', //字符串。从接口获取的已选系统标签ID。（从接口获取数据填充）。
+      sysTagArr: [], //数组。已选系统标签ID。
+      sysTagObjArr: [], //数组。整理已选系统标签，根据标签ID显示标签名称。
+      usrTags: '', //字符串。从接口获取的用户自定义标签。（从接口获取数据填充）。
+      usrTagArr: [], //数组。用户自定义标签。
+      /* 标签相关变量 结束 */
+      videoVisible: !1,
+      audioType: 'upload',
+      audioUpStatus: 'on'
+    },
+    methods: {
+      init: function() {
+        this.getTags();
+      },
+      selectFn: function() {
+
+      },
+      searchFn: function() {
+
+      },
+      toggleEditCnr: function() {
+        this.editCnrVisible = !this.editCnrVisible;
+      },
+      /* 标签相关函数 开始 */
+      getTags: function() { //从接口获取数据后，填充对应变量，然后初始化标签列表。
+        //ajax 获取数据
+        this.allSysTagArr = [
+          {
+            id: '000',
+            name: 'tagI'
+          },
+          {
+            id: '111',
+            name: 'tagII'
+          },
+          {
+            id: '222',
+            name: 'tagIII'
+          },
+          {
+            id: '333',
+            name: 'tagIV'
+          },
+          {
+            id: '444',
+            name: 'tagV'
+          },
+          {
+            id: '555',
+            name: 'tagVI'
+          },
+          {
+            id: '666',
+            name: 'tagVII'
+          }
+        ];
+        this.sysTags = '111,333,555';
+        this.usrTags = 'usrI,usrII,usrIII';
+        this.initTag();
+      },
+      initTag: function() { //初始化标签列表
+        var _html = '';
+        this.allSysTagArr.forEach(function(obj) {
+          _html += '<option value="' + obj.id + '">' + obj.name + '</option>'; //根据接口返回数据中的Key，修改obj.id和obj.name
+        });
+        $('#tagPcr').html(_html);
+        $('#tagPcr').selectpicker('refresh');
+
+        this.sysTagArr = TRIM(this.sysTags).split(',');
+        $('#tagPcr').selectpicker('val', this.sysTagArr);
+        this.resetSysObjArr();
+        this.usrTagArr = TRIM(this.usrTags).split(',');
+      },
+      addUsrTag: function() {
+        setTimeout(function () {
+          if (DEMO.usrTagArr.indexOf(DEMO.usrTag) < 0) DEMO.usrTagArr.push(DEMO.usrTag);
+          DEMO.usrTag = '';
+        }, 200);
+      },
+      selectTag: function() {
+        this.sysTagArr = $('#tagPcr').selectpicker('val');
+        this.resetSysObjArr();
+      },
+      resetSysObjArr: function() {
+        this.sysTagObjArr = [];
+        this.allSysTagArr.forEach(function(obj) {
+          if (DEMO.sysTagArr.indexOf(obj.id) > -1) DEMO.sysTagObjArr.push({id: obj.id, name: obj.name});
+        });
+      },
+      removeTag: function(type, idx) {
+        if (type == 'usr') {
+          this.usrTagArr.removeByIndex(idx);
+        } else if (type == 'sys') {
+          this.sysTagArr.removeByIndex(idx);
+          $('#tagPcr').selectpicker('val', this.sysTagArr);
+          this.sysTagObjArr.removeByIndex(idx);
+        }
+      },
+      postTag: function() { //保存数据时，将标签分别转换为字符串后再保存。
+        this.sysTags = this.sysTagArr.join(',');
+        this.usrTags = this.usrTagArr.join(',');
+      },
+      /*标签相关函数 结束*/
+      previewVideo: function(poster, src) {
+        PLAYER.poster(poster);
+        PLAYER.src(src);
+        PLAYER.load(src);
+        this.videoVisible = !0;
+      },
+      hideVideo: function() {
+        PLAYER.pause();
+        this.videoVisible = !1;
+      }
+    }
+  });
+  DEMO.init();
+});
+</script>
+<include file="Public/footer" js="__STATIC__/plugin/lightbox/js/lightbox.min.js,__PUBLIC__/js/uploadPreview.js,__PUBLIC__/js/bootstrap-select.js,__PUBLIC__/js/video.min.js" />

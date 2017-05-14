@@ -1,0 +1,73 @@
+<include file="Public/header" title="附近" css="__STATIC__/css/iscroll.css,__STATIC__/css/nearby_other.css"/>
+<div id="scroller">
+  <div id="pullDown">
+    <span class="pull-down-icon"></span>
+    <span class="pull-down-label">下拉刷新</span>
+  </div>
+  <div id="headCnr">
+    <div id="headCnt">
+      <div id="searchCnr">
+        <input class="form-control" placeholder="搜索景区周边" v-model="searchKey" @change="search()">
+      </div>
+      <div id="navCnr">
+        <div @click="jumptopointlist">景点</div>
+        <div @click="navi('food')" :class="cate=='food'?'active':''">美食</div>
+        <div @click="navi('hotel')" :class="cate=='hotel'?'active':''">住宿</div>
+        <!-- <div @click="navi('shop')" :class="cate=='shop'?'active':''">购物</div>
+        <div @click="navi('fun')" :class="cate=='fun'?'active':''">娱乐</div> -->
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <div id="bodyCnr" class="food">
+    <div v-for="(idx,obj) in dataArr" class="sgl-cnr" @click="go(idx)">
+      <div class="title" v-text="obj.name"></div>
+      <div class="tag-cnr">
+        <div v-for="obj in obj.commercialTenantLableID.trim().split(',')" class="tag-sgl">
+          <div class="tag-text" v-text="obj"></div>
+          <div class="tag-arrow"></div>
+        </div>
+      </div>
+      <div class="album-cnr">
+        <div class="sgl-img" :style="{backgroundImage:bgImg(obj.backPic[0])}"></div>
+        <div class="sgl-img" :style="{backgroundImage:bgImg(obj.backPic[1])}"></div>
+        <div class="sgl-img" :style="{backgroundImage:bgImg(obj.backPic[2])}"></div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="dsc-cnr">
+        <div class="more" @click="go(idx)"></div>
+        <div class="price-cnr">
+          <div class="price small">￥</div>
+          <div class="price" v-text="obj.averPrice"></div>
+          <div class="small">/人均</div>
+        </div>
+        <div class="level">
+          <!-- <div class="stars">
+            <div class="stars per per-70"></div>
+          </div> -->
+          <div class="stars" :class="parseInt(obj.starLev)>0?'active':''"></div>
+          <div class="stars" :class="parseInt(obj.starLev)>1?'active':''"></div>
+          <div class="stars" :class="parseInt(obj.starLev)>2?'active':''"></div>
+          <div class="stars" :class="parseInt(obj.starLev)>3?'active':''"></div>
+          <div class="stars" :class="parseInt(obj.starLev)>4?'active':''"></div>
+          <div class="score-cnr">
+            <div class="count-large" v-text="parseInt(obj.starLev)*2"></div>/10
+          </div>
+        </div>
+        <div>
+          <span>地址：</span>
+          <span v-text="obj.adress"></span>
+        </div>
+        <!-- <div>
+          <span>联系方式：</span>
+          <span v-text="obj.tel"></span>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div id="pullUp">
+    <span class="pull-up-icon"></span>
+    <span class="pull-up-label">上拉加载更多</span>
+  </div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/nearby_other.js"/>

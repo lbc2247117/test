@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"> 
+        <meta name="apple-mobile-web-app-capable" content="yes"> 
+        <meta name="apple-mobile-web-status-bar-style" content="block"> 
+        <meta name="fromat-detecition" content="telephone=no">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <title>[title]</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" href="__STATIC__/css/sb-admin.css">
+        <link rel="stylesheet" href="__STATIC__/font-awesome/css/font-awesome.min.css">
+        <link rel="icon" href="/favicon.jpg">
+        <script src="__PUBLIC__/js/jquery.min.js"></script>
+        <!-- <script src="__STATIC__/js/basePermit.js"></script> -->
+    <load href="[css]" />
+</head>
+<body>
+    <!-- NOTICE BEGIN -->
+    <div id="noticeCnr">
+        <div v-html="consoleMsg"></div>
+        <div v-show="confirm.show" class="confirm-cnr" style="display:none;">
+            <div class="confirm-cnt">
+                <span v-html="confirm.msg"></span>
+                <div class="confirm-btn-cnr">
+                    <div class="confirm-btn" @click="confirm.confirm()">确定</div>
+                    <div class="confirm-btn" @click="confirm.cancel()">取消</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div v-show="alert.show" class="alert-cnr" :class="alert.type" style="display:none;">
+            <span v-html="alert.msg"></span>
+        </div>
+    </div>
+    <!-- NOTICE END -->
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{:U('index/index')}">
+                        <div class="title-sce">东台长安汽车后台管理系统</div>
+
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <include file="Public/sidebar" />
+                    <ul class="nav navbar-nav navbar-right navbar-user">
+                        <li class="dropdown user-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 你好,{$userinfo.username} <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a id="editPass" href="javascript:void(0);"><i class="fa fa-gear"></i>修改密码</a></li>
+                                <li><a href="{:U('Login/logout')}"><i class="fa fa-power-off"></i> 退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>

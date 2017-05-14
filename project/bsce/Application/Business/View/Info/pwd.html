@@ -1,0 +1,42 @@
+<include file="Public/header" title="商家设置" css="__STATIC__/css/base.css,__STATIC__/css/info.css" />
+<div id="pageTitle">
+  <div class="page-title">修改密码</div>
+</div>
+<div id="pageWrapper">
+  <div class="step-guide" :style="stepII?{backgroundImage:'url(__STATIC__/css/img/editstepii.png)'}:''"></div>
+  <form id="laiaForm" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <div v-show="!stepII" class="stepi-cnr" style="display: none;">
+      <div class="col-md-12">
+        <input class="form-control" type="text" readonly name="tel" id="tel" maxlength="11" placeholder="登录手机号码" v-model="cell" @change="checkCell()">
+      </div>
+      <div>
+        <div class="col-md-6">
+          <input class="form-control" type="text" name="code" placeholder="验证码" v-model="verify">
+        </div>
+        <div class="col-md-6">
+          <div class="btn btn-laia pull-right" v-text="verifyBtn" @click="verifyFn()"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="col-md-12">
+        <div class="pull-right btn btn-laia" @click="nextStep()">下一步</div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div v-show="stepII" class="stepii-cnr" style="display: none;">
+      <div class="col-md-12">
+        <input class="form-control" type="password"  placeholder="密码" v-model="pwd">
+      </div>
+      <div class="col-md-12">
+        <input class="form-control" type="password"  placeholder="确认密码" v-model="repwd">
+      </div>
+      <div class="col-md-12">
+        <div id="saveBtn" class="pull-right btn btn-laia">保存</div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </form>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/jquery.form.js,__STATIC__/js/md5.js,__STATIC__/js/info/pwd.js" />

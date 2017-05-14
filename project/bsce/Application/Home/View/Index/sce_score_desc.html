@@ -1,0 +1,59 @@
+<include file="Public/header" title="我要打分" css="__STATIC__/css/iscroll.css,__STATIC__/css/sce_score_desc.css"/>
+<div id="scroller">
+    <div id="pullDown">
+        <span class="pull-down-icon"></span>
+        <span class="pull-down-label">下拉刷新</span>
+    </div>
+    <div id="headCnr">
+        <div class='descCnr'>
+            <div class='desc-left'>氛围</div>
+            <div class='desc-right'>
+                <div @click="fw(1)"  class="stars" :class="parseInt(fenwei)>0?'active':''"  ></div>
+                <div @click="fw(2)"  class="stars" :class="parseInt(fenwei)>1?'active':''"  ></div>
+                <div @click="fw(3)"  class="stars" :class="parseInt(fenwei)>2?'active':''"  ></div>
+                <div @click="fw(4)"  class="stars" :class="parseInt(fenwei)>3?'active':''"  ></div>
+                <div @click="fw(5)"  class="stars" :class="parseInt(fenwei)>4?'active':''"  ></div>
+            </div>
+            <div class='clearfix'></div>
+            <div class='desc-left'>服务</div>
+            <div class='desc-right'>
+                <div @click="server(1)"  class="stars" :class="parseInt(fuwu)>0?'active':''"  ></div>
+                <div @click="server(2)"  class="stars" :class="parseInt(fuwu)>1?'active':''"  ></div>
+                <div @click="server(3)"  class="stars" :class="parseInt(fuwu)>2?'active':''"  ></div>
+                <div @click="server(4)"  class="stars" :class="parseInt(fuwu)>3?'active':''"  ></div>
+                <div @click="server(5)"  class="stars" :class="parseInt(fuwu)>4?'active':''"  ></div>
+            </div>
+            <div class='clearfix'></div>
+            <div class='desc-left'>美景</div>
+            <div class='desc-right'>
+                <div @click="sce(1)"  class="stars" :class="parseInt(meijing)>0?'active':''"  ></div>
+                <div @click="sce(2)"  class="stars" :class="parseInt(meijing)>1?'active':''"  ></div>
+                <div @click="sce(3)"  class="stars" :class="parseInt(meijing)>2?'active':''"  ></div>
+                <div @click="sce(4)"  class="stars" :class="parseInt(meijing)>3?'active':''"  ></div>
+                <div @click="sce(5)"  class="stars" :class="parseInt(meijing)>4?'active':''"  ></div>
+            </div>
+        </div>
+        <div class="totalscore">
+            <div class="totaltext">总分</div>
+            <div class='desc-left'>
+                <div   class="stars-total" :class="parseInt(allscore)>0?'active':''"  ></div>
+                <div   class="stars-total" :class="parseInt(allscore)>1?'active':''"  ></div>
+                <div   class="stars-total" :class="parseInt(allscore)>2?'active':''"  ></div>
+                <div   class="stars-total" :class="parseInt(allscore)>3?'active':''"  ></div>
+                <div   class="stars-total" :class="parseInt(allscore)>4?'active':''"  ></div>
+            </div>
+            <div class="userstar"><strong>{{content}}</strong></div>
+            <div class='clearfix'></div>
+        </div>
+
+    </div>
+    <div id="bodyCnr">
+        <span>请选择标签</span>
+        <div class="scoretag" >
+            <div @click="tag(obj,idx)" v-for="(idx,obj) in listContent">{{obj}}</div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div id="footCnr" @click="score()">提交评价</div>
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/sce_score_desc.js"/>

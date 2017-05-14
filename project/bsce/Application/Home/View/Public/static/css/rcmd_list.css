@@ -1,0 +1,110 @@
+#bodyCnr {
+    background-color: #fff;
+    padding: 10px;
+}
+.rcmd {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+.rcmd:last-child {
+    border: none;
+    margin: 0;
+}
+.rcmd-cover {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 33.3333%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.rcmd-cnr {
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 0;
+    padding-bottom: 33.3333%;
+    font-size: 11px;
+    color: #fff;
+}
+.rcmd-cnt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../static/img/line.png);
+}
+.rcmd-no {
+    color: #333;
+    float: left;
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 5px;
+    position: absolute;
+}
+
+.rcmd-title {
+    color: #333;
+    line-height: 22px;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
+}
+.rcmd-per {
+    display: inline-block;
+    color: #fff;
+    background-color: #ff9d00;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 5px;
+}
+.rcmd-grey {
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    line-height: 18px;
+}
+.rcmd-place {
+    color: #666;
+    font-size: 12px;
+}
+.rcmd-place-on {
+    position: absolute;
+    width: 30%;
+    text-align: center;
+}
+.rcmd-place-a {
+    top: 60%;
+}
+.rcmd-place-b {
+    top: 23%;
+    left: 18%;
+}
+.rcmd-place-c {
+    top: 60%;
+    left: 38%;
+}
+.rcmd-place-d {
+    top: 23%;
+    left: 56%;
+}
+.mgn-b-10 {
+    margin-bottom: 10px;
+    position: relative;
+}
+.mgn-b-10-title{
+    padding-top: 10px;
+    position: relative;
+}

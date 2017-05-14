@@ -1,0 +1,51 @@
+<include file="Public/header" title="游客评分" css="__STATIC__/css/iscroll.css,__STATIC__/css/scescore.css"/>
+<div id="scroller">
+    <div id="pullDown">
+        <span class="pull-down-icon"></span>
+        <span class="pull-down-label">下拉刷新</span>
+    </div>
+
+    <div id="headCnr">
+        <div class='totalCnr'>
+            <div class='num-score'>
+                <div class='scoretext'>游客评分</div>
+                <div class='curscore'>{{allScore}}</div>
+                <div class='totalscore'>/10</div>
+                <div class='text-sorce'>分</div>
+            </div>
+            <div class='clearfix'></div>
+            <div class="star">
+
+            </div>
+            <div class="sorcecount">{{allNum}}人参与评论</div>
+        </div>
+        <div class='descCnr'>
+            <div class="atmosphere">
+                <div style="float: left">氛围　</div>
+                <div class="atmosphere1 " style="float: left"></div>
+                <span class="yellow-score" style="float: left">{{fw}}</span>分
+                <div class='clearfix'></div>
+            </div>
+            <div class="atmosphere">
+
+                <div style="float: left">服务　</div>
+                <div class="atmosphere2 " style="float: left"></div>
+                <span class="yellow-score" style="float: left">{{server}}</span>分
+            </div>
+            <div class="atmosphere">
+                <div style="float: left">美景　</div>
+                <div class="atmosphere3 " style="float: left"></div>
+                <span class="yellow-score " style="float: left">{{mj}}</span>分
+            </div>
+        </div>
+        <div class='clearfix'></div>
+    </div>
+    <div id="bodyCnr">
+        <div class="scoretag">
+            <div  v-for="obj in comment"> {{obj.k}}({{obj.v}})</div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div id="footCnr" @click="score()">我要打分</div>
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/scescore.js"/>

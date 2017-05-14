@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>非时序OA管理系统-活动相册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <meta name="renderer" content="webkit" /> 
+        <link href="../../assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/bootstrap-datepicker/css/datepicker3.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/bootstrap-toastr/toastr.min.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/jstree/dist/themes/default/style.min.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/bootstrap-select/bootstrap-select.min.css">
+        <!-- BEGIN THEME STYLES -->
+        <link href="../../assets/local/css/components.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/local/css/plugins.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/local/css/base.css" rel="stylesheet" type="text/css"/>
+        <!-- END THEME STYLES -->
+        <link rel="shortcut icon" type="image/ico" href="../../assets/global/img/favicon.ico">
+    </head>
+    <body style="background: #ffffff;margin: 0px;padding: 0px;">
+
+        <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li><i class="fa fa-home"></i><a href="../index.html">首页</a><i class="fa fa-angle-right"></i></li>
+                <li><a href="#">活动观光</a><i class="fa fa-angle-right"></i></li>
+                <li><a href="#" id="pictureName"></a></li>
+            </ul>
+        </div>
+        <!--                <div class="permit_buttons emploeestyle">
+                            <button type="button" id="open_dialog_btn" class="btn red-sunglo permit_1020501" data-toggle="modal" data-target="#myModal"><i class="fa fa-cloud-upload"></i> 上传照片</button>
+                            <button type="button" id="outexcel" class="btn red-sunglo permit_1020502" data-toggle="modal" data-target="#myexcelModal"><i class="fa fa-folder-o"></i> 创建相册</button>
+                        </div>-->
+        <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-hidden="false">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">添加相册图片</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-success">
+                            <span style="color: red;">*</span>注:   带有"<span style="color: red;">*</span>"的字段为必填项
+                        </div>
+                        <form id="add_img_form" class="form-horizontal" action="../../api/culture/showimg.php" novalidate="novalidate"  enctype="multipart/form-data" method="post">
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label class="control-label col-md-2" for="dirName">图片标题<span class="required">*</span></label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="dirName" id="dirName" placeholder="图片标题" aria-required="true" aria-invalid="false"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2" for="dic_title">归类相册名称</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="dic_title" id="dic_title" readonly="true" aria-required="true" aria-invalid="false" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2" for="sys_class">上传相册图片</label>
+                                    <div class="col-md-9">
+                                        <input type="file" id="file" name="file[]" multiple/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="submit" class="btn btn-primary" onclick="formSubmit();" value="保存" />
+                                <!--<button type="button" class="btn btn-primary" id="btn_submit_primary">保存</button>-->
+                                <button type="button" class="btn btn-default" id="btn_close_primary" data-dismiss="modal">关闭</button>
+                            </div>
+                            <input type="hidden" id="action" name="action" value="2" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="photoTitle clearfix">
+            <img src="../../assets/global/img/employeeStyle_small.jpg" width="72" height="72"/>
+            <div class="photoInfo">
+                <h3>非时序员工活动照片</h3>
+                <button type="button" id="open_dialog_btn" class="btn red-sunglo permit_1020501" data-toggle="modal" data-target="#myModal"><i class="fa fa-cloud-upload"></i> 上传照片</button>
+                <button type="button" id="returnNext" class="btn red-sunglo permit_1020502">返回上一级</button>
+                <button type="button" id="allCheck" class="btn red-sunglo permit_1020502">全选</button>
+                <button type="button" id="allNotCheck" class="btn red-sunglo permit_1020502">全不选</button>
+                <button type="button" id="deleteCheck" class="btn red-sunglo permit_1020502">删除选中</button>
+            </div>
+        </div>
+        <div class="col-md-12 photoList" data-bind="foreach:showAllList">
+            <div data-bind="if:type==1">
+                <div class="photoItem">
+                    <div>
+                        <img data-bind="attr: {src: attachment_url},click:$parent.showImg.bind($data,attachment_url)" data-toggle="modal" data-target="#showPhoto"/>
+                        <div style="display: inline;" id="showAllImg">
+                            <input type="checkbox" id="checkId" name="fruit" data-bind="attr:{'value':id}">
+                            <h5 style="display: inline;" data-bind="text:title"></h5>    
+                            <a href="javascript:void(0)" style="display: inline;" data-bind="click:$parent.DeletePic.bind($data,id)">删除</a>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <div data-bind="if:type==2">
+                <div class="photoItem">
+                    <img src="../../assets/global/img/rar.jpg"/>
+                    <h5 class="inline" data-bind="text:title"></h5>
+                    <a href="javascript:void(0)" data-bind="click:$parent.downRar.bind($data,attachment_url)">下载</a>
+                </div>
+            </div>
+            <div class="modal fade bs-example-modal-lg" id="showPhoto" tabindex="-1" role="dialog" aria-hidden="false">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <!--<h4 class="modal-title" id="myModalLabel">公司的超级大帅哥</h4>-->
+                        </div>
+                        <div class="modal-body">
+                            <img id="showImages" width="786" height="482"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../assets/global/plugins/jquery-1.9.1.min.js" type="text/javascript"></script>
+        
+        <script src="../../assets/global/plugins/bootstrap/js/bootstrap.3.3.2.min.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+
+        <script src="../../assets/global/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
+        
+        <script src="../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jquery-validation/js/jquery.validation.1.11.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jstree/dist/jstree.min.js"></script>
+        <script src="../../assets/global/plugins/xheditor/xheditor-1.1.13-zh-cn.min.js"></script>
+        <script src="../../assets/local/knockout/knockout-3.1.0.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="../../assets/local/respond.js" type="text/javascript"></script>
+<script src="../../assets/local/html5shiv.js" type="text/javascript"></script>
+
+<![endif]-->
+        <script src="../../assets/local/plugins/json.js" type="text/javascript"></script>
+        <script src="../../assets/local/plugins/base64encode.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jquery.form.js" type="text/javascript"></script>
+        <script>
+                                    document.write("<script src='../../assets/local/ycoa.js?ts=" + Math.random() + "' type='text/javascript'></\script>");
+                                    document.write("<script src='../../assets/local/culture/showallimg.js?ts=" + Math.random() + "' type='text/javascript'></\script>");
+                                    document.write("<script src='../../assets/local/culture/showallimg-form-validate.js?ts=" + Math.random() + "' type='text/javascript'></\script>");
+        </script>
+        <!--<script src="../../assets/local/ycoa.js" type="text/javascript"></script>-->
+        <!--<script src="../../assets/local/attendance/resign.js" type="text/javascript"></script>-->
+        <!--<script src="../../assets/local/attendance/resign-form-validate.js" type="text/javascript"></script>-->
+        <script src="../../assets/local/basePermit.js" type="text/javascript"></script>
+    </body>
+</html>

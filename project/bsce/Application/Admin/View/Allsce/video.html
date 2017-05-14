@@ -1,0 +1,161 @@
+<include file="Public/header" title="景区视频" css="__STATIC__/css/base.css,__STATIC__/css/allsce.css" />
+<div id="pageTitle">
+    <div class="page-title">景区视频</div>
+</div>
+<div id="pageWrapper">
+    <div id="searchCnr">
+        <div v-show="!addImgVisible" class="pull-left">
+            <div class="btn btn-laia" @click="clearSearch()">返回</div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input id='keyWord' type="text" class="form-control" placeholder="视频关键字" v-model="keyword" @change='searchFn'>
+                <div class="input-group-addon bg-laia" @click="searchFn">
+                    <span class="glyphicon glyphicon-search" ></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <select class="form-control" v-model="selPoint" @change="getPointData()">
+                <option v-for="(idx,obj) in points" :value="obj.SceLongitude + ','+obj.SceLatitude" v-text="obj.SceName"></option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <select class="form-control" v-model="selWapTag" @change="getPointData()">
+                <option v-for="(idx,obj) in wapTag" :value="obj.id" v-text="obj.tagName"></option>
+            </select>
+        </div>
+        <div class="btn btn-default" @click="toTop">置顶视频</div>
+        <div class="btn btn-danger" @click="delVideo()">删除视频</div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="laia-row">
+        <div class="help-block h4 text-center" v-show="!tableVideo||(typeof tableVideo=='object'&&tableVideo.length<1)" style="display:none;">没有相关视频</div>
+        <div class="portfolio-content">
+            <ul class="cl portfolio-area">
+                <li v-show="addImgVisible" style="cursor: pointer" @click="addvideo">
+                    <div class="portfoliobox">
+                        <div class="addvideo">
+                            <div style="background-image: url(__PUBLIC__/img/addvideo.png)"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="video-thumbnail" v-for="(idx, obj) in tableVideo">
+                    <div class="portfoliobox">
+                        <input class="img-chk" type="checkbox" value="{{idx}}" id="{{obj.id}}" v-model="checkedArr">
+                        <label for="{{obj.id}}"></label>
+                        <div class="picbox">
+                            <div class="video-cover" :style="{'backgroundImage': 'url('+obj.videoPic+')'}" @click="showEdit(idx)"></div>
+                            <div class="video-date">
+                                <div class="pull-left">{{obj.creatDate}}</div>
+                                <div class="pull-right">{{obj.watchNum}}</div>
+                            </div>
+                            <div class="video-dsc">
+                                <div>{{obj.videoName}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <ul v-show="showPageNav" class="pagination">
+            <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+                <a href="javascript:;">{{obj.num}}</a>
+            </li>
+            <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+                <a href="javascript:;">下一页</a>
+            </li>
+        </ul>
+        <div id="pageCount" class="btn bg-laia">
+            <span>第 {{curPage}} 页 | </span>
+            <span>共 {{pageCount}} 页</span>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="laia-mask" v-show="editCnrVisible" style="display:none;">
+        <div class="laia-edit-cnr">
+            <div class="edit-icon"></div>
+            <div class="edit-cnt">
+                <div class="cnt-body">
+                    <form id="form"  method="POST" enctype="multipart/form-data">
+
+                        <input type="hidden" name="videoWidth" id="videoWidth" v-model="editVideoObj.videoWidth">
+                        <input type="hidden" name="videoHeight" id="videoHeight" v-model="editVideoObj.videoHeight">
+                        <input type="hidden" name="hourLeng" id="hourLeng" v-model="editVideoObj.hourLeng">
+                        <input type="hidden" name="id" id="id" v-model="editVideoObj.id">
+                        <div id="videoCnr" class="pull-left">
+                            <video id="videoView" :src="editVideoObj.videoPath" :poster="editVideoObj.videoPic" controls preload="none" width="390" height="390" v-show='videoVisible' onerror="this.poster='/operate/Public/img/error.png'"></video>
+                            <img width="390" src="/operate/Public/img/error.png" v-show='imgVisible'>
+                            <input type="file" name="video" id="uploadVideo" accept=".mp4" hidden multiple>
+                            <div class="btn btn-default pull-left btn-sm" id="upVideoBtn">修改</div><span><strong class="star">●</strong>视频小于200MB</span>
+                        </div>
+                        <div id="ContentCnr" class="pull-left">
+                            <div class="form-group">
+                                <div class="col-md-2">景点</div>
+                                <div class="col-md-10">
+                                    <select class="form-control" v-model="selPointVideo" name="lonlat">
+                                        <option v-for="(idx,obj) in points" :value="obj.SceLongitude + ','+obj.SceLatitude" v-text="obj.SceName"></option>
+                                    </select>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-2">标签</div>
+                                <div class="col-md-10">
+                                    <select class="form-control" v-model="selWapTagVideo" name="waptag">
+                                        <option v-for="(idx,obj) in wapTagVideo" :value="obj.id" v-text="obj.tagName"></option>
+                                    </select>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-2">标题</div>
+                                <div class="col-md-10 laia-ctrl-cnr">
+                                    <textarea type="text"  name="videoName" class="form-control laia-ctrl laia-area" maxlength="90" placeholder="标题"   v-model="editVideoObj.videoName"></textarea>
+                                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>90</span></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-2">封面</div>
+                                <div class="col-md-10">
+                                    <img id="coverView" class="upload-review album-cover"  title="视频封面" :src="editVideoObj.videoPic"  width="180" onerror="this.src='/operate/Public/img/error.png'"/>
+                                    <input type="file" name="cover" id="uploadCover" accept=".png,.jepg,.jpg,.gif,.bmp" hidden multiple>
+                                    <div id='upCoverBtn' class="btn btn-default btn-sm pull-right">修改</div>
+                                    <div  class="btn btn-laia btn-sm  pull-right" @click="cutImg">截图</div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-1"><strong class="star">●</strong></div>
+                                <div class="col-md-11">请选择图片大小为1280px*720px，小于1MB，格式为jpg/png/gif</div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- <div class="form-group">
+                                 <div class="col-md-4">视频时长</div>
+                                 <div class="col-md-8">
+                                     <input type="text"  readonly id="duration" name="duration" class="form-control" placeholder="视频时长" v-model="editVideoObj.duration">
+                                 </div>
+                                 <div class="clearfix"></div>
+                             </div>-->
+
+                        </div>
+                    </form>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="cnt-foot">
+                    <div  id="btnSubmit" class="pull-right btn btn-laia">保存</div>
+                    <div class="pull-right btn btn-default" @click="hideEdit()">取消</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/uploadPreview.js,__PUBLIC__/js/jquery.form.js,__PUBLIC__/js/vue.min.js,__STATIC__/js/allsce/video.js" />

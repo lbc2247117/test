@@ -1,0 +1,149 @@
+<include file="Public/header" title="推荐行程" css="__PUBLIC__/css/video-js.min.css,__STATIC__/css/rcmd.css"/>
+<div id="headCnr">
+  <div id="headCover" :style="{backgroundImage:bgImg(urlFix+banner)}">
+    <div id="headTitle" v-html="title"></div>
+  </div>
+  <div id="tipMark"></div>
+  <div id="dsc" v-html="dsc"></div>
+</div>
+<div id="bodyCnr">
+  <div id="roadLineCnr" @click="toggle">
+    <div id="roadLineTitle">行程安排</div>
+    <div id="roadLineCnt">
+      <div v-html="roadLine"></div>
+      <div id="roadLineMask"></div>
+    </div>
+    <div id="roadLineState"></div>
+    <div id="roadLineBottom"></div>
+  </div>
+  <div id="dayCnr">
+    <div class="day-cnr" v-for="(dayIdx,dayObj) in dayArr">
+      <div class="day-title active" @click="toggle">
+        <div class="day-count" v-text="'D'+(dayIdx+1)"></div>
+        <div class="day-dsc">
+          <div class="name text-ellipsis" v-text="dayObj.name"></div>
+          <div class="dsc text-ellipsis" v-text="dayObj.remark"></div>
+        </div>
+      </div>
+      <div class="day-info">
+        <div class="sgl-data-cnr" v-for='(dataIdx,dataObj) in dayObj.info'>
+          <div v-if="dataObj.type==4" :id="dataObj.id">
+            <div class="sgl-icon traffic"></div>
+            <div class="data-title traffic">
+              <div v-text="dataObj.name"></div>
+            </div>
+            <div class="traffic-dtl" v-html="dataObj.trafficInformation"></div>
+          </div>
+          <div v-if="dataObj.type==5" :id="dataObj.id">
+            <div class="sgl-icon place"></div>
+            <div class="sgl-place" @click="jumpToplace(dataObj.resource.id,dataObj.resource.maplon,dataObj.resource.maplat)">
+              <div class="data-cover" :style="{backgroundImage:bgImg(urlFix+dataObj.resource.pageFm)}"></div>
+              <div class="sgl-dtl">
+                <div class="sgl-title text-ellipsis mgn-b-5" v-text="dataObj.name"></div>
+                <div class="sgl-remark place" v-text="dataObj.resource.sceRemark"></div>
+              </div>
+            </div>
+            <div v-if="!!dataObj.recommendedReason">
+              <div class="rcmd-icon"></div>
+              <div class="rcmd-text-cnr">
+                <div class="rcmd-arrow"></div>
+                <div class="rcmd-text" v-text="dataObj.recommendedReason"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="traffic-text-cnr" v-if="!!dataObj.trafficInformation">
+              <div class="traffic-icon"></div>
+              <div class="traffic-text" v-text="dataObj.trafficInformation"></div>
+            </div>
+          </div>
+          <div v-if="dataObj.type==2" :id="dataObj.id">
+            <div class="sgl-icon food"></div>
+            <div class="data-title food">
+              <div v-text="'推荐美食'+(!!dataObj.tag?'('+dataObj.tag+')':'')"></div>
+            </div>
+            <div class="sgl-biz" v-for="(bizIdx,bizObj) in dataObj.sellers" @click="jumpToBiz(bizObj.resource.id)">
+              <div class="data-cover" :style="{backgroundImage:bgImg(urlFix+bizObj.resource.backPic[0])}"></div>
+              <div class="sgl-dtl">
+                <div class="sgl-title text-ellipsis mgn-b-5" v-text="bizObj.name"></div>
+                <div class="level">
+                  <div class="stars" :class="parseInt(bizObj.resource.starLev)>0?'active':''"></div>
+                  <div class="stars" :class="parseInt(bizObj.resource.starLev)>1?'active':''"></div>
+                  <div class="stars" :class="parseInt(bizObj.resource.starLev)>2?'active':''"></div>
+                  <div class="stars" :class="parseInt(bizObj.resource.starLev)>3?'active':''"></div>
+                  <div class="stars" :class="parseInt(bizObj.resource.starLev)>4?'active':''"></div>
+                </div>
+                <div class="tag-cnr">
+                  <div v-for="obj in bizObj.resource.tagArr" class="tag-sgl">
+                    <div class="tag-text" v-text="obj"></div>
+                    <div class="tag-arrow"></div>
+                  </div>
+                </div>
+                <div class="clearfix mgn-b-5"></div>
+                <div class="small sgl-remark text-ellipsis mgn-b-5" v-text="bizObj.resource.remark"></div>
+                <div class="small">人均<span class="red" v-text="bizObj.resource.averPrice"></span>元</div>
+              </div>
+            </div>
+          </div>
+          <div v-if="dataObj.type==6" :id="dataObj.id">
+            <div class="sgl-icon hotel"></div>
+            <div class="data-title hotel">
+              <div>推荐住宿</div>
+            </div>
+            <div class="sgl-biz" v-for="(bizIdx,bizObj) in dataObj.sellers" @click="jumpToBiz(bizObj.resource.id)">
+              <div class="data-cover" :style="{backgroundImage:bgImg(urlFix+bizObj.resource.backPic[0])}"></div>
+              <div class="sgl-dtl">
+                <div class="sgl-title text-ellipsis mgn-b-5" v-text="bizObj.name"></div>
+                <div class="level">
+                  <div class="stars" :class="parseInt(bizObj.resource.starLev)>0?'active':''"></div>
+                  <div class="stars" :class="parseInt(bizObj.resource.starLev)>1?'active':''"></div>
+                  <div class="stars" :class="parseInt(bizObj.resource.starLev)>2?'active':''"></div>
+                  <div class="stars" :class="parseInt(bizObj.resource.starLev)>3?'active':''"></div>
+                  <div class="stars" :class="parseInt(bizObj.resource.starLev)>4?'active':''"></div>
+                </div>
+                <div class="tag-cnr">
+                  <div v-for="obj in bizObj.resource.tagArr" class="tag-sgl">
+                    <div class="tag-text" v-text="obj"></div>
+                    <div class="tag-arrow"></div>
+                  </div>
+                </div>
+                <div class="clearfix mgn-b-5"></div>
+                <div class="small sgl-remark text-ellipsis mgn-b-5" v-text="bizObj.resource.remark"></div>
+                <div class="small">人均<span class="red" v-text="bizObj.resource.averPrice"></span>元</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="rcmdCnr">
+    <div class="text-center">
+      <div id="rcmdTitle">相关行程</div>
+    </div>
+    <div v-show="!!rcmd.id" @click="jumpToRcmd(rcmd.id)">
+      <div v-text="rcmd.name" class="rcmd-title"></div>
+      <div class="small"><span class="rcmd-per" v-text="rcmd.percentNum+'%'"></span>游客会选择该路线</div>
+      <div v-text="'推荐理由：'+rcmd.remark"></div>
+      <div id="rcmdCover" :style="{backgroundImage:bgImg(rcmd.travelPic)}"></div>
+    </div>
+    <div v-show="!rcmd.id" class="text-center">暂无相关行程</div>
+  </div>
+  <div id="listCnr" @click="hideList()">
+    <div id="list">
+      <ul class="list-unstyled" v-for="(dayIdx,dayObj) in dayArr">
+        <li>
+          <div class="title" v-text="'D'+(dayIdx+1)"></div>
+          <div class="day-icon"></div>
+        </li>
+        <li v-for="(idx,obj) in dayObj.info">
+          <a href="javascript:;" @click='gotomap(obj.id)'>
+            <div class="text-ellipsis" v-text="obj.name"></div>
+          </a>
+          <div class="place-icon"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="listBtn" @click="showList()"></div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/video.min.js,__STATIC__/js/rcmd.js"/>

@@ -1,0 +1,123 @@
+#headCnr {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+}
+#headerCnr{
+    margin-top: 40px;
+}
+#headerCnr,#headerCnr img{
+    width: 100%;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    user-drag: none;
+}
+#bodyCnr {
+    padding: 10px;
+    background: #eee;
+}
+.sgl {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px #eee;
+    font-size: 14px;
+    line-height: 18px;
+    color: #666;
+    background: #fff;
+}
+.titledsc {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    color: #666;
+    font-weight: bold;
+    border-left: 8px solid #4BDDCF;
+    padding-left: 8px;
+}
+.place-title-cnt {
+    float: left;
+    color: #333;
+    padding: 0 0 0 40px;
+    line-height: 50px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 30px;
+    background-image: url(img/place_icon.png);
+    font-size: 16px;
+}
+#listCnr {
+    display: none;
+    background-color: rgba(0, 0, 0, .6);
+    position: fixed;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999999999999999999999;
+}
+
+#list {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.list-title {
+    background-color: #fff;
+    border-bottom: 1px solid #767676;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.list-title .name {
+    margin-left: 7px;
+    border-left: 3px solid #f96e57;
+    padding: 0 10px;
+
+}
+
+.list-unstyled > li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #767676;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    background: url(img/jingqu_icon_dian1.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: left;
+    color: #333;
+
+}
+.list-unstyled .active{
+    color:#48d3c6;
+}
+
+
+.list-unstyled > li > a:hover,
+.list-unstyled > li > a:focus {
+    color: #3bc2b5;
+    text-decoration: none;
+}
+#listBtn {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url(../../static/img/listbtn.png);
+    width: 20%;
+    max-width: 100px;
+    height: 0;
+    padding-bottom: 11%;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: inherit;
+}

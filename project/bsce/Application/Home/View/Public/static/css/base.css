@@ -1,0 +1,417 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-color: #eee;
+  font-family: '微软雅黑', 'Microsoft YaHei';
+  letter-spacing: 1.1px;
+}
+
+.pad-10 {
+  padding: 10px;
+}
+
+.pad-10-0 {
+  padding: 10px 0;
+}
+
+.pad-10-0-0 {
+  padding: 10px 0 0;
+}
+
+.pad-0-10 {
+  padding: 0 10px;
+}
+
+.pad-0-10-10 {
+  padding: 0 10px 10px;
+}
+
+.alert-cnr {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+  padding: 15px;
+  text-align: center;
+  color: #333;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 5px;
+  z-index: 99;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .9);
+}
+
+.alert-success {
+}
+
+.alert-warning {
+}
+
+.alert-danger {
+}
+
+.confirm-cnr {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+  z-index: 99;
+}
+
+.confirm-cnt {
+  width: 100%;
+  position: relative;
+  padding: 15px 15px 50px;
+  text-align: center;
+  color: #333;
+  background-color: rgba(255, 255, 255, .9);
+  word-break: break-all;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .9);
+}
+
+.confirm-btn-cnr {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.confirm-btn {
+  float: left;
+  width: 50%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  cursor: pointer;
+  font-size: 85%;
+}
+
+.confirm-btn:first-child {
+  border-right: 1px solid #eee;
+}
+
+.sgl-pjt-cnr {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 100%;
+  margin: 15px 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.sgl-pjt-cnr .dtl-cnr {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 100%;
+  left: 0;
+}
+
+.sgl-pjt-cnr.active .dtl-cnr {
+  top: 0;
+  animation: toTop 0.5s;
+  -moz-animation: toTop 0.5s;
+  -webkit-animation: toTop 0.5s;
+  -o-animation: toTop 0.5s;
+}
+
+@keyframes toTop {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 0;
+  }
+
+}
+
+@-moz-keyframes toTop {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 0;
+  }
+
+}
+
+@-webkit-keyframes toTop {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 0;
+  }
+
+}
+
+@-o-keyframes toTop {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 0;
+  }
+
+}
+
+.text-ellipsis {
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#toTop {
+  position: fixed;
+  cursor: pointer;
+  bottom: 30px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/to_top.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#laiaNav {
+  display: none;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+#navBack {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-size: 15px 20px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-image: url(../../static/img/icon_back.png);
+  float: left;
+  margin-left: 10px;
+}
+
+.nav-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+#navHome .nav-icon {
+  background-image: url(../../static/img/menu_icon_home.png);
+}
+
+#navLive .nav-icon {
+  background-image: url(../../static/img/menu_icon_live.png);
+}
+
+#navNear .nav-icon {
+  background-image: url(../../static/img/menu_icon_service.png);
+}
+
+#navRcmd .nav-icon {
+  background-image: url(../../static/img/menu_icon_xingcehng.png);
+}
+
+#navShare .nav-icon {
+  background-image: url(../../static/img/menu_icon_share.png);
+}
+
+.mark-live {
+  background-image: url(../../static/img/marklive.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 15%;
+  max-width: 50px;
+  height: 0;
+  padding-bottom: 6%;
+  z-index: 9;
+}
+
+/* Cover bootstrap.css */
+.navbar {
+  min-height: 40px;
+}
+
+.navbar-nav {
+  margin: 0;
+}
+
+.navbar-fixed-top {
+  margin-bottom: 0;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+
+.navbar-brand {
+  padding: 5px 15px;
+}
+
+.navbar-right {
+  margin-right: 0;
+}
+
+.dropdown-toggle {
+  width: 50px;
+  height: 40px;
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../static/img/icon_more.png);
+}
+
+.input-group-addon {
+  border-color: #eee;
+}
+
+.form-control {
+  border-color: #eee;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: #ddd;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(177, 177, 177, .6);
+}
+
+.carousel-inner .item {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-indicators {
+  bottom: 0;
+}
+
+.carousel-indicators li {
+  width: 30px;
+  height: 5px;
+}
+
+.carousel-indicators .active {
+  width: 32px;
+  height: 7px;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #ddd;
+  text-decoration: none;
+  box-shadow: 0 0 10px black;
+}
+
+.thumbnail .caption * {
+  text-decoration: none;
+}
+
+@media (max-width:767px) {
+  .col-xs-1,
+  .col-xs-10,
+  .col-xs-11,
+  .col-xs-12,
+  .col-xs-2,
+  .col-xs-3,
+  .col-xs-4,
+  .col-xs-5,
+  .col-xs-6,
+  .col-xs-7,
+  .col-xs-8,
+  .col-xs-9 {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+
+  .navbar-default {
+    background-color: #fff;
+  }
+
+  .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: auto;
+    width: auto;
+    min-width: inherit;
+    margin-top: 0;
+    border: 0;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 3px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    padding: 10px;
+  }
+
+  .navbar-nav .open .dropdown-menu .dropdown-header,
+  .navbar-nav .open .dropdown-menu>li>a {
+    padding: 5px 10px;
+  }
+
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #fff;
+  }
+
+  .dropdown-menu .divider {
+    margin: 4px 0;
+  }
+
+  .alert-cnr {
+    margin: 0;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 0.3rem;
+  }
+
+  .confirm-cnr {
+    margin: 0;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+  }
+
+  .confirm-cnt {
+    padding: 1rem 1rem 4rem;
+    border-radius: 0.3rem;
+  }
+
+  .confirm-btn {
+    height: 3rem;
+    line-height: 3rem;
+  }
+
+  #toTop {
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+}

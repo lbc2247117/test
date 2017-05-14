@@ -1,0 +1,181 @@
+<include file="Public/header" title="问答管理" css="__STATIC__/css/base.css,__STATIC__/css/question.css" />
+<div id="pageTitle">
+    <div class="page-title">问答管理</div>
+</div>
+<div id="pageWrapper">
+    <div id="searchCnr">
+        <div class="col-md-3">
+            <div class="input-group">
+                <input id='keyWord' type="text" class="form-control" placeholder="问题关键字" v-model="serchName" @change="saveSerchName">
+                <div class="input-group-addon bg-laia" @click="saveSerchName">
+                    <span class="glyphicon glyphicon-search" ></span>
+                </div>
+            </div>
+        </div>
+        <div class ="col-md-2">
+            <select class ="form-control" v-model="selStatus" @change="saveAnser">
+                <option v-for ="(idx,obj) in status" :value="obj.id" v-text="obj.val"></option>
+            </select>
+        </div>
+        <div class ="col-md-2">
+            <select class ="form-control" v-model="selSortType" @change="saveSortType">
+                <option v-for ="(idx,obj) in sortType" :value="obj.id" v-text="obj.val"></option>
+            </select>
+        </div>
+        <div class ="pull-right">
+            <div class ="btn btn-default" @click="delQusetion()">删除</div>
+        </div>
+    </div>
+    <div class ="clearfix"></div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>问题</th>
+                    <th>状态</th>
+                    <th>点赞数</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(idx, obj) in tableData">
+                    <td>
+                        <div class="laia-chk">
+                            <input type="checkbox" :value="obj.id" :id="obj.id" v-model="checkedArr">
+                            <label :for="obj.id"></label>
+
+                        </div>
+                    </td>
+                    <td class="text-left">
+                        {{obj.requestContent}}
+                    </td>
+                    <td>
+                        <span v-if="(obj.requestRepeat=='')">待回答</span>
+                        <span v-if="(obj.requestRepeat!='')">已回答</span>
+                    </td>
+                    <td>
+                        点赞{{obj.vote}}次
+                    </td>
+                    <td>
+                        {{obj.createDate}}
+                    </td>
+                    <td>
+                        <span v-if="(obj.requestRepeat=='')" class="btn btn-link" @click="showEdit(idx)">回答</span>
+                        <span v-if="(obj.requestRepeat!='')" class="btn btn-link" @click="showEdit(idx)">查看</span>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <ul v-show="showPageNav" class="pagination">
+            <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+                <a href="javascript:;">{{obj.num}}</a>
+            </li>
+            <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+                <a href="javascript:;">下一页</a>
+            </li>
+        </ul>
+
+        <div id="pageCount" class="btn bg-laia">
+            <span>第 {{curPage}} 页 | </span>
+            <span>共 {{pageCount}} 页</span>
+        </div>
+    </div>
+    <div class="laia-mask" v-show="editCnrVisible" style="display:none;">
+        <div class="laia-edit-cnr">
+            <div class="edit-icon"></div>
+            <div class="edit-cnt">
+                <div class="cnt-body">
+                    <form id="editform"  enctype="multipart/form-data">
+                        <div id="editCntBnr" >
+                            <div>
+                                <div class="form-group">
+                                    <div class="col-md-2">游客问题</div>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" v-model="editObj.question" placeholder="游客问题">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-2">提问时间</div>
+                                    <div class="col-md-10">{{editObj.time}}</div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-2">解答</div>
+                                    <div class="col-md-10">
+                                        <textarea type="text" class="form-control" v-model="editObj.answer" placeholder="解答"></textarea>
+                                    </div>
+                                    <input type="hidden" v-model="editObj.userID">
+                                    <input type="hidden" v-model="editObj.vote">
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="cnt-foot">
+                    <div class="form-group">
+                        <div class="col-md-10"></div>
+                        <div class="btn btn-default" @click="hideEdit()">取消</div>
+                        <div  id="btnSubmit" class="btn btn-laia" @click="saveEdit(editObj)">保存</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  <div id="editCnr" v-show="editCnrVisible" style="display:none;">
+          <form id="editform"  enctype="multipart/form-data">
+              <div id="editCntBnr" >
+  
+                  <div id="header">
+                      <div class="pull-right" id="editClose" @click="hideEdit">&times;</div>
+                  </div>
+                  <div>
+                      <div class="form-group">
+                          <div class="col-md-2">问题详情</div>
+                          <div class="clearfix"></div>
+                      </div>
+                      <div class="form-group">
+                          <div class="col-md-2">游客咨询</div>
+                          <div class="col-md-10">
+                              <input type="text" class="form-control" v-model="editObj.question" placeholder="游客咨询">
+                          </div>
+                          <div class="clearfix"></div>
+                      </div>
+                      <div class="form-group">
+                          提问日期：{{editObj.time}}
+  
+                          <div class="clearfix"></div>
+                      </div>
+                      <div class="form-group">
+                          <div class="col-md-2">解答</div>
+                          <div class="col-md-10">
+                              <textarea type="text" class="form-control" v-model="editObj.answer" placeholder="解答"></textarea>
+                          </div>
+                          <input type="hidden" v-model="editObj.userID">
+                          <input type="hidden" v-model="editObj.vote">
+                          <div class="clearfix"></div>
+                      </div>
+                      <div class="col-md-6">
+                          <div  class="pull-left btn bg-laia btn-sm" @click="saveEdit(editObj)">保存</div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="pull-right btn btn-default btn-sm" @click="hideEdit">取消</div>
+                      </div>
+  
+                  </div>
+              </div>
+          </form>
+      </div>-->
+</div>
+<include file="Public/footer" js="__STATIC__/js/question/question.js,__STATIC__/js/app.js" />

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>非时序OA管理系统-提交流量业绩</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <link href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/bootstrap-datetimepicker/css/datetimepicker.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/bootstrap-datepicker/css/datepicker3.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/bootstrap-toastr/toastr.min.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/jstree/dist/themes/default/style.min.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/bootstrap-select/bootstrap-select.min.css">
+        <!-- BEGIN THEME STYLES -->
+        <link href="../../assets/local/css/components.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/local/css/plugins.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/local/css/base.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/local/css/center.css" rel="stylesheet" type="text/css"/>
+        <!-- END THEME STYLES -->
+        <link rel="shortcut icon" href="../../assets/global/img/favicon.ico"/>
+    </head>
+    <body>
+        <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-hidden="false">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">添加提交流量点</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-success">
+                            <span style="color: red;">*</span>注:   带有"<span style="color: red;">*</span>"的字段为必填项
+                        </div>
+                        <form id="add_sendflow_form" class="form-horizontal" novalidate="novalidate">
+                            <div class="form-body">
+                                <div class="form-group">
+
+                                    <label class="control-label col-md-2" for="add_time">添加时间<span class="required">*</span></label>
+                                    <div class="col-md-3">
+                                        <input type="text" style="width:186px;height:32px;" name="add_time" id="add_time" data-bind="value:add_time" onfocus="WdatePicker({dateFmt: 'yyyy-MM-dd HH:mm:ss'})"/>
+                                    </div>
+                                    <label class="control-label col-md-2" for="rception_staff">平台客服<span class="required">*</span></label>
+                                    <div class="col-md-3">
+                                        <input type="text" readonly="" class="form-control" name="rception_staff" id="rception_staff" placeholder="平台客服"/>
+                                        <input type="hidden" name="rception_staff_id" id="rception_staff_id">
+                                    </div>  
+                                </div>
+                                <div class="form-group">                                    
+                                    <label class="control-label col-md-2" for="ww">旺旺</label>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control" name="ww" id="ww" placeholder="淘宝旺旺"/>
+                                    </div>
+                                    <label class="control-label col-md-2" for="qq">QQ</label>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control" name="qq" id="qq" placeholder="客户QQ"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2" for="hoturl">爆款链接<span class="required">*</span></label>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control" name="hoturl" id="hoturl" placeholder="爆款链接"/>
+                                    </div>
+                                    <label class="control-label col-md-2" for="goodsbase">货源</label>
+                                    <div class="col-md-3" >
+                                        <input type="text"  class="form-control" name="goodsbase" readonly="readonly" id="goodsbase" placeholder="货源"/>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="shengf">                                    
+                                    <label class="control-label col-md-2" for="level">等级</label>
+                                    <div class="col-md-3">
+                                        <input type="text"  class="form-control" name="level" readonly="readonly" id="level" placeholder="等级"/>
+                                    </div>
+                                    <label class="control-label col-md-2" for="point">流量点<span class="required">*</span></label>
+                                    <div class="col-md-3">
+                                        <input type="text"  class="form-control" name="point" id="point" placeholder="流量数"/>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="shengf">                                    
+                                    <label class="control-label col-md-2" for="day_point">每日流量</label>
+                                    <div class="col-md-3">
+                                        <input type="text"  class="form-control" name="day_point" id="day_point" placeholder="每日流量"/>
+                                    </div>
+                                    <label class="control-label col-md-2" for="isfirst">是否主推</label>
+                                    <div class="col-md-3">
+                                        <!--<input type="text" class="form-control" name="isfirst" id="isfirst" placeholder="是否主推"/>-->
+                                        <select name="isfirst" id="isfirst"><option value="0">主推</option><option value="1">副推</option></select>
+                                    </div> 
+                                </div>
+                                <div class="form-group" id="shengf"> 
+                                    <label class="control-label col-md-2" for="serviceEmployee">服务部<span class="required">*</span></label>
+                                    <div class="col-md-3">
+                                        <input type="text" readonly="readonly" class="form-control" name="serviceEmployee" id="serviceEmployee" placeholder="服务部"/>
+                                        <input type="hidden" name="serviceEmployee_id" id="serviceEmployee_id">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2" for="remark">备注</label>
+                                    <div class="col-md-8">
+                                        <textarea class="form-control auto_paste_img" name="remark" id="remark" placeholder="备注" contenteditable="true" title="请将图片粘贴到此处"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="btn_submit_primary">保存</button>
+                            <button type="button" class="btn btn-default" id="btn_close_primary" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type='hidden' id="search_type"/>
+        <input type='hidden' id="tmpid"/>
+        <div class="modal fade bs-example-modal-lg in" id="assignService" tabindex="-1" role="dialog" aria-hidden="false">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content ui-draggable">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel">指派服务部</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="assignService_form" class="form-horizontal" novalidate="novalidate">
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label class="control-label col-md-2" for="serviceEmployee">服务部人员<span class="required">*</span></label>
+                                    <div class="col-md-3">
+                                        <input type="text" readonly="" class="form-control" name="serviceEmployee" id="serviceEmployee" placeholder="指定服务部人员"/>
+                                        <input type="hidden" name="serviceEmployee_id" id="serviceEmployee_id">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2" for="remark">备注</label>
+                                    <div class="col-md-8">
+                                        <div class="form-control auto_paste_img" name="remark" id="remark" placeholder="备注" contenteditable="true" title="请将图片粘贴到此处"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="btn_toexcel_primary">确定</button>
+                        <button type="button" class="btn btn-default" id="btn_close_primary" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        <div class="modal fade bs-example-modal-lg" id="myImportExcelModal" tabindex="-1" role="dialog" aria-hidden="false">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">导入EXCEL</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form id="importexcel_form"  enctype="multipart/form-data" class="form-horizontal" novalidate="novalidate">
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <a href="javascript:void(0)">
+                                                <label class="col-md-2" for="importFile">
+                                                    <i class="glyphicon glyphicon-upload"></i>
+                                                    本地上传
+                                                </label>
+                                            </a>
+                                            <input  type="file" name="filename" id="importFile" style="display:none;">
+                                        </div>
+                                        <div class="alert alert-danger alert-dismissible fade in" role="alert" id="fileMessage">
+                                            <strong>警告!</strong> 只能选择格式为 xls 或者 xlsx &nbsp;&nbsp; 请重新上传文件
+                                        </div>
+                                        <div class="form-group" id="uploadFileInfo">
+                                            <div class="col-md-2">
+                                                <img src="https://wt-thumb.oss.aliyuncs.com/res/icon/icon-excel.png"/>
+                                            </div>
+                                            <div class="col-md-8 file-preview">
+                                                <dl>
+                                                    <dt class="fileName"></dt>
+                                                    <dd class="fileSize"></dd>
+                                                    <dd><a href="javascript:void(0)">删除</a></dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" id="btn_importexcel_primary">确认导入</button>
+                                <button type="button" class="btn btn-default" id="btn_close_primary" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+        <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li><i class="fa fa-home"></i><a href="../index.html">首页</a><i class="fa fa-angle-right"></i></li>
+                <li><a href="#">添加业绩</a><i class="fa fa-angle-right"></i></li>
+                <li><a href="#">提交流量点业绩</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="permit_buttons" style="float: left;">
+                <button type="button" id="open_dialog_btn" class="btn red-sunglo permit_3050801" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i>添加提交流量点</button>
+                <!--                <button type="button" id="open_dialog_fill_btn" class="btn red-sunglo permit_3050405" data-toggle="modal" data-target="#fillModal"><i class="fa fa-plus"></i>添加补欠款</button>-->
+                <button type="button" id="outexcel" class="btn red-sunglo permit_3050808" data-toggle="modal" data-target="#myexcelModal"><i class="glyphicon glyphicon-arrow-up"></i>导出EXCEL</button>
+                <button type="button" id="importexcel" class="btn red-sunglo permit_3050807" data-toggle="modal" data-target="#myImportExcelModal"><i class="glyphicon glyphicon-arrow-down"></i>导入EXCEL</button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="portlet box red-sunglo">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="icon-users" ></i>
+                        提交流量业绩列表
+                    </div>
+                </div>
+                <div class="portlet-body" >
+                    <table class="table table-hover" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" class="checkbox" id="checkall">
+                                </th>
+                                <th>日期</th>
+                                <th>老师</th>
+                                <th>是否主推</th>
+                                <th>旺旺</th>
+                                <th>QQ</th>
+                                <th>爆款链接</th>
+                                <th>货源</th>
+                                <th>等级</th>
+                                <th>流量数</th>
+                                <th>每日流量</th>
+                                <th>备注</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach:sendflowList">
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="checkbox" data-bind="value:id">
+                                    <!--ko if:dele-->
+                                    <!--<span  aria-hidden="false" class="icon-trash" style="cursor: pointer;margin-left: 10px;" title="删除"></span>-->
+                                    <!--/ko-->
+                                </td>
+                                <td data-bind="text:add_time"></td>
+                                <td data-bind="text:rception_staff"></td>
+                                <td data-bind="text:isfirst_text"></td>
+                                <td data-bind="text:ww"></td>
+                                <td data-bind="text:qq"></td>
+                                <td style="max-width: 300px;overflow: hidden;" data-bind="text:hoturl"></td>
+                                <td data-bind="text:goodsbase"></td>
+                                <td data-bind="text:level"></td>
+                                <td data-bind="text:point"></td>
+                                <td data-bind="text:day_point"></td>
+                                <td data-bind="text:remark"></td>
+                                <td>
+                                    <!--ko if:dele-->
+                                    <span data-bind="click:$root.delsendflow" aria-hidden="true" class="icon-trash" style="cursor: pointer;margin-left: 10px;color: #1E9E74;" title="删除">删除</span>
+                                    <!--/ko-->
+                                    <!--ko if:edit-->
+                                    <span data-bind="click:$root.editsendflow" aria-hidden="true" class="icon-note" style="cursor: pointer;margin-left: 10px;color: #1E9E74;" title="编辑">编辑</span>
+                                    <!--/ko-->
+                                </td>
+                            </tr>
+                            <tr style="display: none;" class="second_tr" data-bind="attr:{'id':'tr_'+id}">
+                                <td colspan="2"></td>
+                                <td colspan="9">
+                                    <form data-bind="attr:{'id':'form_'+id}">
+                                        <input type="hidden" name="id" id="id" data-bind="value:id"/>
+                                        <table class="table second_table">
+                                            <tr>
+                                                <th>添加时间:</th>
+                                                <td>
+                                                    <input type="text" name="add_time"  class="form-control" id="add_time" data-bind="value:add_time" onfocus="WdatePicker({dateFmt: 'yyyy-MM-dd HH:mm:ss'})"/>
+                                                </td>
+                                                <th>平台客服：</th>
+                                                <td>
+                                                    <input type="text" readonly="" class="form-control"  name="rception_staff" id="rception_staff" placeholder="平台客服" data-bind="value:rception_staff" />
+                                                    <input type="hidden" name="rception_staff_id" id="rception_staff_id" data-bind="value:rception_staff_id" />
+                                                </td>
+                                                <th>是否主推：</th>
+                                                <td>
+                                                    <input type="text"  class="form-control" name="isfirst" id="isfirst" placeholder="是否主推" data-bind="value:isfirst"/>
+                                                </td>                                                
+                                            </tr>
+                                            <tr>
+                                                <th>旺旺：</th>
+                                                <td>
+                                                    <input type="text"  data-bind="value:ww" name="ww" id="ww" class="form-control"  placeholder="旺旺" />
+                                                </td>
+                                                <th>QQ：</th>
+                                                <td>
+                                                    <input type="text"  class="form-control" name="qq" id="qq" placeholder="QQ"  data-bind="value:qq"/>
+                                                </td>
+                                                <th>爆款链接:</th>
+                                                <td>
+                                                    <input type="text"  class="form-control" name="hoturl" id="hoturl" placeholder="爆款链接" data-bind="value:hoturl" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>货源:</th>
+                                                <td>
+                                                    <input type="text" readonly="" class="form-control" name="goodsbase" id="goodsbase"  placeholder="货源" data-bind="value:goodsbase" />
+                                                </td>
+                                                <th>等级：</th>
+                                                <td>
+                                                    <input type="text" readonly="" class="form-control" name="level" id="level"  placeholder="等级" data-bind="value:level" />
+                                                </td>
+                                                <th>流量数:</th>
+                                                <td>
+                                                    <input type="text" name="point" id="point" data-bind="value:point" class="form-control"  placeholder="流量数" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>每日流量:</th>
+                                                <td>
+                                                    <input type="text"  name="day_point" id="day_point" data-bind="value:day_point" class="form-control"  placeholder="每日流量" />
+                                                </td>
+                                                <th>服务部:</th>
+                                                <td>
+                                                    <input type="text" readonly="" class="form-control"  name="serviceEmployee" id="serviceEmployee" placeholder="服务部客服" data-bind="value:serviceEmployee" />
+                                                    <input type="hidden" name="serviceEmployee_id" id="serviceEmployee_id" data-bind="value:serviceEmployee_id" />
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <th>备注:</th>
+                                                <td colspan="5">
+                                                    <div class="form-control auto_paste_img" name="remark" id="remark_edit" placeholder="备注" contenteditable="true" title="请将图片粘贴到此处" data-bind="html:remark"></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6">
+                                                    <button type="button" class="btn btn-primary submit_btn generationOperation_submit_btn" style="display: none;" data-bind="attr:{'id':'submit_'+id},click:$root.doEditSubmit">提交</button>
+                                                    <button type="button" class="btn btn-info cancel_btn" style="display: none;" data-bind="attr:{'id':'cancel_'+id},click:$root.cancelTr">取消</button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                </td>
+                                <td colspan="3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="paging-container"></div>
+                </div>
+            </div>
+        </div>
+        <script src="../../assets/global/plugins/jquery-1.9.1.min.js" type="text/javascript"></script>
+        
+        <script src="../../assets/global/plugins/bootstrap/js/bootstrap.3.3.2.min.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jquery.form_1.js" type="text/javascript"></script>
+
+        <script src="../../assets/global/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jquery-validation/js/jquery.validation.1.11.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
+        
+        <script src="../../assets/global/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+        <script src="../../assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+
+        <script src="../../assets/global/plugins/jstree/dist/jstree.min.js"></script>
+        <script src="../../assets/local/plugins/json.js" type="text/javascript"></script>
+        <script src="../../assets/local/plugins/base64encode.js" type="text/javascript"></script>
+        <script src="../../assets/local/knockout/knockout-3.1.0.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="../../assets/local/respond.js" type="text/javascript"></script>
+<script src="../../assets/local/html5shiv.js" type="text/javascript"></script>
+
+<![endif]-->
+        <script>
+                                                        document.write("<script src='../../assets/local/ycoa.js?ts=" + Math.random() + "' type='text/javascript'></\script>");
+                                                        document.write("<script src='../../assets/local/second_sale/sendflow.js' type='text/javascript'></\script>");
+                                                        document.write("<script src='../../assets/local/second_sale/sendflow-form-validate.js' type='text/javascript'></\script>");
+        </script>
+        <!--<script src="../../assets/local/ycoa.js" type="text/javascript"></script>-->
+        <!--<script src="../../assets/local/second_sale/generationOperation.js" type="text/javascript"></script>-->
+        <!--<script src="../../assets/local/second_sale/generationOperation-form-validate.js" type="text/javascript"></script>-->
+        <script src="../../assets/local/basePermit.js" type="text/javascript"></script>
+        <script src="../../assets/local/datapacker/WdatePicker.js" type="text/javascript"></script>
+        <script type="text/javascript">
+                                                        $(function () {
+                                                            $("#add_time").val(new Date().format("yyyy-MM-dd hh:mm:ss"));
+                                                        });
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,37 @@
+<include file="Public/header" title="" css="__STATIC__/css/iscroll.css,__STATIC__/css/coupon.css"/>
+<div id="scroller">
+  <div id="pullDown">
+    <span class="pull-down-icon"></span>
+    <span class="pull-down-label">下拉刷新</span>
+  </div>
+  <div id="headCnr">
+    <div id="name">
+      <div id="biz" v-text="dataObj.commericalname"></div>
+      <div v-text="dataObj.voucherName"></div>
+    </div>
+    <div id="per">
+      <span v-text="dataObj.zk"></span>
+      <span id="cn">折</span>
+    </div>
+  </div>
+  <div id="bodyCnr">
+    <img :src="dataObj.picUrl" width="100%">
+    <div class="time">
+        使用时间:<p/><span v-html="dataObj.useTime"></span>
+    </div>
+    <div class="sgl">
+      <span v-html="dataObj.remark"></span>
+    </div>
+    <div v-if="fromShake" id="bizCnr" @click="toBiz()">
+      <div id="bizCover" :style="{backgroundImage:bgImg(bizDataObj.backPic[0])}"></div>
+      <div id="bizDsc">
+        <div class="text-ellipsis" id="bizTitle" v-text="bizDataObj.name"></div>
+        <div class="text-ellipsis" id="bizAddress">地址：<span v-text="bizDataObj.adress"></span></div>
+        <div class="text-ellipsis" id="bizPhone">联系方式：<span v-text="bizDataObj.tel"></span></div>
+      </div>
+      <div id="bizGo">立即查看</div>
+    </div>
+    <div class="small">请保持当前页或截图，以便使用。</div>
+  </div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/coupon.js"/>

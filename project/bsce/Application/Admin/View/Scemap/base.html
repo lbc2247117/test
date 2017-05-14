@@ -1,0 +1,193 @@
+<include file="Public/header" title="景点基本资料" css="__STATIC__/css/scemap.css,__STATIC__/css/base.css" />
+<div id="pageTitle">
+    <div class="page-title">景点管理</div>
+    <div class="pull-right btn btn-laia" @click="saveEdit">保存</div>
+</div>
+<div id="pageWrapper">
+    <nav class="laia navbar navbar-default navbar-static-top pull-left" role="navigation">
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="javascript:void(0);">景点基本资料</a></li>
+                <li class="ishide"><a href="javascript:void(0);" @click="gotovideo">景点视频</a></li>
+                <li class="ishide"><a href="javascript:void(0);"@click="gotoimg">景点图片</a></li>
+                <li class="ishide"><a href="javascript:void(0);" @click="gotolive">美景直播</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="clearfix"></div>
+    <form id="editform" :action="mars" method="post" enctype="multipart/form-data">
+        <input type="hidden"  name="id" v-model="id">
+
+        <div  class="col-md-6">
+            <div class="form-group">
+                <div class="col-md-2">景点名称</div>
+                <div class="col-md-10 laia-ctrl-cnr">
+                    <input type="text" id="sceName"  name="name" v-model="SceName" class="form-control laia-ctrl laia-ipt" maxlength="32" placeholder="景点名称">
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>32</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">景点封面</div>
+                <div class="col-md-10">
+                    <div class="help">请选择1000x750px大小图片，格式为jpg/png，大小不要超过1MB。</div>
+                    <div>
+                        <img  id="picView" style='cursor: pointer' class="upload-review album-cover" title="景点封面" width="319" height="176" onerror="this.src='__PUBLIC__/img/error_scepic.png'" :src="logoUrl"  onclick="pic.click();
+                                return false;">
+                        <input type="file" hidden="" class="upload-button" id="pic" name="cover">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">景点介绍</div>
+                <div class="col-md-10 laia-ctrl-cnr">
+                    <textarea type="text" class="form-control laia-ctrl laia-area" maxlength="240" placeholder="景点介绍" v-model="mapRemark" name="sceRemark"></textarea>
+                     <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>240</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">门票价格：</div>
+                <div class="col-md-10">
+                        ￥
+                        <input type="text"   name="price" v-model="price" class="form-group" placeholder="门票价格">/人
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div  class="col-md-6">
+            <div class="form-group">
+                <div class="col-md-2">搜索</div>
+                <div class="col-md-10">
+                    <div class="input-group">
+                        <input type="text" id="suggestId" class="form-control">
+                        <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+                        <div class="input-group-addon bg-laia">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-10">
+                    <div id="l-map" style="height:350px;width:100%;"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">经度</div>
+                <div class="col-md-10">
+                    <input type="text" class="form-control"  readonly id="wk" :value="maplon"  name="maplon">
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">纬度</div>
+                <div class="col-md-10">
+                    <input type="text" class="form-control"  readonly id="wk1" :value="maplat"  name="maplat">
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">景点范围半径</div>
+                <div class="col-md-10">
+                    <input type="text" class="form-control"  placeholder="景点范围半径"  v-model="Radius"  name="raduis">
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div  class="col-md-6">
+            <div class="form-group">
+                <div class="col-md-12">                  
+                    <div class="btn btn-laia pull-right" @click="saveEdit">保存</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </form>
+</div>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3E82149f19f28fc35678c119fd8bb74e"></script>
+<include file="Public/footer" js="__PUBLIC__/js/uploadPreview.js,__PUBLIC__/js/jquery.form.js,__PUBLIC__/js/vue.min.js,__STATIC__/js/scemap/base.js" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3E82149f19f28fc35678c119fd8bb74e"></script>
+<script type="text/javascript">
+    // 百度地图API功能
+    function G(id) {
+        return document.getElementById(id);
+    }
+    var SceLongitude = '';
+    var SceLatitude = '';
+    var Longitude = CNT.lon;
+    var Latitude = CNT.lat;
+
+    var map = new BMap.Map("l-map");
+    if (SceLongitude != '') {
+        map.centerAndZoom(new BMap.Point(SceLongitude, SceLatitude), 14);
+        var mkr = new BMap.Marker(new BMap.Point(SceLongitude, SceLatitude));
+        map.addOverlay(mkr);
+    }
+    else
+    {
+        map.centerAndZoom(new BMap.Point(Longitude, Latitude), 14);
+        var mkr = new BMap.Marker(new BMap.Point(Longitude, Latitude));
+        map.addOverlay(mkr);
+    }         // 初始化地图,设置城市和地图级别。
+
+    var ac = new BMap.Autocomplete(//建立一个自动完成的对象
+            {"input": "suggestId"
+                , "location": map
+            });
+
+    ac.addEventListener("onhighlight", function (e) {  //鼠标放在下拉列表上的事件
+        var str = "";
+        var _value = e.fromitem.value;
+        var value = "";
+        if (e.fromitem.index > -1) {
+            value = _value.province + _value.city + _value.district + _value.street + _value.business;
+        }
+        str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+
+        value = "";
+        if (e.toitem.index > -1) {
+            _value = e.toitem.value;
+            value = _value.province + _value.city + _value.district + _value.street + _value.business;
+        }
+        str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+        G("searchResultPanel").innerHTML = str;
+    });
+
+    var myValue;
+    ac.addEventListener("onconfirm", function (e) {    //鼠标点击下拉列表后的事件
+        var _value = e.item.value;
+        myValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+        G("searchResultPanel").innerHTML = "onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+
+        setPlace();
+    });
+
+    function setPlace() {
+        map.clearOverlays();    //清除地图上所有覆盖物
+        function myFun() {
+            var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+            map.centerAndZoom(pp, 18);
+            map.addOverlay(new BMap.Marker(pp));    //添加标注
+        }
+        var local = new BMap.LocalSearch(map, {onSearchComplete: myFun});
+        local.search(myValue);
+    }
+
+
+
+    map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+
+</script>

@@ -1,0 +1,127 @@
+<include file="Public/header" title="附近" css="__STATIC__/css/iscroll.css,__STATIC__/css/nearby_search.css"/>
+<div id="scroller">
+  <div id="pullDown">
+    <span class="pull-down-icon"></span>
+    <span class="pull-down-label">下拉刷新</span>
+  </div>
+  <div id="searchCnr">
+    <input class="form-control" placeholder="搜索问题" v-model="searchKey" @change="search()">
+    <div id="searchBtn" @click="search()">搜索</div>
+    <div id="backBtn" @click="clear()">&times;</div>
+  </div>
+  <div id="bodyCnr">
+    <div v-if="typeof placeArr.data=='object'&&placeArr.data.length>0" class="sgl-cate">
+      <div class="cate-title">
+        <div class="cate-icon icon-place"></div>
+        <div>景点</div>
+      </div>
+      <div class="sgl-cnr" v-for="(idx,obj) in placeArr.data" @click="toPlace(obj.maplat,obj.maplon,obj.id)">
+        <div class="cover" :style="{backgroundImage: bgImg(obj.pageFm)}"></div>
+        <div class="sgl-cnt">
+          <div class="title" v-text="obj.name"></div>
+          <div>
+            <span class="color-num" v-text="obj.PicNum"></span>
+            图片，
+            <span class="color-num" v-text="obj.videoNum"></span>
+            视频
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div v-if="placeArr.isNext" class="more" @click="viewMore('place')">
+        <div class="search-icon"></div>
+        查看更多 景点 搜索结果
+        <div class="more-icon"></div>
+      </div>
+    </div>
+    <div v-if="typeof foodArr.data=='object'&&foodArr.data.length>0" class="sgl-cate">
+      <div class="cate-title">
+        <div class="cate-icon icon-food"></div>
+        <div>美食</div>
+      </div>
+      <div class="sgl-cnr" v-for="(idx,obj) in foodArr.data" @click="toBiz(obj.id)">
+        <div class="cover" :style="{backgroundImage: bgImg(obj.backPic[0])}"></div>
+        <div class="sgl-cnt">
+          <div class="title" v-text="obj.name"></div>
+          <div>
+            <span class="color-num" v-text="obj.VoucherNum"></span>
+            优惠
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div v-if="foodArr.isNext" class="more" @click="viewMore('food')">
+        <div class="search-icon"></div>
+        查看更多 美食 搜索结果
+        <div class="more-icon"></div>
+      </div>
+    </div>
+    <div v-if="typeof hotelArr.data=='object'&&hotelArr.data.length>0" class="sgl-cate">
+      <div class="cate-title">
+        <div class="cate-icon icon-hotel"></div>
+        <div>住宿</div>
+      </div>
+      <div class="sgl-cnr" v-for="(idx,obj) in hotelArr.data" @click="toBiz(obj.id)">
+        <div class="cover" :style="{backgroundImage: bgImg(obj.backPic[0])}"></div>
+        <div class="sgl-cnt">
+          <div class="title" v-text="obj.name"></div>
+          <div>
+            <span class="color-num" v-text="obj.VoucherNum"></span>
+            优惠
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div v-if="hotelArr.isNext" class="more" @click="viewMore('hotel')">
+        <div class="search-icon"></div>
+        查看更多 住宿 搜索结果
+        <div class="more-icon"></div>
+      </div>
+    </div>
+    <div v-if="typeof funArr.data=='object'&&funArr.data.length>0" class="sgl-cate">
+      <div class="cate-title">
+        <div class="cate-icon icon-fun"></div>
+        <div>娱乐</div>
+      </div>
+      <div class="sgl-cnr" v-for="(idx,obj) in funArr.data" @click="toBiz(obj.id)">
+        <div class="cover" :style="{backgroundImage: bgImg(obj.backPic[0])}"></div>
+        <div class="sgl-cnt">
+          <div class="title" v-text="obj.name"></div>
+          <div>
+            <span class="color-num" v-text="obj.VoucherNum"></span>
+            优惠
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div v-if="funArr.isNext" class="more" @click="viewMore('fun')">
+        <div class="search-icon"></div>
+        查看更多 娱乐 搜索结果
+        <div class="more-icon"></div>
+      </div>
+    </div>
+    <div v-if="typeof shopArr.data=='object'&&shopArr.data.length>0" class="sgl-cate">
+      <div class="cate-title">
+        <div class="cate-icon icon-shop"></div>
+        <div>购物</div>
+      </div>
+      <div class="sgl-cnr" v-for="(idx,obj) in shopArr.data" @click="toBiz(obj.id)">
+        <div class="cover" :style="{backgroundImage: bgImg(obj.backPic[0])}"></div>
+        <div class="sgl-cnt">
+          <div class="title" v-text="obj.name"></div>
+          <div>
+            <span class="color-num" v-text="obj.VoucherNum"></span>
+            优惠
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div v-if="shopArr.isNext" class="more" @click="viewMore('shop')">
+        <div class="search-icon"></div>
+        查看更多 购物 搜索结果
+        <div class="more-icon"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/nearby_search.js"/>

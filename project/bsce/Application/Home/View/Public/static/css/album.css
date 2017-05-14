@@ -1,0 +1,74 @@
+#bodyCnr {
+  background-color: #fff;
+  padding: 5px;
+}
+
+/* #bodyCnr img {
+  max-width: 100%;
+}
+.sgl-cnr {
+  width: 50%;
+  float: left;
+}
+.sgl {
+  padding: 3px;
+}
+#viewCnr {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0,0,0,.8);
+}
+#viewCnt {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.sgl-view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+}
+.sgl-view.active {
+  display: block;
+  left: 0;
+}
+.sgl-view.prev{
+  display: block;
+  left: -101%;
+}
+.sgl-view.next{
+  display: block;
+  left: 101%;
+} */
+
+/* .sgl {
+  position: relative;
+  width: 50%;
+  padding: 3px;
+} */
+
+.img-cnr {
+  width: 100%;
+}
+
+.sgl-cnr {
+  width: 50%;
+  float: left;
+}
+
+.sgl {
+  padding: 3px;
+}
+
+.lb-data .lb-details {
+  display: none;
+}

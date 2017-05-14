@@ -1,0 +1,68 @@
+<include file="Public/header" title="美景直播" css="__STATIC__/css/base.css,__STATIC__/css/allsce.css" />
+<div id="pageTitle">
+    <div class="page-title">美景直播</div>
+</div>
+<div id="pageWrapper">
+    <nav class="laia navbar navbar-default navbar-static-top pull-left" role="navigation">
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="javascript:void(0);" @click="gotobase">景点基本资料</a></li>
+                <li class="ishide"><a href="javascript:void(0);" @click="gotovideo">景点视频</a></li>
+                <li class="ishide"><a href="javascript:void(0);"@click="gotoimg">景点图片</a></li>
+                <li class="ishide active"><a href="javascript:void(0);">美景直播</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="clearfix"></div>
+    <div class="col-md-6">
+        <div class="form-group ">
+            <div class="btn btn-default" @click="toTop">置顶直播</div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="laia-row">
+        <div class="portfolio-content">
+            <ul class="cl portfolio-area">
+
+                <li class="video-thumbnail" v-for="(idx, obj) in tableVideo">
+                    <div class="portfoliobox">
+                        <input class="img-chk" type="checkbox" value="{{idx}}" id="{{obj.id}}" v-model="checkedArr">
+                        <label for="{{obj.id}}"></label>
+                        <div class="picbox">
+                            <div class="video-cover" :style="{'backgroundImage': 'url('+obj.videoPic+')'}" @click="showEdit(idx)"></div><!-- 用VUE.JS变量注入 -->
+                            <div class="video-date">
+                                <div class="pull-left">{{obj.creatDate}}</div>
+                                <div class="pull-right">{{obj.reviews}}</div>
+                            </div>
+                            <div class="video-dsc">
+                                <div>{{obj.videoName}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <ul v-show="showPageNav" class="pagination">
+            <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+                <a href="javascript:;">{{obj.num}}</a>
+            </li>
+            <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+                <a href="javascript:;">下一页</a>
+            </li>
+        </ul>
+
+        <div id="pageCount" class="btn bg-laia">
+            <span>第 {{curPage}} 页 | </span>
+            <span>共 {{pageCount}} 页</span>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/uploadPreview.js,__PUBLIC__/js/jquery.form.js,__PUBLIC__/js/vue.min.js,__STATIC__/js/scemap/live.js" />

@@ -1,0 +1,134 @@
+input[placeholder], [placeholder], *[placeholder] {
+  color: #c1c1c1;
+}
+#searchCnr {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 60px 10px 40px;
+}
+#searchBtn {
+  color: #3bc2b5;
+  position: absolute;
+  line-height: 54px;
+  width: 60px;
+  top: 0;
+  right: 0;
+  text-align: center;
+  z-index: 9;
+  font-size: 18px;
+}
+#backBtn {
+  color: #333;
+  position: absolute;
+  line-height: 54px;
+  width: 40px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 9;
+  font-size: 34px;
+}
+#searchCnr .form-control {
+  height: 34px;
+  line-height: 24px;
+  padding: 5px 10px;
+  color: #333;
+  border: 1px solid #eee;
+  -webkit-transition: none;
+  -webkit-box-shadow: none;
+  transition: none;
+  box-shadow: none;
+}
+#bodyCnr {
+  padding-bottom: 10px;
+}
+.sgl-cate {
+  background: #fff;
+  margin-bottom: 7px;
+  padding: 10px;
+  color: #999;
+}
+.cate-title {
+  color: #333;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 5px 0;
+}
+.cate-title * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.cate-icon {
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-place {
+  background-image: url(../../static/img/zhoubian_icon_jingdian_s.png);
+}
+.icon-food {
+  background-image: url(../../static/img/zhoubian_icon_meishi_s.png);
+}
+.icon-fun {
+  background-image: url(../../static/img/zhoubian_icon_yule_s.png);
+}
+.icon-hotel {
+  background-image: url(../../static/img/zhoubian_icon_zhusu_s.png);
+}
+.icon-shop {
+  background-image: url(../../static/img/zhoubian_icon_gouwu_s.png);
+}
+.sgl-cnr {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+.cover {
+  float: left;
+  width: 20%;
+  height: 0;
+  padding-bottom: 20%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sgl-cnt {
+  float: left;
+  width: 80%;
+  padding: 0 10px;
+}
+.title {
+  font-size: 20px;
+  line-height: 30px;
+  color: #333;
+}
+.more {
+  margin-top: 10px;
+  height: 20px;
+  line-height: 20px;
+}
+.more-icon {
+  width: 20px;
+  height: 20px;
+  float: right;
+  background-image: url(../../static/img/more.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px 16px;
+}
+.search-icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  background-image: url(../../static/img/search.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+.color-num {
+  color: #ffa748;
+  font-size: 16px;
+}

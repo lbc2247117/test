@@ -1,0 +1,89 @@
+<include file="Public/header" title="普通活动" css="__STATIC__/css/base.css,__STATIC__/css/activity.css" />
+<div id="pageTitle">
+    <div class="page-title">活动管理</div>
+</div>
+<div id="pageWrapper">
+    <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+        <div class="close" @click="hideAlert">&times;</div>
+        <span v-html="alert.msg"></span>
+    </div>
+    <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+        <span>{{notice.msg}}</span>
+        <div class="close" @click="hideNotice">&times;</div>
+    </div>
+    <div id="searchCnr">
+        <div class="col-md-2">
+            查看报名参加活动名单
+        </div>
+        <div class="pull-right">
+            <div class="btn btn-laia"   style="margin-right:10px;"  @click="downlist">下载报名人员列表</div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-6">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>姓名</th>
+                <th>联系方式</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(idx, obj) in tableData">
+                <td>
+                    <div class="laia-chk">
+                        {{obj.name}}
+                    </div>
+                </td>
+                <td>
+                    {{obj.tel}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>联系方式</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(idx, obj) in tableData1">
+                    <td>
+                        <div class="laia-chk">
+                            {{obj.name}}
+                        </div>
+                    </td>
+                    <td>
+                        {{obj.tel}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div>
+        <ul v-show="showPageNav" class="pagination">
+            <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+                <a href="javascript:;">{{obj.num}}</a>
+            </li>
+            <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+                <a href="javascript:;">下一页</a>
+            </li>
+        </ul>
+        <div id="pageCount" class="btn bg-laia">
+            <span>第 {{curPage}} 页 | </span>
+            <span>共 {{pageCount}} 页</span>
+        </div>
+    </div>
+
+</div>
+<include file="Public/footer" js="__STATIC__/js/activity/list.js" />

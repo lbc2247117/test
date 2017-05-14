@@ -1,0 +1,58 @@
+<include file="Public/header" title="商家介绍" css="__STATIC__/css/business.css" />
+<div id="pageTitle">
+    <div class="page-title">商家管理</div>
+</div>
+<div id="pageWrapper">
+    <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+        <div class="close" @click="hideAlert">&times;</div>
+        <span v-html="alert.msg"></span>
+    </div>
+    <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+        <span>{{notice.msg}}</span>
+        <div class="close" @click="hideNotice">&times;</div>
+    </div>
+    <nav class="laia navbar navbar-default navbar-static-top pull-left" role="navigation">
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="javascript:void(0);" @click="gotoBusiness">商家信息</a></li>
+                <li><a href="javascript:void(0);" @click="gotoShortBus">商家介绍</a></li>
+                <li><a href="javascript:void(0);" @click="gotoBiz">优惠券</a></li>
+                <li class="active"><a href="javascript:void(0);">商家资料</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="clearfix"></div>
+    <div  class="col-md-6">
+        <div class="form-group">
+            <div class="col-md-12"><strong>商家管理员</strong></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">手持身份证照片</div>
+            <div class="col-md-10">
+                <img  id="picView" class="upload-review album-cover" title="手持身份证照片" width="320"  src="__UPLOAD__/{{card}}"  onerror="this.src='__PUBLIC__/img/error_2_1.png'" >
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!--<div class="form-group">
+            <div class="col-md-12"><strong>商家法人</strong></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">法人手持身份证照片</div>
+            <div class="col-md-10">
+                <img  id="picView" class="upload-review album-cover" title="照片" width="319" height="176" src='__PUBLIC__/img/error_scepic.png'  >
+            </div>
+            <div class="clearfix"></div>
+        </div>-->
+        <div class="form-group">
+            <div class="col-md-2">营业执照</div>
+            <div class="col-md-10">
+                <img  id="picView" class="upload-review album-cover" title="营业执照" width="320" src="__UPLOAD__/{{service}}"  onerror="this.src='__PUBLIC__/img/error_2_1.png'" >
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/vue.min.js,__STATIC__/js/business/busdata.js" />

@@ -1,0 +1,123 @@
+html {
+  overflow: hidden;
+}
+
+#maskCnr {
+  position: absolute;
+  height: calc(100% + 20px);
+  width: calc(100% + 20px);
+  top: -10px;
+  left: -10px;
+  -webkit-filter: blur(3px);
+  opacity: 0.8;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+#mainCnr {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .3);
+  color: #fff;
+  text-shadow: 0 1px 2px #666;
+}
+
+#mainCnt {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#middleCnr {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: calc(50% - 75px);
+  padding: 0 30px;
+  margin-top: -100px;
+}
+
+#middleNum {
+  float: left;
+  font-size: 75px;
+  line-height: 75px;
+}
+
+#middleOc {
+  font-size: 38px;
+  line-height: 50px;
+}
+
+#middleZhcn {
+  font-size: 18px;
+  line-height: 18px;
+  text-align: right;
+}
+
+#middleIcon {
+  float: left;
+  width: 62px;
+  height: 75px;
+  margin-left: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#middleDtl {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+#bottomCnr {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, .3);
+  padding: 20px 10px;
+  width: 100%;
+}
+
+#bottom-title {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+#bottom-cnt {
+  padding: 30px 0 20px;
+}
+
+.bottom-sgl {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+.sgl-date,
+.sgl-temp {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.sgl-icon {
+  width: 100%;
+  height: 0;
+  margin: 14px 0;
+  padding-bottom: 29px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.cloth-dsc {
+  width: calc(100% - 90px);
+  float: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,42 @@
+<include file="Public/header" title="移动高清直播" css="__STATIC__/css/activity.css" />
+<link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+<div id="pageTitle">
+    <div class="page-title">移动高清直播</div>
+</div>
+<div id="pageWrapper">
+    <div class="col-md-6">
+        <div class="form-group">
+            <div class="col-md-2">移动直播：</div>
+            <div class="col-md-10">
+                <SCRIPT LANGUAGE=JavaScript>
+                        var vID = "";
+                        var vWidth = '100%'; //播放器宽度设置
+                        var vHeight = 311; //播放器宽度设置
+                        var vPlayer = "__PUBLIC__/ueditor/third-party/video-js/HLSPlayer.swf?v=1.5"; //播放器文件
+                        var vHLSset = "__PUBLIC__/ueditor/third-party/video-js/HLS.swf";             //HLS配置
+                        var vPic = localStorage.getItem('livecover');    //视频缩略图
+                        var vCssurl = "__PUBLIC__/ueditor/third-party/video-js/mini.css";     //移动端CSS应用文件
+                        var vHLSurl = localStorage.getItem('liveurl');
+                    </SCRIPT> 
+                    <script type="text/javascript" src="__PUBLIC__/ueditor/third-party/video-js/hls.min.js?rand=3396fsa778"></script>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="form-group col-md-12">
+            <div id='backBtn' class="btn btn-default pull-left">返回</div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<include file="Public/footer"/>
+<script type="text/javascript">
+    $(function(){
+        $('#backBtn').click(function(){
+            window.location.href='live.html';
+        });
+         $('#actlive').addClass('open');
+         $('#actlive').parents('.dropdown').addClass('open');
+    });
+
+</script>

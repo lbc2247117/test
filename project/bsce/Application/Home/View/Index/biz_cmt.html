@@ -1,0 +1,32 @@
+<include file="Public/header" title="商户评论" navtitle="商户评论" css="__STATIC__/css/biz.css"/>
+<div id="cmtCnr" v-show="!success&&!error">
+  <div class="sgl-cnr">
+    <div class="cmt-level-cnr">
+      <div class="level-cnr">
+        <div class="level">
+          <div class="stars" :class="parseInt(scores)>0?'active':''" @click="aim(1)"></div>
+          <div class="stars" :class="parseInt(scores)>1?'active':''" @click="aim(2)"></div>
+          <div class="stars" :class="parseInt(scores)>2?'active':''" @click="aim(3)"></div>
+          <div class="stars" :class="parseInt(scores)>3?'active':''" @click="aim(4)"></div>
+          <div class="stars" :class="parseInt(scores)>4?'active':''" @click="aim(5)"></div>
+        </div>
+      </div>
+      <div class="pull-right">
+        <span class="count-large" v-text="parseInt(scores)*2"></span>/10
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="cmt-tag-cnr">
+      <!-- <div class="sgl-cmt-tag" v-for="obj in cmt[cmtIdx].listContent" v-text="obj" @click="toggle"></div> -->
+      <div class="sgl-tag" v-for="(idx,obj) in cmt[cmtIdx].listContent" :class="obj==cmtTag?'active':''">
+        <label class="sgl-tag-label" :for="'cmtTag'+idx" v-text="obj"></label>
+        <input type="radio" :id="'cmtTag'+idx" :value="obj" v-model="cmtTag" hidden>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div id="cmtFootCnr" @click="cmtConfirm"></div>
+</div>
+<div id="successCnrCmt" v-show="success" style="display: none;" @click="toBiz"></div>
+<div id="errorCnrCmt" v-show="error" style="display: none;" @click="toCmt"></div>
+<include file="Public/footer" js="__STATIC__/js/biz_cmt.js"/>

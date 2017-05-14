@@ -1,0 +1,172 @@
+<include file="Public/header" title="商家信息" css="__PUBLIC__/css/bootstrap-select.min.css,__STATIC__/css/base.css,__STATIC__/css/business.css" />
+<div id="pageTitle">
+  <div class="page-title">商家管理</div>
+</div>
+<div id="pageWrapper">
+  <nav class="laia navbar navbar-default navbar-static-top pull-left" role="navigation">
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="javascript:;">基本信息</a></li>
+        <li v-show="!isAdd"><a href="javascript:;" @click="gotoUnique">特色产品</a></li>
+        <li v-show="!isAdd"><a href="javascript:;" @click="gotoShortBus">其他信息</a></li>
+        <li v-show="!isAdd"><a href="javascript:;" @click="gotoBiz">优惠券管理</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="clearfix"></div>
+  <form id="laiaForm" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right" for="bizName">商家名称</label>
+      <div class="laia-ctrl-cnr col-md-3">
+        <input id="bizName" class="laia-ctrl laia-ipt" type="text" v-model="name" placeholder="商家名称" maxlength="20">
+         <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>20</span></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30 ">
+      <label class="col-md-2 text-right" for="bizLinkman">联系人姓名</label>
+      <div class="laia-ctrl-cnr col-md-3">
+        <input id="bizLinkman" class="laia-ctrl laia-ipt" type="text" maxlength="10" v-model="linkman" placeholder="联系人姓名">
+        <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>10</span></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right" for="bizCell">商家联系方式</label>
+      <div class="laia-ctrl-cnr col-md-3">
+        <input id="bizCell" class="laia-ctrl laia-ipt" type="text" v-model="cell" placeholder="商家手机号" maxlength="13" @change="cellChange()">
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right" for="bizCell">商家座机号码</label>
+      <div class="laia-ctrl-cnr col-md-3">
+        <input id="biztel1" class="laia-ctrl laia-ipt" type="text" v-model="tel" placeholder="商家座机号码(010-00000000)" @change="telChange()">
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right" for="style">类型</label>
+      <div class="laia-ctrl-cnr col-md-3">
+        <select id="style" class="form-control" v-model="style">
+          <option v-for="obj in styleArr" :value="obj.id" v-text="obj.name"></option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right" for="type">类别</label>
+      <div class="laia-ctrl-cnr col-md-3">
+        <select id="type" class="form-control" v-model="type" @change="getTag()">
+          <option v-for="obj in typeArr" :value="obj.id" v-text="obj.name"></option>
+        </select>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right" for="tag">标签</label>
+      <div class="laia-ctrl-cnr col-md-3">
+        <select id="tagPcr" class="selectpicker form-control" multiple data-live-search="false" @change="selectTag"></select>
+        <!-- <select id="tag" class="form-control" v-model="tag">
+          <option v-for="(idx,obj) in tagArr" :value="idx" v-text="obj.lableName"></option>
+        </select> -->
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right" for="bizCell">人均消费</label>
+      <div class="laia-ctrl-cnr col-md-2">
+        <input id="bizCell" class="laia-ctrl laia-ipt" type="text" v-model="price" placeholder="人均消费" maxlength="13">
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right">地址</label>
+      <div class="laia-ctrl-cnr col-md-2">
+        <select class="form-control" v-model="adrPidx" @change="adrPchange">
+          <option :value="-1" v-text="'选择省'"></option>
+          <option v-for="(idx,obj) in adrParr" :value="idx" v-text="obj.name"></option>
+        </select>
+      </div>
+      <div class="laia-ctrl-cnr col-md-2">
+        <select class="form-control" v-model="adrCidx" @change="adrCchange">
+          <option :value="-1" v-text="'选择市'"></option>
+          <option v-for="(idx,obj) in adrCarr" :value="idx" v-text="obj.name"></option>
+        </select>
+      </div>
+      <div class="laia-ctrl-cnr col-md-2">
+        <select class="form-control" v-model="adrAidx" @change="adrAchange">
+          <option :value="-1" v-text="'选择区/县'"></option>
+          <option v-for="(idx,obj) in adrAarr" :value="idx" v-text="obj.name"></option>
+        </select>
+      </div>
+      <div class="laia-ctrl-cnr col-md-4">
+        <input id="bizCell" class="laia-ctrl laia-ipt" type="text" v-model="address"   maxlength="40"  placeholder="详细地址">
+        <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>40</span></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right">Logo上传</label>
+      <div class="col-md-10">
+        <div id="logo" class="add-cnr" onclick="document.getElementById('logoIpt').click()" :style="logo?{backgroundImage:'url('+logo+')',backgroundSize:'cover',border:'1px solid #eee'}:{}"></div>
+        <img id="logoView" class="upload-review album-cover" hidden>
+        <input name="logo" type="file" id="logoIpt" accept=".png,.jpg" hidden multiple>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right">地图上传</label>
+      <div class="col-md-10">
+        <div id="map" class="add-cnr" onclick="document.getElementById('mapIpt').click()" :style="map?{backgroundImage:'url('+map+')',backgroundSize:'cover',border:'1px solid #eee'}:{}"></div>
+        <img id="mapView" class="upload-review album-cover" hidden>
+        <input name="map" type="file" id="mapIpt" accept=".png,.jpg" hidden multiple>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right">封面上传</label>
+      <div class="portfolio-content col-md-10">
+        <ul class="cl portfolio-area">
+          <li>
+            <div id="bannerI" class="add-cnr" onclick="document.getElementById('bannerIptI').click()" :style="backPic[0]?{backgroundImage:'url('+backPic[0]+')',backgroundSize:'cover',border:'1px solid #eee'}:{}"></div>
+            <img id="bannerViewI" class="upload-review album-cover" hidden>
+            <input :name="isAdd?'backPic[]':'cover1'" type="file" id="bannerIptI" accept=".png,.jpg" hidden multiple @change="bannerChange(1)">
+          </li>
+          <li>
+            <div id="bannerII" class="add-cnr" onclick="document.getElementById('bannerIptII').click()" :style="backPic[1]?{backgroundImage:'url('+backPic[1]+')',backgroundSize:'cover',border:'1px solid #eee'}:{}"></div>
+            <img id="bannerViewII" class="upload-review album-cover" hidden>
+            <input :name="isAdd?'backPic[]':'cover2'" type="file" id="bannerIptII" accept=".png,.jpg" hidden multiple @change="bannerChange(2)">
+          </li>
+          <li>
+            <div id="bannerIII" class="add-cnr" onclick="document.getElementById('bannerIptIII').click()" :style="backPic[2]?{backgroundImage:'url('+backPic[2]+')',backgroundSize:'cover',border:'1px solid #eee'}:{}"></div>
+            <img id="bannerViewIII" class="upload-review album-cover" hidden>
+            <input :name="isAdd?'backPic[]':'cover3'" type="file" id="bannerIptIII" accept=".png,.jpg" hidden multiple @change="bannerChange(3)">
+          </li>
+          <!-- <li v-for="(idx,obj) in imgListArr">
+            <div class="portfoliobox">
+              <div class="picbox">
+                <div class="edit" @click.stop="rmImg(obj)"></div>
+                <a :href="obj" data-lightbox="laia">
+                  <div :style="{backgroundImage: 'url('+obj+')'}"></div>
+                </a>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mgn-b-30">
+      <label class="col-md-2 text-right" for="bizDsc">商家简介</label>
+      <div class="laia-ctrl-cnr col-md-6">
+        <textarea id="bizDsc" class="laia-area" rows="5" placeholder="商家简介" maxlength="180" v-model="remark"></textarea>
+        <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>180</span></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div id="saveBtn" class="col-md-2 col-md-offset-5 btn btn-laia">保存</div>
+    <div class="clearfix"></div>
+  </form>
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/bootstrap-select.js,__PUBLIC__/js/PCA.js,__PUBLIC__/js/jquery.form.js,__PUBLIC__/js/vue.min.js,__PUBLIC__/js/uploadPreview.js,__STATIC__/js/business/base.js" />

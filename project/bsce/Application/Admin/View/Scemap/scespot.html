@@ -1,0 +1,90 @@
+<include file="Public/header" title="景点管理" css="__STATIC__/css/base.css,__STATIC__/css/scemap.css" />
+<div id="pageTitle">
+    <div class="page-title">景点管理</div>
+</div>
+<div id="pageWrapper">
+    <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+        <div class="close" @click="hideAlert">&times;</div>
+        <span v-html="alert.msg"></span>
+    </div>
+    <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+        <span>{{notice.msg}}</span>
+        <div class="close" @click="hideNotice">&times;</div>
+    </div>
+    <div id="searchCnr">
+
+        <div class="col-md-3">
+            <div class="input-group">
+                <input id='keyWord' type="text" class="form-control" placeholder="景点名称关键字" v-model="serchName" @change="saveSerchName">
+                <div class="input-group-addon bg-laia" @click="saveSerchName">
+                    <span class="glyphicon glyphicon-search" ></span>
+                </div>
+            </div>
+        </div>
+        <div class="pull-right">
+            <div class="btn btn-laia" @click="addPoint()"  >创建景点</div>
+            <div class="btn btn-danger" @click="delPoint()">删除景点</div>
+        </div>
+        <div class="clearfix"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>景点ID</th>
+                    <th>景点名称</th>
+                    <th>图片数</th>
+                    <th>视频数</th>
+                    <th>美景直播数</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(idx, obj) in tableData">
+                    <td>
+                        <div class="laia-chk">
+                            <input type="checkbox" :value="idx" :id="obj.id" v-model="checkedArr">
+                            <label :for="obj.id"></label>
+                        </div>
+                    </td>
+                    <td>{{obj.id}}</td>
+                    <td>
+                        {{obj.name}}
+                    </td>
+                    <td>
+                        {{obj.picNum}}张图
+                    </td>
+                    <td>
+                        {{obj.videoNum}}个视频
+                    </td>
+                    <td>
+                        {{obj.mjvideoNum}}个美景直播
+                    </td>
+                    <td>
+                        <div class="btn btn-link permit_buttons permit_812" @click="editPoint(obj.id)">编辑</div>
+                        <!--<div class="btn btn-link permit_buttons permit_811" @click="delPoint(idx)">删除</div>-->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <ul v-show="showPageNav" class="pagination">
+            <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+                <a href="javascript:;">{{obj.num}}</a>
+            </li>
+            <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+                <a href="javascript:;">下一页</a>
+            </li>
+        </ul>
+
+        <div id="pageCount" class="btn bg-laia">
+            <span>第 {{curPage}} 页 | </span>
+            <span>共 {{pageCount}} 页</span>
+        </div>
+    </div>
+
+</div>
+<include file="Public/footer" js="__STATIC__/js/scemap/scespot.js" />

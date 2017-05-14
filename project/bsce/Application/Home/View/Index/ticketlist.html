@@ -1,0 +1,43 @@
+<include file="Public/header" title="票务列表" css="__STATIC__/css/iscroll.css,__STATIC__/css/ticketlist.css"/>
+<div id="scroller">
+    <div id="pullDown">
+        <span class="pull-down-icon"></span>
+        <span class="pull-down-label">下拉刷新</span>
+    </div>
+    <div id="bodyCnr">
+        <div>
+            <div class="rcmd" v-for="(idx,obj) in dataArray">
+                <div class="rcmd-cover" :style="{backgroundImage:bgImg(obj.pic)}" @click="toinfo(obj.id)">
+                    <div class="rcmd-grey">
+                    </div>
+                    <div class="serverdesc">{{obj.remark}}</div>
+                </div>
+                <div class="round-fa">
+                    <div class="round">
+                        <div class="round-left"></div>
+                        <div class="round-right"></div>
+                        <hr style="border:1px dashed #eee;margin-top: 7px;" />
+                    </div>
+                </div>
+                <div class="rcmd-price">
+                    <div class="rcmd-name" @click="toinfo(obj.id)">{{obj.name}}</div>
+                    <div>
+                        <div style="color: #ff4d48;float: left;margin-top: 18px;">￥</div>
+                        <div style="color: #ff4d48;float: left;font-size: 20px;margin-top: 10px;">{{obj.price}}</div>
+                        <div style="color: #666666;float: left;margin-top: 18px;">/份</div>
+                        <div class="buytag"></div>
+                        <div class="btn-watch pull-right">立即查看</div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div id="pullUp">
+        <span class="pull-up-icon"></span>
+        <span class="pull-up-label">上拉加载更多</span>
+    </div>
+</div>
+
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/ticketlist.js" />

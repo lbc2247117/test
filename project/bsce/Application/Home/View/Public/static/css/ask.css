@@ -1,0 +1,24 @@
+*[placeholder] {
+  color: #c1c1c1;
+}
+.form-control {
+  color: #333;
+  border: none;
+}
+#footCnr {
+  background-color: #3bc2b5;
+  padding: 10px;
+  line-height: 30px;
+  font-size: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  z-index: 999;
+}
+#help {
+  padding: 10px;
+  color: #999;
+}

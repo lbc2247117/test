@@ -1,0 +1,61 @@
+<include file="Public/header" title="活动详情" css="__STATIC__/css/iscroll.css,__STATIC__/css/act.css"/>
+<div id="scroller">
+    <div id="pullDown">
+        <span class="pull-down-icon"></span>
+        <span class="pull-down-label">下拉刷新</span>
+    </div>
+    <div id="headCnr">
+        <div class="head-cover" :style="{backgroundImage: bgImg(dataObj.url)}"></div>
+        <div class="head-sgl">
+            <div class="title large" v-text="dataObj.titleName"></div>
+        </div>
+        <div class="head-sgl">
+            <div class="laia-icon icon-time"></div>
+            <div class="title">活动时间</div>
+            <div class="time">
+                <span v-text="dataObj.startTime"></span>
+                <span>~</span>
+                <span v-text="dataObj.endTime"></span>
+            </div>
+        </div>
+        <div class="head-sgl">
+            <div class="laia-icon icon-main"></div>
+            <div class="title">活动主题</div>
+            <div v-html="dataObj.acTitle">
+
+            </div>
+        </div>
+        <div class="head-sgl">
+            <div class="laia-icon icon-dsc"></div>
+            <div class="title">活动内容</div>
+            <div v-html="dataObj.name">
+
+            </div>
+        </div>
+        <div class="head-sgl">
+            <div class="laia-icon icon-rule"></div>
+            <div class="title">活动规则</div>
+            <div v-html="dataObj.acRuke">
+
+            </div>
+        </div>
+        <div class="head-sgl prize">
+            <div class="laia-icon icon-prize"></div>
+            <div class="title">活动奖品</div>
+            <div v-text="dataObj.acjp">
+
+            </div>
+        </div>
+    </div>
+    <div id="bodyCnr">
+        <div v-html="dataObj.content"></div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div  v-if="(dataObj.signUp=='true')" id="footCnr" @click="addAct" v-show="addVisible">立即参与</div>
+<div class="end-cnr" v-show="endVisible">
+    <div class="end-cnt">
+        <div @click="backHome" class="bakHome-Cnr"></div>
+    </div>
+</div>
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/act.js"/>

@@ -1,0 +1,47 @@
+<include file="Public/header" title="景点详情" css="__PUBLIC__/css/video-js.min.css,__STATIC__/css/place.css"/>
+<div id="headCnr">
+    <div id="headCnt" :style="{backgroundImage:bgImg(headObj.MapMark)}">
+        <!--<div class="title" v-text="headObj.SceName"></div>-->
+        <div class="ei"  @click="jumptoalbum"  ></div>
+    </div>
+    <div id="priceCnr">
+        <div class="priceCnr-title" v-text="headObj.SceName"></div>
+        <div class="priceCnr-price" v-show="headObj.price>0">门票<span>￥</span><strong>{{headObj.price}}</strong></div>
+        <div class="priceCnr-line">
+            <div class="left-line-box">
+                <hr class="left-line">
+            </div>
+            <div class="right-line-box">
+                <hr class="right-line">
+            </div>
+            <div class="center-pic"></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="mapdesctext">景点介绍</div>
+    </div>
+    <div id="dscCnr" @click="toggle">
+        <div class="dtl" v-text="headObj.mapRemark"></div>
+
+    </div>
+</div>
+<div id="bodyCnr">
+    <div class="sgl" v-for="(idx,obj) in videoObj">
+        <div class="sgl-live">
+            <div class="mark-live" v-if="obj.videoType==1"></div>
+            <video  @play="playEvent(idx)"  class="video-js vjs-default-skin vjs-big-play-centered" controls webkit-playsinline playsinline preload="auto" :poster="obj.videoPic">
+                <source :src="obj.videoPath" type="">
+            </video>
+            <div class="clearfix"></div>
+            <div class="dsc">
+                {{obj.videoName}}
+            </div>
+            <div class="count">
+                <span >{{obj.watchNum}}</span>
+                <span>次播放</span>
+                <span class="videotag" v-if="obj.videoType==7">{{obj.wapTagName}}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+<include file="Public/footer" js="__PUBLIC__/js/video.min.js,__STATIC__/js/place.js"/>

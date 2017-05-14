@@ -1,0 +1,62 @@
+<include file="Public/header" title="行程列表" css="__STATIC__/css/base.css,__STATIC__/css/road.css" />
+<div id="pageTitle">
+  <div class="page-title">行程列表</div>
+</div>
+<div id="pageWrapper">
+  <div id="searchCnr">
+    <div class="col-md-2">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="行程名称" v-model="searchKey" @keyup.enter="getData()">
+        <div class="input-group-addon bg-laia" @click="getData()">
+          <span class="glyphicon glyphicon-search" ></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <select v-model="searchType" class="form-control" @change="getData()">
+        <option v-for="obj in searchTypeArr" :value="obj.id" v-text="obj.name"></option>
+      </select>
+    </div>
+    <div class="pull-right">
+      <div class="btn btn-laia" @click="create()">创建</div>
+      <div class="btn btn-danger" @click="del()">删除</div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>名称</th>
+        <th>创建时间</th>
+        <th>上次修改时间</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="(idx, obj) in tableData">
+        <td>
+          <div class="laia-chk">
+            <input type="checkbox" :value="obj.id" :id="obj.id" v-model="checkedArr">
+            <label :for="obj.id"></label>
+          </div>
+        </td>
+        <td v-text="obj.name"></td>
+        <td v-text="obj.createDate"></td>
+        <td v-text="!!obj.modifyDate?obj.modifyDate:obj.createDate"></td>
+        <td>
+          <div class="btn btn-link" @click="edit(obj.id)">编辑</div>
+          <div class="btn btn-link" v-text="obj.state=='0'?'下架':'上架'" @click="changeState(obj.id,obj.state)"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <div v-show="showPageNav" id="pageCount" class="btn bg-laia">
+      <span v-text="'第 ' + curPage + ' 页 | '"></span>
+      <span v-text="'共 ' + pageCount + ' 页'"></span>
+    </div>
+  </div>
+
+</div>
+<include file="Public/footer" js="__STATIC__/js/road/road.js" />

@@ -1,0 +1,120 @@
+<include file="Public/header" title="票务编辑" css="__STATIC__/css/base.css" />
+<div id="pageTitle">
+    <div class="page-title">票务编辑</div>
+
+</div>
+<div id="pageWrapper">
+
+    <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+        <div class="close" @click="hideAlert">&times;</div>
+        <span v-html="alert.msg"></span>
+    </div>
+    <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+        <span>{{notice.msg}}</span>
+        <div class="close" @click="hideNotice">&times;</div>
+    </div>
+
+    <form id="editform"  method="post" enctype="multipart/form-data">
+        <!--<input type="hidden" name="Longitude" id="Longitude" v-model="Longitude">-->
+        <!--<input type="hidden" name="Latitude" id="Latitude" v-model="Latitude">-->
+
+        <input type="hidden" name="id" v-model="id" >
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="col-md-2">
+                    票务名称：
+                </div>
+                <div class="col-md-10 laia-ctrl-cnr">
+                    <input type="text" class="form-control laia-ctrl laia-ipt" maxlength="20" v-model="name"  name="name"  placeholder="票务名称">
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>20</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">票务封面：</div>
+                <div class="col-md-10">
+                    <div class="help">请选择1000x750px大小图片，格式为jpg/png/gif，大小不要超过1MB。</div>
+                    <div>
+                        <img  id="picView" class="upload-review album-cover" title="活动封面" width="319"  onerror="this.src='__PUBLIC__/img/error_scepic.png'" :src="pic"   onclick="pic.click();
+                                return false;">
+                        <input type="file" hidden="" class="upload-button" id="pic" name="cover">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-2">票务描述：</div>
+                <div class="col-md-10 laia-ctrl-cnr">
+                    <textarea type="text" id="SceRemark" class="form-control laia-ctrl laia-area" maxlength="40" placeholder="票务描述" v-model='remark' name="remark"></textarea>
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>40</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">
+                    票务价格：
+                </div>
+
+                <div class="col-md-10">
+                    ￥<input type="text" class="form-group" v-model="price"  name="price"  >/份（请输入门票价格,如898、199、49等！）
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">
+                    票务包含人数：
+                </div>
+                <div class="col-md-10">
+                    <input type="text" class="form-group" v-model="person1"  name="person1"  >
+                    成人
+                    <input type="text" class="form-group" v-model="person2"  name="person2"  >
+                    儿童
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">使用范围：</div>
+                <div class="col-md-10 laia-ctrl-cnr">
+                    <textarea type="text" id="SceRemark" class="form-control laia-area laia-ctrl" maxlength="120" placeholder="使用范围" v-model='rangeRemark'  name=" rangeRemark"></textarea>
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>120</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">使用规则：</div>
+                <div class="col-md-10 laia-ctrl-cnr">
+                    <textarea type="text" id="SceRemark" class="form-control laia-ctrl laia-area" maxlength="120" placeholder="使用规则" v-model='ruleRemark'  name="ruleRemark"></textarea>
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>120</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">包含项目：</div>
+                <div class="col-md-10 laia-ctrl-cnr">
+                    <textarea type="text" maxlength="120" id="SceRemark" class="form-control laia-ctrl laia-area" placeholder="包含项目" v-model='includeRemark'  name="includeRemark"></textarea>
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>120</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">
+                    票务订购电话：
+                </div>
+                <div class="col-md-10 laia-ctrl-cnr">
+                    <input type="text" maxlength="20" class="form-control laia-ipt laia-ctrl" v-model="tel"  name="tel"  placeholder="票务订购电话">
+                    <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>20</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group col-md-12">
+                <div  class="btn btn-default pull-left">取消</div>
+                <div id="btnSubmit" class="btn btn-laia pull-right">保存</div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </form>
+</div>
+<include file="Public/footer" js="__PUBLIC__/ueditor/ueditor.config.js,__PUBLIC__/ueditor/ueditor.all.js,__PUBLIC__/js/uploadPreview.js,__PUBLIC__/ueditor/third-party/datapacker/WdatePicker.js,__PUBLIC__/js/jquery.form.js,__PUBLIC__/js/vue.min.js,__STATIC__/js/ticket/ticketinfo.js" />

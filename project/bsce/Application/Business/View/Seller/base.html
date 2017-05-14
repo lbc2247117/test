@@ -1,0 +1,82 @@
+<include file="Public/header" title="商家信息" css="__PUBLIC__/ueditor/third-party/webuploader/webuploader.css,__PUBLIC__/ueditor/third-party/webuploader/style.css,__STATIC__/plugin/lightbox/css/lightbox.css,__STATIC__/css/base.css,__STATIC__/css/seller.css" />
+<div id="pageTitle">
+  <div class="page-title">商家基本信息</div>
+  <div id="saveBtn" class="pull-right btn btn-laia">保存</div>
+</div>
+<div id="pageWrapper">
+  <form id="laiaForm" method="POST" enctype="multipart/form-data" @submit.prevent>
+    <input type="hidden"  v-model="name">
+    <input type="hidden"  v-model="type">
+    <div class="title">商家概述</div>
+    <div class="dsc-cnr col-md-8">
+      <div class="mgn-b-30">
+        <label class="col-md-2 text-right" for="bizDsc">商家简介</label>
+        <div class="laia-ctrl-cnr col-md-6">
+          <textarea id="bizDsc" class="laia-area" rows="5" placeholder="商家简介" maxlength="150" v-model="bizDsc"></textarea>
+          <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>150</span></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="mgn-b-30">
+        <label class="col-md-2 text-right" for="bizAddress">商家地址</label>
+        <div class="laia-ctrl-cnr col-md-6">
+          <input id="bizAddress" class="laia-ctrl laia-ipt" type="text" v-model="bizAddress" placeholder="商家地址" maxlength="50">
+          <div class="laia-ctrl-count"><span class="help-ntc">0</span><span>/</span><span>50</span></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div>
+        <label class="col-md-2 text-right" for="bizCell">商家联系方式</label>
+        <div class="laia-ctrl-cnr col-md-6">
+          <input id="bizCell" class="laia-ctrl laia-ipt" type="text" v-model="bizCell" placeholder="商家联系方式" maxlength="13">
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="title">商家封面</div>
+    <div class="cover-cnr">
+      <div class="portfolio-content">
+        <ul class="cl portfolio-area">
+          <li v-show="imgListArr.length<5">
+            <div class="add-cnr" @click="showUploader()"></div>
+          </li>
+          <li v-for="(idx,obj) in imgListArr">
+            <div class="portfoliobox">
+              <div class="picbox">
+                <div class="edit" @click.stop="rmImg(obj)"></div>
+                <a :href="obj" data-lightbox="laia">
+                  <div :style="{backgroundImage: 'url('+obj+')'}"></div>
+                </a>
+              </div>
+            </div>
+          </li>
+          <div class="clearfix"></div>
+        </ul>
+      </div>
+      <div v-show="uploaderVisible" id="add_picture" class="form-group">
+        <div id="container">
+          <div id="uploader">
+            <div class="queueList">
+              <div id="dndArea" class="placeholder">
+                <div id="filePicker"></div>
+              </div>
+            </div>
+            <div class="statusBar" style="display:none;">
+              <div class="progress">
+                <span class="text">0%</span>
+                <span class="percentage"></span>
+              </div>
+              <div class="info"></div>
+              <div class="btns">
+                <div id="filePicker2"></div>
+                <div class="uploadBtn">开始上传</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<include file="Public/footer" js="__PUBLIC__/ueditor/third-party/webuploader/webuploader.js,__PUBLIC__/ueditor/third-party/webuploader/upload.js,__STATIC__/plugin/lightbox/js/lightbox.min.js,__PUBLIC__/js/jquery.form.js,__STATIC__/js/seller/base.js"/>

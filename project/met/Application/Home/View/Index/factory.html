@@ -1,0 +1,17 @@
+<include file="Public/header" title="长安汽车-盐城万达东台分公司" css="__STATIC__/css/index.css" />
+<a href="javascript:void(0);" class="v2-banner__dz" style="display:block;"><img src="{$setting.headrPic}"></a>
+<article class="sidebar-v2__article">
+    <div class="met_article">
+        <div class="active" id="img-v2">
+            <ul class="v2-list v2-ac">
+                <li class="col-lg-3 col-md-4 col-sm-6" v-for="(idx,obj) in tableData">
+                    <a href="javascript:void(0);">
+                        <span><img src="{{obj.picPath}}"></span>
+                        <h2 v-html="obj.name"></h2>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
+<include file="Public/footer" js="__STATIC__/js/factory.js" />

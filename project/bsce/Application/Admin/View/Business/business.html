@@ -1,0 +1,110 @@
+<include file="Public/header" title="商家管理" css="__STATIC__/css/base.css,__STATIC__/css/business.css" />
+<div id="pageTitle">
+  <div class="page-title">商家管理</div>
+</div>
+<div id="pageWrapper">
+  <div id="alertCnr" v-show="alert.show" class="alert" :class="alert.type" style="display:none;">
+    <div class="close" @click="hideAlert">&times;</div>
+    <span v-html="alert.msg"></span>
+  </div>
+  <div v-show="notice.show" class="alert" :class="notice.type" style="display:none;">
+    <span>{{notice.msg}}</span>
+    <div class="close" @click="hideNotice">&times;</div>
+  </div>
+  <div id="searchCnr">
+    <!--  <div class="col-md-1">
+        <select class="form-control" v-model="selSearchType">
+          <option v-for="(idx,obj) in searchType" :value="obj.id" v-text="obj.val"></option>
+        </select>
+      </div>-->
+    <div class="col-md-2">
+      <div class="input-group">
+        <input id='keyWord' type="text" class="form-control" placeholder="商家名称" v-model="keyword" @keyup.enter="getData(1)">
+        <div class="input-group-addon bg-laia" @click="getData(1)">
+          <span class="glyphicon glyphicon-search"</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="col-md-4">
+        <select class="form-control" v-model="selBusType" @change="getData(1)">
+          <option v-for="(idx,obj) in busType" :value="obj.id" v-text="obj.val"></option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select class="form-control" v-model="selBusCate" @change="getData(1)">
+          <option v-for="(idx,obj) in busCata" :value="obj.id" v-text="obj.val"></option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select class="form-control" v-model="selBusStatus" @change="getData(1)">
+          <option v-for="(idx,obj) in busStatus" :value="obj.id" v-text="obj.val"></option>
+        </select>
+      </div>
+    </div>
+    <div class="pull-right">
+      <div class="btn btn-laia" @click="add">新增商家</div>
+      <div class="btn btn-danger" @click='del'>删除</div>
+      <div class="btn btn-default" @click="downlist">下载列表</div>
+    </div>
+    <div class="clearfix"></div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>商家ID</th>
+          <th>商家名称</th>
+          <th>商家类型</th>
+          <th>商家种类</th>
+          <th>商家状态</th>
+          <th>管理员手机</th>
+          <th>联系方式</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(idx, obj) in tableData">
+          <td>
+            <div class="laia-chk">
+              <input type="checkbox" :value="obj.id" :id="obj.id" v-model="checkedArr">
+              <label :for="obj.id"></label>
+            </div>
+          </td>
+          <td v-text="obj.id"></td>
+          <td v-text="obj.name"></td>
+          <td v-text="obj.commercialTenantStyle==0?'自营商家':'景区商家'"></td>
+          <td v-text="obj.commercialTenantType"></td>
+          <td v-text="obj.isAlive"></td>
+          <td v-text="obj.mobile"></td>
+          <td v-text="obj.tel"></td>
+          <td>
+            <div class="btn btn-link" @click='showbus(idx)'>编辑</div>
+            <div class="btn btn-link" @click="obj.frameState==0?downfn(idx):upfn(idx)" v-text="obj.frameState==0?'下架':'上架'"></div>
+            <!-- <div v-if="obj.frameState==0" class="btn btn-link" @click="downfn(idx)">下架</div>
+            <div v-if="obj.frameState==1" class="btn btn-link" @click="upfn(idx)">上架</div> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <ul v-show="showPageNav" class="pagination">
+      <li :class="curPage < 2 ? 'disabled' : ''" @click="pageNav(curPage-1)">
+        <a href="javascript:;">上一页</a>
+      </li>
+      <li v-for="obj in pageShowData" :class="curPage == obj.num ? 'active' : ''" @click="pageNav(obj.num)">
+        <a href="javascript:;">{{obj.num}}</a>
+      </li>
+      <li :class="curPage < pageAllData.length ? '' : 'disabled'" @click="pageNav(curPage+1)">
+        <a href="javascript:;">下一页</a>
+      </li>
+    </ul>
+
+    <div id="pageCount" class="btn bg-laia">
+      <span>第 {{curPage}} 页 | </span>
+      <span>共 {{pageCount}} 页</span>
+    </div>
+  </div>
+
+</div>
+<include file="Public/footer" js="__STATIC__/js/business/business.js" />

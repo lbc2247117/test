@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Microsoft YaHei';
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    color: #000;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+
+
+
+.clearfix {
+    clear: both;
+}
+.form-control {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid #3B3D4A;
+    color: #3B3D4A;
+    background: none;
+}
+.navbar-nav li {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.alert {
+    position: fixed;
+    top: 10rem;
+    left: 10%;
+    width: 80%;
+    padding: 1rem;
+    text-align: center;
+    color: #333;
+    background-color: rgba(255,255,255,0.9);
+    word-break: break-all;
+    border-radius: 0.3rem;
+    font-size: 1.4rem;
+    z-index: 9999;
+}
+.pos-rel {
+    position: relative;
+}
+.pos-abs {
+    position: absolute;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    padding: 0 1rem;
+    float: left;
+}
+.col-12 {
+    width: 100%;
+}
+.col-11 {
+    width: 91.66666667%;
+}
+.col-10 {
+    width: 83.33333333%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-8 {
+    width: 66.66666667%;
+}
+.col-7 {
+    width: 58.33333333%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-5 {
+    width: 41.66666667%;
+}
+.col-4 {
+    width: 33.33333333%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-2 {
+    width: 16.66666667%;
+}
+.col-1 {
+    width: 8.33333333%;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.page-nav {
+    width: 50%;
+    float: left;
+}
+.page-nav .btn {
+    margin: 0 auto;
+}
+.pad-0 {
+    padding: 0;
+}
+.pad-10 {
+    padding: 1rem;
+}
+.pad-10-0 {
+    padding: 1rem 0;
+}
+.pad-0-10 {
+    padding: 0 1rem;
+}
+.pad-lt-0 {
+    padding-left: 0;
+}
+.mgn-10-0 {
+    margin: 1rem 0;
+}
+.radius-cnr {
+    border-radius: 1rem;
+    width: 100%;
+    height: 4rem;
+    background-color: #3bc2b5;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+.text-lg {
+    font-size: 1.2rem;
+}
+.text-sm {
+    font-size: 0.8rem;
+}
+#banner1{
+    width: 100%;
+    padding-bottom: 50%;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(http://7xnjsm.com1.z0.glb.clouddn.com/B80XCX0$73_K%7D3%29%29Q5%29%7BTVU.jpg);
+    margin-bottom: 1rem;
+
+}
+.contentmargin{
+    margin-bottom:0.4rem; 
+}

@@ -1,0 +1,45 @@
+<include file="Public/header" title="官方解答" css="__STATIC__/css/iscroll.css,__STATIC__/css/faq.css"/>
+<div id="scroller">
+  <div id="pullDown">
+    <span class="pull-down-icon"></span>
+    <span class="pull-down-label">下拉刷新</span>
+  </div>
+  <div id="headCnr">
+    <div id="headCnt">
+      <div id="searchCnr">
+        <input class="form-control" placeholder="搜索问题" v-model="searchKey">
+        <div id="searchBtn" @click="search()">搜索</div>
+      </div>
+      <div id="sortCnr">
+        <div :class="sortByTime?'active':''" @click="sort('time')">按时间排序</div>
+        <div :class="sortByTime?'':'active'" @click="sort()">按点赞数排序</div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <div id="bodyCnr">
+    <div v-for="(idx,obj) in dataArr" class="sgl-cnr">
+      <div class="sgl-qa" @click="toggle">
+        <div class="sgl-q">
+          <span>游客咨询：</span>
+          <span v-html="obj.requestContent"></span>
+        </div>
+        <div class="sgl-a">
+          <span>景区回答：</span>
+          <span v-html="obj.requestRepeat"></span>
+        </div>
+      </div>
+      <div class="sgl-act">
+        <div class="pull-left" v-text="obj.createDate"></div>
+        <div class="like" :class="obj.state==1?'active':''" @click="like(idx)">赞<span v-text="obj.vote"></span></div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <div id="pullUp">
+    <span class="pull-up-icon"></span>
+    <span class="pull-up-label">上拉加载更多</span>
+  </div>
+</div>
+<div id="footCnr" @click="ask()">提问</div>
+<include file="Public/footer" js="__STATIC__/js/iscroll.js,__STATIC__/js/faq.js"/>
