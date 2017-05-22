@@ -18,10 +18,9 @@ $channel->queue_declare('myrabbit', false, false, false, false);
 echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
 
 $callback = function ($msg) {
-    $db = mysqlPDO::create();
+
     $content = $msg->body;
-    $sql = 'insert into rabbit (`key`,`value`)VALUES ("testkey","' . $content . '")';
-    $db->exec($sql);
+    echo $content;
 };
 
 $channel->basic_consume('myrabbit', '', false, true, false, false, $callback);
