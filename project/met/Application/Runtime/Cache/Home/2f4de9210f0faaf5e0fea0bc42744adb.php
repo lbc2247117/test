@@ -10,7 +10,7 @@
         <link href="http://7xnjsm.com1.z0.glb.clouddn.com/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
         <title>长安汽车-盐城万达东台分公司</title>
         <link rel="stylesheet" href="/Public/css/bootstrap.min.css">
-        <link href="/Application/Home/View/public/static/css/base.css" rel="stylesheet" />
+        <link href="/Application/Home/View/Public/static/css/base.css" rel="stylesheet" />
     </head>
     <body>
         <div id="wrapper">
@@ -117,8 +117,8 @@
 <script src="/Public/js/jquery.min.js"></script>
 <script src="/Public/js/bootstrap.min.js"></script>
 <script src="/Public/js/vue.min.js"></script>
-<script src="/Application/Home/View/public/static/js/base.js"></script>
-<?php $str = "/Application/Home/View/public/static/js/product.js"; $arr = explode(",", $str); ?>
+<script src="/Application/Home/View/Public/static/js/base.js"></script>
+<?php $str = "/Application/Home/View/Public/static/js/product.js"; $arr = explode(",", $str); ?>
 <?php if(is_array($arr)): foreach($arr as $key=>$src): ?><script src="<?php echo ($src); ?>"></script><?php endforeach; endif; ?>
 <script>
     var _hmt = _hmt || [];

@@ -1,34 +1,2968 @@
-[ 2017-02-21T12:53:42+08:00 ] 127.0.0.1 /
+[ 2017-02-21T00:15:17+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000190s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001571s ]
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
-SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0030s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002091s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000575s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001513s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001785s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001161s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001992s ]
+
+[ 2017-02-21T00:38:20+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000200s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002263s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000565s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001567s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001867s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002209s ]
+
+[ 2017-02-21T01:02:21+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000202s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002309s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000639s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069440s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070683s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001657s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002559s ]
+
+[ 2017-02-21T01:03:20+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000300s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001977s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000992s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002546s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040423s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041390s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001249s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002186s ]
+
+[ 2017-02-21T01:07:18+08:00 ] 139.162.108.53 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000351s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005233s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000570s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001495s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000907s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001936s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001169s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002111s ]
+
+[ 2017-02-21T01:25:05+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000194s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001923s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000562s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001478s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040493s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001985s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001131s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001984s ]
+
+[ 2017-02-21T01:25:07+08:00 ] 183.57.53.222 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000186s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001145s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002065s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000789s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001691s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001951s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002091s ]
+
+[ 2017-02-21T01:43:19+08:00 ] 182.18.72.142 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000204s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002361s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000790s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001836s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048901s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001822s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002323s ]
+
+[ 2017-02-21T01:48:09+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000262s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001995s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002260s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000636s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001701s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040916s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002570s ]
+
+[ 2017-02-21T01:57:55+08:00 ] 123.125.71.99 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000396s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003313s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000546s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001556s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052383s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002430s ]
+
+[ 2017-02-21T02:11:19+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000221s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001879s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001837s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000698s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001612s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045099s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001756s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001166s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002066s ]
+
+[ 2017-02-21T02:11:50+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000186s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002416s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000637s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001913s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038749s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039656s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001847s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002140s ]
+
+[ 2017-02-21T02:34:38+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000336s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002589s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001997s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000749s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001688s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001941s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002013s ]
+
+[ 2017-02-21T03:20:37+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000202s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002196s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000672s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001669s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001243s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002212s ]
+
+[ 2017-02-21T03:43:56+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000188s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002024s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000547s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001442s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045757s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002662s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001974s ]
+
+[ 2017-02-21T03:44:37+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000307s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003438s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000557s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001620s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033156s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000742s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001646s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000989s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001937s ]
+
+[ 2017-02-21T04:07:02+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000308s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002980s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000899s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002414s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002083s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002955s ]
+
+[ 2017-02-21T04:07:34+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000347s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001914s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000600s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001570s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033918s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001984s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001948s ]
+
+[ 2017-02-21T04:10:58+08:00 ] 101.226.33.201 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000192s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002067s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000616s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001875s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043495s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001165s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002157s ]
+
+[ 2017-02-21T04:29:40+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000201s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001952s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003107s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000572s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001548s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046354s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000872s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001884s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001167s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002265s ]
+
+[ 2017-02-21T04:30:22+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000200s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001952s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000591s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001515s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001932s ]
+
+[ 2017-02-21T04:31:10+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000337s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002684s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000871s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002328s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052948s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003147s ]
+
+[ 2017-02-21T04:34:34+08:00 ] 183.57.53.196 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000210s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001999s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000893s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001909s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040311s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000960s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002075s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001165s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002051s ]
+
+[ 2017-02-21T04:34:43+08:00 ] 61.151.228.22 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000203s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001750s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000592s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001504s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038312s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003078s ]
+
+[ 2017-02-21T04:34:46+08:00 ] 101.226.33.224 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000301s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003092s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000910s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002382s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001156s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002664s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002963s ]
+
+[ 2017-02-21T04:34:46+08:00 ] 101.226.66.178 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000342s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002855s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002321s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000879s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002277s ]
+
+[ 2017-02-21T04:34:47+08:00 ] 101.226.33.205 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000311s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004212s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000885s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002299s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049661s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051298s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002875s ]
+
+[ 2017-02-21T04:53:22+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000205s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001796s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000586s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001516s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040173s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000950s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001865s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001938s ]
+
+[ 2017-02-21T04:53:58+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000235s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001899s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000546s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001406s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033462s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002574s ]
+
+[ 2017-02-21T05:16:35+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000247s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001777s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001997s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000571s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001494s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041549s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003395s ]
+
+[ 2017-02-21T05:17:08+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000204s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002199s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002578s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049579s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001740s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001257s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002844s ]
+
+[ 2017-02-21T05:40:07+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000288s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001941s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002586s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000605s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001757s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002967s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001110s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002004s ]
+
+[ 2017-02-21T06:02:37+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000195s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002211s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000574s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001529s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000942s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001393s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002279s ]
+
+[ 2017-02-21T06:08:25+08:00 ] 54.80.90.144 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000194s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001803s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002048s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000581s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001515s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035292s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001978s ]
+
+[ 2017-02-21T06:25:54+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000322s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002003s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000544s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001410s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040307s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001861s ]
+
+[ 2017-02-21T06:26:31+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000309s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002809s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000906s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002354s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053198s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002923s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002944s ]
+
+[ 2017-02-21T06:27:26+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000183s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003524s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000591s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001453s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035065s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001771s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001159s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002849s ]
+
+[ 2017-02-21T06:28:36+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000180s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001980s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000575s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001472s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039702s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001891s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002515s ]
+
+[ 2017-02-21T06:48:46+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000256s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002061s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000561s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001476s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049145s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001943s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001219s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002137s ]
+
+[ 2017-02-21T06:49:25+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000316s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003035s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000778s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001774s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001883s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002147s ]
+
+[ 2017-02-21T07:03:34+08:00 ] 116.231.185.45 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000187s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002328s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000720s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001948s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046304s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001917s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002039s ]
+
+[ 2017-02-21T07:10:28+08:00 ] 180.163.220.125 /Home/Index/tell.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000343s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003346s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001019s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003289s ]
+
+[ 2017-02-21T07:12:25+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000229s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001916s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002454s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000646s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001617s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001273s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002587s ]
+
+[ 2017-02-21T07:35:16+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000196s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001996s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000552s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001457s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045530s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046395s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002047s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001224s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002444s ]
+
+[ 2017-02-21T07:35:55+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000351s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002890s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000863s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048455s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002819s ]
+
+[ 2017-02-21T07:58:36+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000292s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002793s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000669s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001549s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002610s ]
+
+[ 2017-02-21T07:59:19+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000187s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003233s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000552s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001409s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001853s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001910s ]
+
+[ 2017-02-21T08:04:50+08:00 ] 177.87.232.3 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000286s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002011s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002328s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000538s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001397s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040778s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001715s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002006s ]
+
+[ 2017-02-21T08:21:42+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000191s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001605s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002401s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000899s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055647s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056932s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002770s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001528s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002969s ]
+
+[ 2017-02-21T08:22:17+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000194s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001971s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000562s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001757s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002598s ]
+
+[ 2017-02-21T08:44:31+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000215s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001778s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002486s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000691s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001823s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049615s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050975s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002297s ]
+
+[ 2017-02-21T09:08:06+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000191s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003471s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000595s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001640s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001739s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001918s ]
+
+[ 2017-02-21T09:30:58+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000467s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002199s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002541s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000842s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001830s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046608s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
 INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000985s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002058s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
-INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001354s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002200s ]
 
-[ 2017-02-21T12:53:43+08:00 ] 127.0.0.1 /Home/Index/get_home_data
+[ 2017-02-21T09:34:42+08:00 ] 207.46.13.114 /
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000291s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002933s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000600s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001968s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001958s ]
+
+[ 2017-02-21T09:52:05+08:00 ] 71.6.202.196 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000195s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002861s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001767s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002007s ]
+
+[ 2017-02-21T09:54:14+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000315s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002941s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001770s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000908s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002496s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042437s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043458s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001817s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001927s ]
+
+[ 2017-02-21T09:55:44+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000192s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001768s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000619s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001624s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033399s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001764s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001889s ]
+
+[ 2017-02-21T10:16:41+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000189s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000974s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001844s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000583s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001519s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043970s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000849s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001842s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001866s ]
+
+[ 2017-02-21T10:17:32+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000186s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001794s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001156s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002482s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000545s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001453s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033231s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001788s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001849s ]
+
+[ 2017-02-21T10:18:26+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000336s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003106s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001021s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002600s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002731s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002757s ]
+
+[ 2017-02-21T10:21:50+08:00 ] 114.215.45.79 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000185s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002779s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000580s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001662s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001775s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001262s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002239s ]
+
+[ 2017-02-21T10:33:29+08:00 ] 183.57.53.197 /Home/Index/tell.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000192s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002019s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000541s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001447s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003127s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004059s ]
+
+[ 2017-02-21T10:33:38+08:00 ] 140.207.124.105 /Home/Index/tell.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000192s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002056s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000534s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010486s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042937s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001593s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001838s ]
+
+[ 2017-02-21T10:40:30+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000193s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002744s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000548s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001429s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001901s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001962s ]
+
+[ 2017-02-21T11:03:15+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000213s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001896s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000923s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002444s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064702s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002869s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003249s ]
+
+[ 2017-02-21T11:27:07+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000328s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001813s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000641s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001624s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002238s ]
+
+[ 2017-02-21T11:49:10+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000192s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001993s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000903s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001876s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002726s ]
+
+[ 2017-02-21T11:50:04+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000280s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001996s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000634s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001505s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001799s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001888s ]
+
+[ 2017-02-21T12:06:36+08:00 ] 114.215.239.201 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000279s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002845s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000751s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002030s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061405s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002672s ]
+
+[ 2017-02-21T12:12:30+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000277s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001936s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001992s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000566s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001545s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044982s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001837s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001128s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002062s ]
+
+[ 2017-02-21T12:36:07+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000306s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002056s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000541s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001420s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042900s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001967s ]
+
+[ 2017-02-21T12:59:01+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000230s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002379s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002606s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060317s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001689s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001546s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002521s ]
+
+[ 2017-02-21T13:00:00+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000436s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003873s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000836s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.098216s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099828s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003240s ]
+
+[ 2017-02-21T13:22:01+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000397s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003395s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000668s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001855s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053897s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055427s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002481s ]
+
+[ 2017-02-21T13:45:09+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000293s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001771s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002162s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000535s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001378s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001870s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001147s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002010s ]
+
+[ 2017-02-21T13:51:13+08:00 ] 125.39.207.33 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000183s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002465s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000620s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001807s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037910s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003488s ]
+
+[ 2017-02-21T14:08:00+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000323s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002767s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002696s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001657s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003445s ]
+
+[ 2017-02-21T15:17:40+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000420s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002859s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003404s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000971s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002414s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003075s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003205s ]
+
+[ 2017-02-21T15:41:24+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000306s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002925s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000874s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002386s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001385s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002941s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001619s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003023s ]
+
+[ 2017-02-21T15:41:56+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000323s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002679s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
-SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0020s ]
-SQL: SELECT * FROM `banner` ORDER BY sort asc  [ RunTime:0.0040s ]
-SQL: select a.* from product as a right join  home_goods as b on a.id=b.pid order by b.sort limit 8 [ RunTime:0.0030s ]
-SQL: SELECT * FROM `factory` LIMIT 0,8   [ RunTime:0.0060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002074s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000707s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040906s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001791s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001970s ]
+
+[ 2017-02-21T16:04:24+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000318s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003029s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002969s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001821s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003258s ]
+
+[ 2017-02-21T16:09:19+08:00 ] 101.226.35.225 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000335s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003268s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000852s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002334s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055990s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001191s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002646s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002892s ]
+
+[ 2017-02-21T16:09:19+08:00 ] 101.226.35.225 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000280s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002776s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000920s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002386s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002768s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002964s ]
+
+[ 2017-02-21T16:09:20+08:00 ] 101.226.35.225 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000338s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002904s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003159s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001330s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002942s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057660s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059421s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003965s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001997s ]
+
+[ 2017-02-21T16:09:20+08:00 ] 101.226.35.225 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000182s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001138s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001998s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000540s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001504s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043098s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001703s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000980s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001857s ]
+
+[ 2017-02-21T16:50:20+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000349s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002782s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003155s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000571s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001769s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063350s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001985s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001242s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002238s ]
+
+[ 2017-02-21T16:51:19+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000256s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001806s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002050s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000840s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001985s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002832s ]
+
+[ 2017-02-21T17:08:22+08:00 ] 42.156.137.37 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000297s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003007s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000880s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002632s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006129s ]
+
+[ 2017-02-21T17:08:26+08:00 ] 42.120.145.7 /Home/Index/get_home_data
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000287s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002685s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `banner` ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: select a.* from product as a right join  home_goods as b on a.id=b.pid order by b.sort limit 8 [ RunTime:0.0015s ]
+SQL: SELECT * FROM `factory` LIMIT 0,8   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `setting`  [ RunTime:0.0008s ]
+
+[ 2017-02-21T17:13:49+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000374s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002906s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002633s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003355s ]
+
+[ 2017-02-21T17:14:29+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000304s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002871s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000598s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001625s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043677s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002102s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001994s ]
+
+[ 2017-02-21T17:36:55+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000339s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002019s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000572s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001474s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048942s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000926s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002419s ]
+
+[ 2017-02-21T17:48:21+08:00 ] 101.226.89.121 /Home/Index/tell.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000350s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003317s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000948s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002534s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076380s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002834s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003373s ]
+
+[ 2017-02-21T17:48:22+08:00 ] 61.151.226.202 /Home/Index/about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000337s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002570s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000875s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001765s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001208s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002173s ]
+
+[ 2017-02-21T17:56:18+08:00 ] 111.206.36.15 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000219s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002062s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000888s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002246s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056411s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002517s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001261s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002285s ]
+
+[ 2017-02-21T17:58:04+08:00 ] 101.226.65.104 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000333s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004741s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000595s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001821s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001862s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002101s ]
+
+[ 2017-02-21T18:00:02+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000369s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004687s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000579s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001591s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002221s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002978s ]
+
+[ 2017-02-21T18:15:06+08:00 ] 123.125.71.99 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000322s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003040s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000942s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002387s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068764s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002817s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003102s ]
+
+[ 2017-02-21T18:23:05+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000199s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002045s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000647s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001670s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050797s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052523s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002763s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003389s ]
+
+[ 2017-02-21T18:23:35+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000365s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002734s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000586s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001586s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002262s ]
+
+[ 2017-02-21T18:43:11+08:00 ] 61.135.165.43 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000311s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005506s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001389s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003241s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084325s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001827s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003613s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001648s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003043s ]
+
+[ 2017-02-21T18:46:16+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000343s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003601s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002721s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042277s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001508s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003501s ]
+
+[ 2017-02-21T18:47:00+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000436s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020015s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001016s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002600s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002941s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003287s ]
+
+[ 2017-02-21T19:09:32+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000202s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001816s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002175s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000957s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002533s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067635s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001267s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002322s ]
+
+[ 2017-02-21T19:10:08+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000211s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001806s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002189s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000993s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002608s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001651s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003911s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002262s ]
+
+[ 2017-02-21T19:19:16+08:00 ] 49.95.9.247 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000279s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002007s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002215s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000776s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001836s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054997s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001233s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002146s ]
+
+[ 2017-02-21T19:19:20+08:00 ] 49.95.9.247 /Home/Index/get_home_data
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000188s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002824s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `banner` ORDER BY sort asc  [ RunTime:0.0011s ]
+SQL: select a.* from product as a right join  home_goods as b on a.id=b.pid order by b.sort limit 8 [ RunTime:0.0015s ]
+SQL: SELECT * FROM `factory` LIMIT 0,8   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `setting`  [ RunTime:0.0008s ]
+
+[ 2017-02-21T19:19:31+08:00 ] 49.95.9.247 /Home/Index/about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000304s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003410s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000989s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002549s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054171s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002991s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001560s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003220s ]
+
+[ 2017-02-21T19:19:31+08:00 ] 49.95.9.247 /Home/Index/getAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000281s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001708s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `setting`  [ RunTime:0.0005s ]
+
+[ 2017-02-21T19:32:18+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000191s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002226s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000902s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002402s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049213s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001183s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002290s ]
+
+[ 2017-02-21T19:52:34+08:00 ] 42.236.10.78 /Home/Index/about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000311s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003104s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000883s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067359s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001348s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001624s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002993s ]
+
+[ 2017-02-21T19:55:36+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000237s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001888s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000650s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001696s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035196s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036380s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001859s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001913s ]
+
+[ 2017-02-21T19:56:09+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000194s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003030s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000612s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001525s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002163s ]
+
+[ 2017-02-21T20:01:12+08:00 ] 180.163.2.118 /Home/Index/get_home_data
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000324s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003103s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `banner` ORDER BY sort asc  [ RunTime:0.0012s ]
+SQL: select a.* from product as a right join  home_goods as b on a.id=b.pid order by b.sort limit 8 [ RunTime:0.0014s ]
+SQL: SELECT * FROM `factory` LIMIT 0,8   [ RunTime:0.0014s ]
 SQL: SELECT * FROM `setting`  [ RunTime:0.0010s ]
+
+[ 2017-02-21T20:17:52+08:00 ] 46.21.191.10 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000220s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004015s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000597s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001694s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051587s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001175s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002144s ]
+
+[ 2017-02-21T20:18:30+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000322s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003154s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000615s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001585s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035028s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000974s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002015s ]
+
+[ 2017-02-21T20:19:11+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000231s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002885s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000674s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001629s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001804s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002089s ]
+
+[ 2017-02-21T20:36:15+08:00 ] 101.226.66.179 /Home/Index/about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000196s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002130s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000847s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002453s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002648s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002948s ]
+
+[ 2017-02-21T20:36:16+08:00 ] 101.226.33.204 /Home/Index/tell.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000436s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002218s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000948s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002875s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003597s ]
+
+[ 2017-02-21T20:36:41+08:00 ] 123.57.10.148 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000404s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002386s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000551s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001707s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036350s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000852s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003982s ]
+
+[ 2017-02-21T20:38:32+08:00 ] 180.153.160.15 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000313s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002947s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000918s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002392s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053764s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001970s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001939s ]
+
+[ 2017-02-21T20:42:19+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000349s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002861s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000652s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001594s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035277s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002454s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002208s ]
+
+[ 2017-02-21T20:54:02+08:00 ] 101.226.68.215 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000310s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003141s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000940s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002364s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002736s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002942s ]
+
+[ 2017-02-21T20:54:18+08:00 ] 101.226.51.230 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000432s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003340s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000936s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002344s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003458s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003079s ]
+
+[ 2017-02-21T20:57:27+08:00 ] 190.238.143.139 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000327s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002745s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000806s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002283s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002971s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002972s ]
+
+[ 2017-02-21T21:28:28+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000318s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002966s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000886s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002283s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073305s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001308s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002906s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005441s ]
+
+[ 2017-02-21T21:28:32+08:00 ] 61.151.226.199 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000308s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003285s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002630s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054341s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055817s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001513s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002875s ]
+
+[ 2017-02-21T21:28:50+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000306s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002065s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000652s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001603s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039888s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001917s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002224s ]
+
+[ 2017-02-21T21:40:06+08:00 ] 207.46.13.114 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000218s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003335s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000841s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002064s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058517s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002827s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003063s ]
+
+[ 2017-02-21T21:51:56+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000305s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002267s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001009s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002792s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002744s ]
+
+[ 2017-02-21T22:14:56+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000316s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002111s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000726s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002512s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052387s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001583s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003535s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002977s ]
+
+[ 2017-02-21T22:37:44+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000278s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002879s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002007s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000605s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001590s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047643s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001227s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002264s ]
+
+[ 2017-02-21T22:38:26+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000298s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003329s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002881s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002751s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003560s ]
+
+[ 2017-02-21T22:39:18+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000202s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002812s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000568s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001693s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033790s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001946s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002082s ]
+
+[ 2017-02-21T22:39:57+08:00 ] 101.226.33.204 /Home/Index/about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000340s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004112s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000911s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002568s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002853s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003359s ]
+
+[ 2017-02-21T22:43:40+08:00 ] 5.188.211.228 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000315s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003207s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002651s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003360s ]
+
+[ 2017-02-21T23:00:51+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000200s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002305s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000558s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001487s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042727s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000922s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001982s ]
+
+[ 2017-02-21T23:01:42+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000190s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001979s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000792s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044634s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002507s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001270s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002466s ]
+
+[ 2017-02-21T23:23:51+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000343s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001998s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000616s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001790s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001709s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-21T23:24:34+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000193s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002148s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000569s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001706s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036876s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001959s ]
+
+[ 2017-02-21T23:46:57+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000380s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002029s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000580s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001727s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052346s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053397s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001963s ]
+
+[ 2017-02-21T23:47:58+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000303s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002710s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000869s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002253s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049394s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001691s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003092s ]
+
+[ 2017-02-21T23:49:07+08:00 ] 111.251.106.9 mx-tw.mail.gm0.yahoodns.net:25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000338s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003091s ]
+SQL: SELECT * FROM `setting` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000812s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001968s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036351s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037514s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002341s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002927s ]
 

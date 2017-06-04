@@ -11,12 +11,12 @@
         <meta name="description" content="">
         <title>首页产品管理</title>
         <link rel="stylesheet" href="/Public/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/Application/Admin/View/public/static/css/sb-admin.css">
-        <link rel="stylesheet" href="/Application/Admin/View/public/static/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/Application/Admin/View/Public/static/css/sb-admin.css">
+        <link rel="stylesheet" href="/Application/Admin/View/Public/static/font-awesome/css/font-awesome.min.css">
         <link rel="icon" href="/favicon.jpg">
         <script src="/Public/js/jquery.min.js"></script>
-        <!-- <script src="/Application/Admin/View/public/static/js/basePermit.js"></script> -->
-    <link rel="stylesheet" type="text/css" href="/Application/Admin/View/public/static/css/base.css" />
+        <!-- <script src="/Application/Admin/View/Public/static/js/basePermit.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="/Application/Admin/View/Public/static/css/base.css" />
 </head>
 <body>
     <!-- NOTICE BEGIN -->
@@ -226,8 +226,8 @@
 <script src="/Public/js/bootstrap.min.js"></script>
 <script src="/Public/js/vue.min.js"></script>
 <script src="/Public/js/md5.js"></script>
-<script src="/Application/Admin/View/public/static/js/base.js"></script>
-<?php $str = "/Public/js/uploadPreview.js,/Public/js/vue.min.js,/Public/js/jquery.form.js,/Application/Admin/View/public/static/js/index/goods.js"; $arr = explode(",", $str); ?>
+<script src="/Application/Admin/View/Public/static/js/base.js"></script>
+<?php $str = "/Public/js/uploadPreview.js,/Public/js/vue.min.js,/Public/js/jquery.form.js,/Application/Admin/View/Public/static/js/index/goods.js"; $arr = explode(",", $str); ?>
 <?php if(is_array($arr)): foreach($arr as $key=>$src): ?><script src="<?php echo ($src); ?>"></script><?php endforeach; endif; ?>
 <script>
     $(function () {

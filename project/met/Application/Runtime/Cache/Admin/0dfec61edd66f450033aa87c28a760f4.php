@@ -6,9 +6,9 @@
         <meta name="renderer" content="webkit" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
         <link href="/Public/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="/Application/Admin/View/public/static/css/sb-admin.css" rel="stylesheet" type="text/css"/>
-        <link href="/Application/Admin/View/public/static/css/base.css" rel="stylesheet" type="text/css"/>
-        <link href="/Application/Admin/View/public/static/css/login.css" rel="stylesheet" type="text/css"/>
+        <link href="/Application/Admin/View/Public/static/css/sb-admin.css" rel="stylesheet" type="text/css"/>
+        <link href="/Application/Admin/View/Public/static/css/base.css" rel="stylesheet" type="text/css"/>
+        <link href="/Application/Admin/View/Public/static/css/login.css" rel="stylesheet" type="text/css"/>
     </head>
     <body class="login">
         <!-- NOTICE BEGIN -->
@@ -65,8 +65,8 @@
         <script src="/Public/js/jquery.backstretch.min.js" type="text/javascript"></script>
         <script src="/Public/js/md5.js" type="text/javascript"></script>
         <script src="/Public/js/vue.min.js" type="text/javascript"></script>
-        <script src="/Application/Admin/View/public/static/js/base.js" type="text/javascript"></script>
-        <script src="/Application/Admin/View/public/static/js/login.js" type="text/javascript"></script>
+        <script src="/Application/Admin/View/Public/static/js/base.js" type="text/javascript"></script>
+        <script src="/Application/Admin/View/Public/static/js/login.js" type="text/javascript"></script>
         <script>
             jQuery(document).ready(function () {
                 $.backstretch([
