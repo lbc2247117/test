@@ -1,0 +1,69 @@
+[ 2017-10-25T16:04:26+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: Ê®°Êùø‰∏çÂ≠òÂú®:./Application/Home/View/Index/index.html
+
+[ 2017-10-25T16:04:26+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T16:06:00+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: Ê®°Êùø‰∏çÂ≠òÂú®:./Application/Home/View/Index/index.html
+
+[ 2017-10-25T16:29:48+08:00 ] 127.0.0.1 /active/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] file_get_contents(): Unable to find the wrapper &quot;https&quot; - did you forget to enable it when you configured PHP? D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 298 Ë°å.
+NOTIC: [2] file_get_contents(https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=wx99db8e13bbd0ddd3&amp;secret=bd73e80f376f06995f25940796b65a46): failed to open stream: No such file or directory D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 298 Ë°å.
+NOTIC: [2] unlink(./Application/Runtime/Temp/d86c828583c5c6160e8acfee88ba1590.php): No such file or directory D:\workspace\test\project\active\ThinkPHP\Library\Think\Cache\Driver\File.class.php Á¨¨ 157 Ë°å.
+NOTIC: [2] file_get_contents(): Unable to find the wrapper &quot;https&quot; - did you forget to enable it when you configured PHP? D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 314 Ë°å.
+NOTIC: [2] file_get_contents(https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&amp;access_token=): failed to open stream: No such file or directory D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 314 Ë°å.
+NOTIC: [8] Trying to get property of non-object D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 315 Ë°å.
+NOTIC: [8] Trying to get property of non-object D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 317 Ë°å.
+NOTIC: [2] file_get_contents(): Unable to find the wrapper &quot;https&quot; - did you forget to enable it when you configured PHP? D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 298 Ë°å.
+NOTIC: [2] file_get_contents(https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=wx99db8e13bbd0ddd3&amp;secret=bd73e80f376f06995f25940796b65a46): failed to open stream: No such file or directory D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 298 Ë°å.
+NOTIC: [2] unlink(./Application/Runtime/Temp/d86c828583c5c6160e8acfee88ba1590.php): No such file or directory D:\workspace\test\project\active\ThinkPHP\Library\Think\Cache\Driver\File.class.php Á¨¨ 157 Ë°å.
+NOTIC: [2] file_get_contents(): Unable to find the wrapper &quot;https&quot; - did you forget to enable it when you configured PHP? D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 314 Ë°å.
+NOTIC: [2] file_get_contents(https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&amp;access_token=): failed to open stream: No such file or directory D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 314 Ë°å.
+NOTIC: [8] Trying to get property of non-object D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 315 Ë°å.
+NOTIC: [8] Trying to get property of non-object D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 317 Ë°å.
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-10-25T16:30:09+08:00 ] 127.0.0.1 /home/active/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] file_get_contents(): Unable to find the wrapper &quot;https&quot; - did you forget to enable it when you configured PHP? D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 298 Ë°å.
+NOTIC: [2] file_get_contents(https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=wx99db8e13bbd0ddd3&amp;secret=bd73e80f376f06995f25940796b65a46): failed to open stream: No such file or directory D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 298 Ë°å.
+NOTIC: [2] unlink(./Application/Runtime/Temp/d86c828583c5c6160e8acfee88ba1590.php): No such file or directory D:\workspace\test\project\active\ThinkPHP\Library\Think\Cache\Driver\File.class.php Á¨¨ 157 Ë°å.
+NOTIC: [2] file_get_contents(): Unable to find the wrapper &quot;https&quot; - did you forget to enable it when you configured PHP? D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 314 Ë°å.
+NOTIC: [2] file_get_contents(https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&amp;access_token=): failed to open stream: No such file or directory D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 314 Ë°å.
+NOTIC: [8] Trying to get property of non-object D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 315 Ë°å.
+NOTIC: [8] Trying to get property of non-object D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 317 Ë°å.
+NOTIC: [2] file_get_contents(): Unable to find the wrapper &quot;https&quot; - did you forget to enable it when you configured PHP? D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 298 Ë°å.
+NOTIC: [2] file_get_contents(https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=wx99db8e13bbd0ddd3&amp;secret=bd73e80f376f06995f25940796b65a46): failed to open stream: No such file or directory D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 298 Ë°å.
+NOTIC: [2] unlink(./Application/Runtime/Temp/d86c828583c5c6160e8acfee88ba1590.php): No such file or directory D:\workspace\test\project\active\ThinkPHP\Library\Think\Cache\Driver\File.class.php Á¨¨ 157 Ë°å.
+NOTIC: [2] file_get_contents(): Unable to find the wrapper &quot;https&quot; - did you forget to enable it when you configured PHP? D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 314 Ë°å.
+NOTIC: [2] file_get_contents(https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&amp;access_token=): failed to open stream: No such file or directory D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 314 Ë°å.
+NOTIC: [8] Trying to get property of non-object D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 315 Ë°å.
+NOTIC: [8] Trying to get property of non-object D:\workspace\test\project\active\Application\Home\Controller\Wechat.php Á¨¨ 317 Ë°å.
+

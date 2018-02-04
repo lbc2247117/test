@@ -5,30 +5,40 @@
  * Date: 17-3-26
  * Time: 下午5:10
  */
-namespace test;
-
-use test\controller\user;
-
-
-
-class index{
-
-    public static function getAge(){
-
-        // 注册AUTOLOAD方法
-       spl_autoload_register('self::autoload');
-        register_shutdown_function('self::fatalError');
-        $user= new user();
-        $age= $user->getAge();
-        exit($age);
-    }
-    public static function autoload($class){
-        $filename       =  'user.php';
-        require $filename;
-    }
-    public static function fatalError(){
-        var_dump(error_get_last());
+//namespace test;
+//
+//use test\controller\user;
+//
+//
+//
+//class index{
+//
+//    public static function getAge(){
+//
+//        // 注册AUTOLOAD方法
+//       spl_autoload_register('self::autoload');
+//        register_shutdown_function('self::fatalError');
+//        $user= new user();
+//        $age= $user->getAge();
+//        exit($age);
+//    }
+//    public static function autoload($class){
+//        $filename       =  'user.php';
+//        require $filename;
+//    }
+//    public static function fatalError(){
+//        var_dump(error_get_last());
+//    }
+//}
+//
+//index::getAge();
+class person{
+    public  function getName(){
+        return '刘波成';
     }
 }
 
-index::getAge();
+$class = new ReflectionClass('person');
+$instance = $class->newInstance();
+$result = $instance->getName();
+var_dump($result);

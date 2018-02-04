@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap core CSS -->
-    <link href="/active/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
-    <link href="/active/Application/Admin/View//Public/static/css/sb-admin.css" rel="stylesheet">
-    <link rel="stylesheet" href="/active/Application/Admin/View//Public/static/font-awesome/css/font-awesome.min.css">
+    <link href="/Application/Admin/View//Public/static/css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Application/Admin/View//Public/static/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 <div class="container">
@@ -44,7 +44,7 @@
         </div>
     </div>
 </div>
-<script src="/active/Public/js/jquery.min.js"></script>
+<script src="/Public/js/jquery.min.js"></script>
 <script>
     $(function(){
         $(".verify").click(function(){

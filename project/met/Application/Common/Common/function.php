@@ -102,7 +102,7 @@ function delFile($file) {
 }
 
 function returnJson($status = 0, $msg = '', $data = '') {
-    $result['status'] = $status;
+    $result['code'] = $status;
     $result['msg'] = $msg;
     $result['data'] = $data;
     exit(json_encode($result));
